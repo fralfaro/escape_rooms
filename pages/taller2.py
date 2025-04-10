@@ -4,43 +4,99 @@ import json
 import time
 
 
-# Función para cargar animaciones locales
+# Cargar animaciones
 def load_lottiefile(filepath):
     with open(filepath, "r") as f:
         return json.load(f)
 
-
-# Configuración inicial de Streamlit
-st.set_page_config(
-    page_title="Escape Room PySchool",
-    layout="centered",
-    initial_sidebar_state="collapsed"
-)
-
-st.title("🚪 Escape Room: PySchool Edition")
-
-# Inicializar estados
-if "sala_actual" not in st.session_state:
-    st.session_state.sala_actual = 0
-
-if "desafio_superado" not in st.session_state:
-    st.session_state.desafio_superado = False
-
-if "mostrar_puerta" not in st.session_state:
-    st.session_state.mostrar_puerta = False
-
-
-# Cargar animaciones
 lottie_success = load_lottiefile("animations/success.json")
-lottie_puzzle = load_lottiefile("animations/puzzle.json")
 lottie_wrong = load_lottiefile("animations/wrong.json")
 lottie_puerta = load_lottiefile("animations/puerta.json")
 
 
-# Mostrar solo animación de la puerta y avanzar
+# config
+SALAS = {
+    0: {
+        "titulo": "🔎 Sala 0: La Clave Secreta",
+        "func_situacion": "sala_0_situacion",
+        "pregunta": "¿Cuál es la palabra mágica?",
+        "respuesta_correcta": "PySchool2025",
+        "pistas": [
+            "Busca en el nombre del evento y el año actual.",
+            "Revisa las primeras letras de cada palabra.",
+            "Solución: PySchool2025"
+        ],
+        "tipo": "texto"
+    },
+    1: {
+        "titulo": "💬 Sala 1: Tradición Programadora",
+        "func_situacion": "sala_1_situacion",
+        "pregunta": "¿Qué se escribe primero al aprender a programar?",
+        "respuesta_correcta": "Hola Mundo",
+        "pistas": [
+            "Es una frase clásica que aparece en tu primer programa.",
+            "En Python lo escribirías con print('...?')",
+            "Solución: Hola Mundo"
+        ],
+        "tipo": "texto"
+    },
+    2: {
+        "titulo": "🧠 Sala 2: Desafío Matemático Final",
+        "func_situacion": "sala_2_situacion",
+        "pregunta": r"\frac{1.23 + 2.34}{1 + \frac{43}{2}} + 3 \times 2^{1.5}",
+        "respuesta_correcta": 8,  # Puedes poner el número más preciso si quieres
+        "pistas": [
+            "Suma primero los números del numerador.",
+            "Recuerda las prioridades de operaciones y potencias.",
+            "Solución: Aproximadamente 8"
+        ],
+        "tipo": "numero"
+    }
+}
+
+
+# salas
+def sala_0_situacion():
+    st.write("Te encuentras en una sala misteriosa con un cofre cerrado...")
+    #st.image("img/cofre.png")
+
+def sala_1_situacion():
+    st.write("Encuentras un computador antiguo...")
+    st.code('print("Hola Mundo")', language='python')
+
+def sala_2_situacion():
+    st.write("Debes resolver un problema matemático para escapar.")
+    #st.image("img/matematica.png")
+
+def mostrar_sala_final():
+    st.balloons()
+    st.success("🎉 ¡Has escapado exitosamente del Escape Room!")
+    if st.button("🔁 Reiniciar juego"):
+        st.session_state.sala_actual = 0
+        st.session_state.desafio_superado = False
+        st.session_state.mostrar_puerta = False
+        st.rerun()
+
+
+
+
+# Config inicial
+st.set_page_config(page_title="Escape Room PySchool", layout="centered", initial_sidebar_state="collapsed")
+
+st.title("🚪 Escape Room: PySchool Edition")
+
+# Estados iniciales
+if "sala_actual" not in st.session_state:
+    st.session_state.sala_actual = 0
+if "desafio_superado" not in st.session_state:
+    st.session_state.desafio_superado = False
+if "mostrar_puerta" not in st.session_state:
+    st.session_state.mostrar_puerta = False
+
+# Mostrar animación de puerta
 def pantalla_puerta():
-    contenedor = st.empty()  # Reservar espacio vacío
-    with contenedor:
+    cont = st.empty()
+    with cont:
         st_lottie(lottie_puerta, height=400)
     time.sleep(2)
     st.session_state.sala_actual += 1
@@ -48,68 +104,83 @@ def pantalla_puerta():
     st.session_state.mostrar_puerta = False
     st.rerun()
 
-
+# Mensaje éxito
 def mensaje_avanzar():
     st_lottie(lottie_success, height=250)
     st.success("🎉 ¡Muy bien! Puedes avanzar a la siguiente habitación.")
-
     if st.button("👉 Avanzar a la siguiente sala"):
-        st.query_params.clear()  # Nuevo método recomendado
         st.session_state.mostrar_puerta = True
         st.rerun()
 
-
-# Lógica de cada sala
+# Mostrar Sala Dinámica
 def mostrar_sala(num):
-    #st_lottie(lottie_puzzle, height=250)
+    if num == len(SALAS):
+        mostrar_sala_final()
+        return
 
-    if num == 0:
-        st.subheader("🔎 Sala 0: La Clave Secreta")
-        respuesta = st.text_input("¿Cuál es la palabra mágica?")
+    sala = SALAS[num]
+    tabs = st.tabs(["🕵️ Situación", "❓ Acertijo", "💡 Pistas"])
+
+
+    with tabs[0]:
+        st.subheader(sala["titulo"])
+        globals()[sala["func_situacion"]]()  # Ejecutar función personalizada
+
+    with tabs[1]:
+        if sala["tipo"] == "texto":
+            respuesta = st.text_input(sala["pregunta"])
+        else:
+            st.latex(sala["pregunta"])
+            respuesta = st.number_input("Ingresa tu resultado:", step=0.01)
+
         if st.button("Verificar"):
-            if respuesta == "PySchool2025":
-                st.session_state.desafio_superado = True
+            correcto = sala["respuesta_correcta"]
+            if sala["tipo"] == "texto":
+                if respuesta == correcto:
+                    st.session_state.desafio_superado = True
+                else:
+                    st_lottie(lottie_wrong, height=200)
+                    st.warning("Respuesta incorrecta.")
             else:
-                st_lottie(lottie_wrong, height=200)
-                st.warning("Ups... esa no es la clave correcta.")
+                if abs(respuesta - correcto) < 1:
+                    st.session_state.desafio_superado = True
+                else:
+                    st_lottie(lottie_wrong, height=200)
+                    st.warning("Respuesta incorrecta.")
 
-    elif num == 1:
-        st.subheader("💬 Sala 1: Tradición Programadora")
-        respuesta = st.text_input("¿Qué se escribe primero al aprender a programar?")
-        if st.button("Verificar"):
-            if respuesta == "Hola Mundo":
-                st.session_state.desafio_superado = True
-            else:
-                st_lottie(lottie_wrong, height=200)
-                st.warning("No es correcto. ¡Recuerda las clases!")
+    with tabs[2]:
+        st.subheader("💡 Pistas")
+        for i, pista in enumerate(sala["pistas"], start=1):
+            with st.expander(f"Pista {i}"):
+                st.write(pista)
 
-    elif num == 2:
-        st.subheader("🧠 Sala 2: Desafío Matemático Final")
-        st.latex(r"\frac{1.23 + 2.34}{1 + \frac{43}{2}} + 3 \times 2^{1.5}")
-        respuesta = st.number_input("Ingresa tu resultado:", step=0.01)
-        resultado_correcto = (1.23 + 2.34) / (1 + 43/2) + 3 * 2**1.5
-        if st.button("Verificar"):
-            if abs(respuesta - resultado_correcto) < 1:
-                st.session_state.desafio_superado = True
-            else:
-                st_lottie(lottie_wrong, height=200)
-                st.warning("Prueba de nuevo con más precisión.")
-
-    elif num == 3:
-        st.balloons()
-        st.success("🎉 ¡Has escapado exitosamente del Escape Room!")
-        if st.button("🔁 Reiniciar juego"):
-            st.session_state.sala_actual = 0
-            st.session_state.desafio_superado = False
-            st.session_state.mostrar_puerta = False
-            st.rerun()
-
-    if st.session_state.desafio_superado and num < 3:
+    if st.session_state.desafio_superado:
         mensaje_avanzar()
 
-
-# Mostrar la pantalla correcta
+# Render
 if st.session_state.mostrar_puerta:
     pantalla_puerta()
 else:
     mostrar_sala(st.session_state.sala_actual)
+
+css = '''
+    <style>
+        /* Adjust the text size in the Tabs */
+        .stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p {
+            font-size: 1.5rem; /* Text size in the tabs */
+        }
+
+        /* Additional option: Adjust the header size within expanders */
+        .st-expander h1, .st-expander h2, .st-expander h3 {
+            font-size: 4rem; /* Header size within expanders */
+        }
+
+        /* Adjust the text size of the selectbox in the sidebar */
+        .sidebar .stSelectbox label {
+            font-size: 1.5rem; /* Adjust this value to change the text size */
+        }
+
+    </style>
+    '''
+
+st.markdown(css, unsafe_allow_html=True)
