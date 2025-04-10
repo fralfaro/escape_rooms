@@ -11,7 +11,7 @@ def load_lottiefile(filepath):
 
 
 # Configuración inicial de Streamlit
-st.set_page_config(page_title="Escape Room PySchool", layout="centered")
+st.set_page_config(page_title="Escape Room PySchool", layout="centered", initial_sidebar_state="collapsed")
 
 st.title("🚪 Escape Room: PySchool Edition")
 

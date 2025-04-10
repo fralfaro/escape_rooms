@@ -7,11 +7,14 @@
 - Comprender cómo aplicar análisis de datos para obtener información relevante.
 - Desarrollar habilidades prácticas para visualizar datos de manera efectiva.
 
-::: {style="text-align: center;"}
-<iframe
-    src="https://llama2.streamlit.app/?embed=true"
+::: {style="display: flex; justify-content: center; margin: 2rem 0;"}
+
+<iframe 
+    src="https://pyschool-v1.streamlit.app/taller2?embed=true"
     frameborder="0"
     width="950"
     height="650"
-  ></iframe>
+    style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);"
+></iframe>
+
 :::

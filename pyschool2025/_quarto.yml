@@ -8,7 +8,7 @@ book:
   author: "Python Chile"
   date: "05/30/2025"
   favicon: "images/pc.png"
-  repo-url: "https://github.com/fralfaro/pyschool_content"
+  repo-url: "https://github.com/fralfaro/pyschool"
 
   chapters:
     - index.qmd
