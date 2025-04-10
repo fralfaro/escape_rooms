@@ -1,0 +1,131 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "🐍 PySchool",
+    "section": "",
+    "text": "🏠 Home\n¡Bienvenido a PySchool!\nEste espacio fue creado para motivar a estudiantes de todas las edades a descubrir y aprender Python, uno de los lenguajes de programación más versátiles y populares del mundo. En este repositorio encontrarás ejemplos autocontenidos, diseñados para ayudarte a comprender y practicar los conceptos fundamentales de manera sencilla y entretenida.\nPySchool es una iniciativa conjunta de Python Chile y DUOC UC, cuyo objetivo es entregar recursos educativos gratuitos para impulsar el aprendizaje de Python en la comunidad.\nLa primera edición de PySchool se realizará el viernes 30 de mayo en DUOC Sede Valparaíso, con la participación de estudiantes invitados de distintos colegios de la Región de Valparaíso.\n📚 ¡Pero eso no es todo! Todo el material está disponible en línea, para que cualquier persona interesada pueda acceder, aprender y disfrutar del mundo de la programación con Python.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>🏠 Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#cronograma",
+    "href": "index.html#cronograma",
+    "title": "🐍 PySchool",
+    "section": "📅 Cronograma",
+    "text": "📅 Cronograma\n\n\n\n\n\n\n\n\nPrograma de actividades\n\n\nHorario de eventos del día\n\n\nInicio\nTérmino\nActividad\n\n\n\n\n9:00\n9:30\nAcreditación\n\n\n9:30\n10:15\nBienvenida y panel pythonistas\n\n\n10:30\n11:30\nTaller 1\n\n\n12:00\n13:00\nTaller 2\n\n\n13:00\n13:30\nCierre",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>🏠 Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#talleres",
+    "href": "index.html#talleres",
+    "title": "🐍 PySchool",
+    "section": "🚀 Talleres",
+    "text": "🚀 Talleres\nTaller Estudiantes:\n\nPrimeros Pasos\nMatemáticas Divertidas\nMás alla del Infinito\n\n\n💡 Consejo: Para optimizar la experiencia en los talleres, se recomienda que cada estudiante disponga de su propio notebook, o que la actividad se realice en un entorno adecuado, como un laboratorio de computación.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>🏠 Home</span>"
+    ]
+  },
+  {
+    "objectID": "material/taller/intro.html",
+    "href": "material/taller/intro.html",
+    "title": "Primeros Pasos",
+    "section": "",
+    "text": "Programación\nPodríamos definir la esencia de la programación en una frase sencilla:\nLa programación permite delegar actividades repetitivas y tediosas a las máquinas, liberando a los humanos para que se concentren en desafíos más estimulantes. Estos desafíos suelen requerir creatividad, pensamiento crítico y un enfoque subjetivo.",
+    "crumbs": [
+      "🎯 Talleres",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros Pasos</span>"
+    ]
+  },
+  {
+    "objectID": "material/taller/intro.html#programación",
+    "href": "material/taller/intro.html#programación",
+    "title": "Primeros Pasos",
+    "section": "",
+    "text": "“Automatizar tareas para que sean ejecutadas por la computadora.”\n\n\n\n“Se dice que uno no comprende verdaderamente algo hasta que puede explicárselo a otro. En realidad, uno no lo entiende completamente hasta que puede explicárselo a una computadora.” — Donald Knuth",
+    "crumbs": [
+      "🎯 Talleres",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros Pasos</span>"
+    ]
+  },
+  {
+    "objectID": "material/taller/intro.html#python",
+    "href": "material/taller/intro.html#python",
+    "title": "Primeros Pasos",
+    "section": "Python",
+    "text": "Python\n\nPython se ha convertido en uno de los lenguajes más populares gracias a factores claves como:\n\n\n\n\n\n\n\n\nFactor\nDescripción\nEjemplos\n\n\n\n\nClaridad y simplicidad\nSintaxis fácil de leer y entender.\nif, for, def, class\n\n\nEcosistema de librerías\nAmplia biblioteca estándar para diversas tareas.\nNumPy, Pandas, Requests\n\n\nExtensibilidad\nIntegración con otros lenguajes para mayor rendimiento.\nCython, Pybind11\n\n\nComunidad activa\nSoporte y recursos abundantes.\nGitHub, Stack Overflow, PyPI\n\n\nVersatilidad\nÚtil en ciencia de datos, web, automatización y más.\nDjango, TensorFlow, Selenium\n\n\nPortabilidad\nFunciona en múltiples sistemas operativos.\nWindows, macOS, Linux",
+    "crumbs": [
+      "🎯 Talleres",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros Pasos</span>"
+    ]
+  },
+  {
+    "objectID": "material/taller/intro.html#uso-de-la-interfaz-web-en-este-taller",
+    "href": "material/taller/intro.html#uso-de-la-interfaz-web-en-este-taller",
+    "title": "Primeros Pasos",
+    "section": "Uso de la Interfaz Web en este Taller",
+    "text": "Uso de la Interfaz Web en este Taller\nEn este taller, emplearemos una tecnología que emula la ejecución de Python en una página web. No requiere instalaciones y se puede usar desde cualquier dispositivo con internet, aunque es un entorno simulado.\nLa interfaz incluye tres botones en la parte superior del contenedor de código: ejecutar, reiniciar y copiar el código. A continuación, se muestra una imagen que ilustra estos botones:\n\n\nEjemplo: 👋 Hola Mundo\nEn el mundo de la programación, es tradicional comenzar aprendiendo a hacer que la computadora muestre el mensaje “Hola, Mundo” (o “Hello World”).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nDesafío:\n\n\n\n\n\nIntenta modificar el código anterior para que, en lugar de “Hola, Mundo”, el mensaje incluya tu nombre. ¿Cómo cambiarías el saludo?\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "🎯 Talleres",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros Pasos</span>"
+    ]
+  },
+  {
+    "objectID": "material/taller/intro.html#quiz",
+    "href": "material/taller/intro.html#quiz",
+    "title": "Primeros Pasos",
+    "section": "❓ Quiz",
+    "text": "❓ Quiz\n\nQ1Q2\n\n\n\n¿Cuál es la definición más adecuada de programación?\n\n\n\n\n ✗Un lenguaje que solo los expertos pueden usar\n\n\n ✗El proceso de crear hardware\n\n\n ✗Un conjunto de pasos para resolver problemas matemáticos únicamente\n\n\n ✓Automatizar tareas para que sean ejecutadas por una computadora\n\n\nLimpiar respuesta\n\n\n\n\n\n\nMostrar respuesta\n\nAutomatizar tareas para que sean ejecutadas por una computadora: La programación permite que las computadoras realicen tareas repetitivas, liberando a los humanos para enfocarse en problemas creativos y desafiantes.\n\n\n\n\n\n\n\n\n\n\n\n¿Qué hace que Python sea un lenguaje de programación popular?\n\n\n\n\n ✗Tiene una sintaxis compleja\n\n\n ✓Ofrece claridad y simplicidad en su sintaxis\n\n\n ✗Es útil solo para el desarrollo web\n\n\n ✗Tiene una comunidad limitada\n\n\nLimpiar respuesta\n\n\n\n\n\n\nMostrar respuesta\n\nPython es popular por su claridad y simplicidad en la sintaxis, lo que lo hace fácil de aprender para principiantes y efectivo para programadores experimentados.",
+    "crumbs": [
+      "🎯 Talleres",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros Pasos</span>"
+    ]
+  },
+  {
+    "objectID": "material/taller/taller_1.html",
+    "href": "material/taller/taller_1.html",
+    "title": "Introducción a Python",
+    "section": "",
+    "text": "🎯 Objetivos del capítulo\n\nAprender los conceptos básicos de Python.\nFamiliarizarse con la sintaxis y funcionalidad de Python.\nResolver problemas prácticos y entretenidos.\nExperimentar con el código directamente en el navegador utilizando Quarto-Pyodide.",
+    "crumbs": [
+      "🎯 Talleres",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducción a Python</span>"
+    ]
+  },
+  {
+    "objectID": "material/taller/taller_2.html",
+    "href": "material/taller/taller_2.html",
+    "title": "Python en Ciencia de Datos",
+    "section": "",
+    "text": "🎯 Objetivos del capítulo\n\nExplorar y analizar un conjunto de datos de Pokémon utilizando Python.\nAprender técnicas básicas de exploración y visualización de datos.\nComprender cómo aplicar análisis de datos para obtener información relevante.\nDesarrollar habilidades prácticas para visualizar datos de manera efectiva.",
+    "crumbs": [
+      "🎯 Talleres",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python en Ciencia de Datos</span>"
+    ]
+  },
+  {
+    "objectID": "material/anexos/cierre_evento.html",
+    "href": "material/anexos/cierre_evento.html",
+    "title": "Cierre PySchool",
+    "section": "",
+    "text": "🎯 Retroalimentación\nNos encantaría saber que te ha parecido PySchool, y que podemos mejorar. Agradeceríamos contestaras la siguiente encuesta:\n\n \n\nhttps://forms.gle/MjQFihE1RiKzVgid9\n\n\n\n\n\nCódigo para sorteo\nPara sortear algunos premios utilizaremos, por supuesto, un código de python. Usaremos la función random.randint(a, b) que retorna un número entero aleatorio \\(N\\) que cumpla la condición \\(a &lt;= N &lt;= b\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "📜 Anexos",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cierre PySchool</span>"
+    ]
+  },
+  {
+    "objectID": "material/anexos/autoria.html",
+    "href": "material/anexos/autoria.html",
+    "title": "Autoría",
+    "section": "",
+    "text": "Reconocimientos adicionales\nEste espacio ha sido creado con el objetivo de motivar a los estudiantes a conocer y aprender el lenguaje de programación Python.\nPySchool es una iniciativa de la organización Python Chile y DUOC.\nNuestro objetivo es proporcionar a la comunidad los recursos necesarios para aprender y mejorar sus habilidades en Python.\nEste proyecto es una iniciativa protegida por derechos de autor bajo la organización Python Chile. Los contribuyentes clave incluyen a Francisco Alfaro y Sebastián Flores, cuya dedicación ha sido esencial para el desarrollo y mantenimiento continuo del proyecto.\nQueremos extender un agradecimiento especial a todos los colaboradores y miembros de nuestra comunidad que han enriquecido este proyecto con sus ideas, sugerencias y aportes de código. Su participación ha sido crucial y es enormemente valorada.\nPara obtener más información sobre los autores y colaboradores, o para descubrir cómo puedes contribuir, te invitamos a visitar la página oficial de Python Chile. ¡Agradecemos tu apoyo y nos complace contar contigo en nuestra comunidad!",
+    "crumbs": [
+      "📜 Anexos",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Autoría</span>"
+    ]
+  }
+]
