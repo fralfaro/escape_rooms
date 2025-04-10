@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: ../docs/pyschool2025  # para que lo deje en docs/pyschool2025
+
+  
+book:
+  title: "🐍 PySchool"
+  author: "Python Chile"
+  date: "05/30/2025"
+  favicon: "images/pc.png"
+  repo-url: "https://github.com/fralfaro/pyschool_content"
+
+  chapters:
+    - index.qmd
+
+    - part: 🎯 Talleres
+      chapters:
+        - material/taller/intro.qmd
+        - material/taller/taller_1.qmd
+        - material/taller/taller_2.qmd
+
+    - part: 📜 Anexos
+      chapters:
+        - material/anexos/cierre_evento.qmd
+        - material/anexos/autoria.qmd
+
+
+lang: es
+
+format:
+  html:
+    theme: flatly
+    number-sections: false
+    toc: false
+    page-layout: full
+  epub:
+    cover-image: images/cover.png
+
+
+filters: 
+  - pyodide
+

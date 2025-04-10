@@ -1,0 +1,42 @@
+project:
+  type: book
+  output-dir: ../docs/pyschool2024  # para dejarlo en el sitio principal
+
+book:
+  title: "PySchool 2024"
+  author: "Python Chile"
+  date: "08/02/2024"
+  favicon: "images/pc.png"
+  repo-url: "https://github.com/fralfaro/pyschool_content"
+
+  chapters:
+    - index.qmd
+    - part: 🚀 Talleres
+      chapters:
+        - material/talleres/intro.qmd
+        - material/talleres/taller_1.qmd
+        - material/talleres/taller_2.qmd
+        - material/talleres/taller_3.qmd
+    - part: 📜 Anexos
+      chapters:
+        - material/anexos/cierre_evento.qmd
+        - material/anexos/aprendizaje.qmd
+        - material/anexos/tecnologia.qmd
+        - material/anexos/autoria.qmd
+        - material/anexos/colaborar.qmd
+
+lang: es
+
+format:
+  html:
+    theme: flatly
+    number-sections: false
+    toc: false
+    page-layout: full
+  epub:
+    cover-image: images/cover.png
+
+
+filters: 
+  - pyodide
+

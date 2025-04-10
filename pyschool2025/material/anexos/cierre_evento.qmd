@@ -1,0 +1,29 @@
+# Cierre PySchool
+
+### 🎯 **Retroalimentación**
+
+Nos encantaría saber que te ha parecido PySchool, y que podemos mejorar.
+Agradeceríamos contestaras la siguiente encuesta: 
+
+<center>
+<a href="https://forms.gle/MjQFihE1RiKzVgid9" target="_blank" rel="noopener noreferrer">
+<img src="../../images/qr_retroalimentacion.png" width="400">
+<p>https://forms.gle/MjQFihE1RiKzVgid9</p>
+</a>
+</center>
+
+### Código para sorteo
+
+Para sortear algunos premios utilizaremos, por supuesto, un código de python.
+Usaremos la función `random.randint(a, b)` que retorna un número entero aleatorio $N$ que cumpla la condición $a <= N <= b$.
+
+```{pyodide-python}
+from random import randint
+
+numero_participantes = 2
+numero_premiado = randint(1, numero_participantes)
+
+print(f"El estudiante premiado es: {numero_premiado}")
+```
+
+

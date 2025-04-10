@@ -1,0 +1,56 @@
+# 🏠 Home
+
+¡Bienvenido a **PySchool**!
+
+Este espacio fue creado para motivar a estudiantes de todas las edades a descubrir y aprender **Python**, uno de los lenguajes de programación más versátiles y populares del mundo. En este repositorio encontrarás **ejemplos autocontenidos**, diseñados para ayudarte a comprender y practicar los conceptos fundamentales de manera sencilla y entretenida.
+
+**PySchool** es una iniciativa conjunta de [Python Chile](https://pythonchile.cl/) y [DUOC UC](https://www.duoc.cl/), cuyo objetivo es **entregar recursos educativos gratuitos** para impulsar el aprendizaje de Python en la comunidad.
+
+<div align="center">
+  <a href="https://pythonchile.cl/" target="_blank" rel="noopener noreferrer"><img src="./images/pythonchile.png" width="270"></a>
+  <a href="https://pyschool.cl/" target="_blank" rel="noopener noreferrer"><img src="./images/cover.png" width="200"></a>
+  <a href="https://www.duoc.cl/" target="_blank" rel="noopener noreferrer"><img src="./images/DUOC_1.png" width="300"></a>
+</div>
+
+La primera edición de **PySchool** se realizará el **viernes 30 de mayo** en **DUOC Sede Valparaíso**, con la participación de estudiantes invitados de distintos colegios de la **Región de Valparaíso**.
+
+📚 **¡Pero eso no es todo!** Todo el material está disponible en línea, para que cualquier persona interesada pueda acceder, aprender y disfrutar del mundo de la programación con Python.
+
+## 📅 Cronograma
+
+```{python}
+#| echo: false
+from great_tables import GT, md
+import pandas as pd
+
+data = {
+    "Inicio": ["9:00", "9:30", "10:30", "12:00", "13:00"],
+    "Término": ["9:30", "10:15", "11:30", "13:00", "13:30"],
+    "Actividad": ["Acreditación", "Bienvenida y panel pythonistas", "Taller 1", "Taller 2", "Cierre"]
+}
+
+df = pd.DataFrame(data)
+
+(
+    GT(df)
+    .tab_header(
+        title="Programa de actividades",
+        subtitle="Horario de eventos del día"
+    ).opt_stylize(style = 2, color = "blue")
+)
+```
+<br>
+
+
+## 🚀 Talleres
+
+**Taller Estudiantes**:
+
+ -  [Primeros Pasos](./material/talleres/intro.html)
+ -  [Matemáticas Divertidas](./material/talleres/taller_1.html)
+ -  [Más alla del Infinito](./material/talleres/taller_2.html)
+
+
+> 💡 **Consejo**: Para optimizar la experiencia en los talleres, se recomienda que cada estudiante disponga de su propio notebook, o que la actividad se realice en un entorno adecuado, como un laboratorio de computación.
+
+

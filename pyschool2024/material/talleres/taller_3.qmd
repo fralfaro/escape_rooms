@@ -1,0 +1,168 @@
+# Python en Ciencia de Datos
+
+🎯 **Objetivos del capítulo**
+
+- Explorar y analizar un conjunto de datos de Pokémon utilizando Python.
+- Aprender técnicas básicas de exploración y visualización de datos.
+- Comprender cómo aplicar análisis de datos para obtener información relevante.
+- Desarrollar habilidades prácticas para visualizar datos de manera efectiva.
+
+## 📊 Exploración y Visualización de Datos
+
+Primero, importemos las bibliotecas necesarias y carguemos el conjunto de datos de Pokémon. Este ejercicio es excelente para practicar la manipulación de datos y la visualización con las bibliotecas `pandas` y `matplotlib`.
+
+### Cargar el Conjunto de Datos
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es cargar un conjunto de datos de Pokémon desde una URL y mostrar las primeras filas para obtener una vista previa de los datos.
+:::
+
+1. **Importar bibliotecas**: Usar `pandas` para manipulación de datos.
+2. **Cargar datos**: Leer el conjunto de datos desde una URL.
+3. **Mostrar datos**: Mostrar las primeras filas del conjunto de datos.
+
+```{pyodide-python}
+import pandas as pd
+pd.set_option('display.max_columns', None)
+
+# Cargar el conjunto de datos de Pokémon
+url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
+pokemon_data = pd.read_csv(url)
+
+# Mostrar las primeras filas del conjunto de datos
+pokemon_data.head()
+```
+
+### Descripción del Conjunto de Datos
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es obtener una visión general de la estructura del conjunto de datos para comprender mejor el tipo y la cantidad de datos disponibles.
+:::
+
+1. **Descripción de la estructura del conjunto de datos**: Usar `info` para obtener información sobre el tipo de datos y valores no nulos del conjunto de datos.
+
+```{pyodide-python}
+# Mostrar la información del conjunto de datos
+pokemon_data.info()
+```
+
+### Estadísticas del Conjunto de Datos
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es obtener una visión general de las estadísticas del conjunto de datos para comprender mejor la distribución de los valores.
+:::
+
+1. **Descripción estadística**: Usar `describe` para obtener estadísticas básicas del conjunto de datos.
+
+```{pyodide-python}
+# Mostrar la descripción estadística del conjunto de datos
+pokemon_data.describe()
+```
+
+## 📈 Análisis y Visualización de Datos
+
+### Tipos de Pokémon
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es contar cuántos Pokémon de cada tipo hay en el conjunto de datos y visualizar estos datos en un gráfico de barras.
+:::
+
+1. **Contar Pokémon por tipo**: Usar `value_counts` para contar los Pokémon por tipo.
+2. **Crear gráfico de barras**: Usar `matplotlib` para visualizar la cantidad de Pokémon por tipo.
+
+```{pyodide-python}
+import matplotlib.pyplot as plt
+
+# Contar la cantidad de Pokémon por tipo
+pokemon_por_tipo = pokemon_data['Type 1'].value_counts()
+
+# Crear un gráfico de barras
+plt.figure(figsize=(11, 6))
+pokemon_por_tipo.plot(kind='bar', color='#66c2a5')
+plt.title('Cantidad de Pokémon por Tipo', fontsize=14)
+plt.xlabel('Tipo', fontsize=12)
+plt.ylabel('Cantidad', fontsize=12)
+plt.xticks(rotation=45)
+plt.grid()
+plt.show()
+```
+
+### Promedio de Estadísticas por Tipo
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es calcular y visualizar el promedio de las estadísticas principales de los Pokémon agrupados por tipo en un gráfico de barras apiladas.
+:::
+
+1. **Calcular promedios**: Usar `groupby` y `mean` para calcular el promedio de estadísticas por tipo.
+2. **Gráfico de barras apiladas**: Usar `plot` para visualizar los promedios.
+
+```{pyodide-python}
+# Calcular el promedio de estadísticas por tipo
+promedio_estadisticas = pokemon_data.groupby('Type 1')[['HP', 'Attack', 'Defense', 'Speed']].mean()
+
+# Crear un gráfico de barras apiladas
+colors = ['#fc8d62', '#66c2a5', '#8da0cb', '#e78ac3']
+promedio_estadisticas.plot(kind='bar', stacked=True, figsize=(11, 6), color=colors)
+plt.title('Promedio de Estadísticas por Tipo de Pokémon', fontsize=14)
+plt.xlabel('Tipo', fontsize=12)
+plt.ylabel('Promedio de Estadísticas', fontsize=12)
+plt.legend(title='Estadísticas', loc='upper left')
+plt.grid()
+plt.show()
+```
+
+### Estadísticas de Ataque y Defensa
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es comparar las estadísticas de ataque y defensa de los Pokémon en un gráfico de dispersión.
+:::
+
+1. **Gráfico de dispersión**: Usar `scatter` para visualizar la relación entre ataque y defensa.
+
+```{pyodide-python}
+# Crear un gráfico de dispersión de ataque vs defensa
+plt.figure(figsize=(11, 6))
+plt.scatter(pokemon_data['Attack'], pokemon_data['Defense'], color='#8da0cb', alpha=0.7, edgecolor='k', linewidth=0.5)
+plt.title('Ataque vs Defensa de Pokémon', fontsize=14)
+plt.xlabel('Ataque', fontsize=12)
+plt.ylabel('Defensa', fontsize=12)
+plt.grid()
+plt.show()
+```
+
+## 📊 Tablas y Gráficos Interactivos
+
+### Tabla de Pokémon con Mayor Ataque
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es mostrar los 10 Pokémon con la mayor estadística de ataque.
+:::
+
+1. **Top 10 en ataque**: Usar `nlargest` para obtener los Pokémon con mayor ataque.
+2. **Mostrar tabla**: Mostrar una tabla con los resultados.
+
+```{pyodide-python}
+# Obtener los 10 Pokémon con mayor ataque
+top_ataque = pokemon_data.nlargest(10, 'Attack')[['Name', 'Type 1', 'Attack', 'Defense', 'HP']]
+
+# Mostrar la tabla
+top_ataque
+```
+
+### Tabla de Pokémon con Mayor Defensa
+
+::: {.callout-tip collapse="false" title="Desafío:"}
+El objetivo de este ejercicio es mostrar los 10 Pokémon con la mayor estadística de defensa.
+:::
+
+1. **Top 10 en defensa**: Usar `nlargest` para obtener los Pokémon con mayor defensa.
+2. **Mostrar tabla**: Mostrar una tabla con los resultados.
+
+```{pyodide-python}
+# Obtener los 10 Pokémon con mayor defensa
+top_defensa = pokemon_data.nlargest(10, 'Defense')[['Name', 'Type 1', 'Defense', 'Attack', 'HP']]
+
+# Mostrar la tabla
+top_defensa
+```
+
