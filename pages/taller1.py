@@ -11,7 +11,11 @@ def load_lottiefile(filepath):
 
 
 # Configuración inicial de Streamlit
-st.set_page_config(page_title="Escape Room PySchool", layout="centered", initial_sidebar_state="collapsed")
+st.set_page_config(
+    page_title="Escape Room PySchool",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
 
 st.title("🚪 Escape Room: PySchool Edition")
 
@@ -45,11 +49,12 @@ def pantalla_puerta():
     st.rerun()
 
 
-# Mensaje para pasar de sala (botón que activa animación de puerta)
 def mensaje_avanzar():
     st_lottie(lottie_success, height=250)
     st.success("🎉 ¡Muy bien! Puedes avanzar a la siguiente habitación.")
+
     if st.button("👉 Avanzar a la siguiente sala"):
+        st.query_params.clear()  # Nuevo método recomendado
         st.session_state.mostrar_puerta = True
         st.rerun()
 
