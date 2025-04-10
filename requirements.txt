@@ -3,3 +3,5 @@ numpy
 jupyter
 itables
 great_tables
+streamlit 
+streamlit-lottie
