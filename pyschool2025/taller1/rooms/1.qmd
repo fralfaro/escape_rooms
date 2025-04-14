@@ -1,7 +1,5 @@
 ---
 title: "Habitación 1: Hola Mundo"
-appendix: true
-page-layout: full
 ---
 
 Al responder correctamente el enigma, la puerta se abre. Al cruzar la puerta, la puerta se cierra y 

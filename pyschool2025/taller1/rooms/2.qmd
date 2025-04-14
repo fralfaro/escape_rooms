@@ -1,7 +1,5 @@
 ---
 title: "Habitación 2: Números"
-appendix: true
-page-layout: full
 ---
 
 Comienzas a entender la rutina. Respondes correctamente, se abre una puerta, y apenas cruzas la puerta, la habitación se cierra.  

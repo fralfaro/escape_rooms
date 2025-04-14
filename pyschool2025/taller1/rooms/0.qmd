@@ -1,7 +1,5 @@
 ---
 title: "Habitación 0: Inicio"
-appendix: true
-page-layout: full
 ---
 
 Despiertas poco a poco en un cuarto oscuro.  
