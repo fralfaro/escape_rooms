@@ -15,5 +15,6 @@ Has dado tus primeros pasos como Científico de Datos Pokémon.
 Y esto... es solo el comienzo.
 
 <center>
-<a href="../../anexos/cierre_evento.html" class="btn btn-danger btn-lg w-100">🏆 Cierre PySchool</a>
+<a href="../../anexos/cierre_evento.html" class="btn btn-success" w-100 h-100>🏆 Cierre PySchool</a>
 </center>
+

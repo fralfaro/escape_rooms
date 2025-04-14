@@ -1,35 +1,63 @@
 ---
-title: "Habitación 1: Hola Mundo"
-appendix: true
-page-layout: full
+title: "Habitación 1: Explorador de Datos"
 ---
 
-Al responder correctamente el enigma, la puerta se abre. Al cruzar la puerta, la puerta se cierra y 
-te encuentras en una nueva habitación, exactamente como la habitación anterior, con una nueva nota sobre la pantalla electrónica:
+El sistema se ha reiniciado parcialmente...  
+Pero las puertas siguen bloqueadas.  
+
+En la pantalla aparece un mensaje del Profesor Oak:
 
 <div class="alert alert-info">
-La primera tarea de todo pythonista es escribir "Hola Mundo".  
-Cambia el valor de la variable `respuesta` por `"Hola Mundo"` y ejecuta la celda.
+"Un verdadero Maestro Pokémon debe conocer bien sus datos antes de analizarlos.  
+Solo podrás avanzar si logras explorar la estructura y características de los Pokémon."
 </div>
 
-::: {.callout-tip title="Pista" collapse="true"}
-Recuerda que en Python, los strings (cadenas de texto) se escriben entre comillas dobles o simples.  
-Puedes escribir 
-```python 
-respuesta="Hola Mundo"
-```
-o
-```python 
-respuesta='Hola Mundo'
+::: {.callout-tip title="Explorar Datos en Python" collapse="true"}
+
+Con `pandas` puedes obtener información general de un conjunto de datos usando:
+
+- `.info()` → Ver columnas, tipos de datos y cantidad de datos.  
+- `.describe()` → Ver estadísticas básicas de las columnas numéricas.
+
+Por ejemplo:
+
+```python
+df.info()
+df.describe()
 ```
 :::
 
-```{pyodide-python}
-# Escribe tu respuesta aquí
-respuesta = None
-print(respuesta)
+---
 
-# Verifica la respuesta
+## Desafío de la Sala
+
+Ya cargaste los datos en la sala anterior (`df`).
+
+Ahora:
+
+1. Crea una variable llamada `info` que almacene el resultado de `df.info()` (solo ejecutarlo está bien).  
+2. Crea una variable llamada `desc` que almacene el resultado de `df.describe()`.
+
+---
+
+```{pyodide-python}
+# Cargar datos nuevamente
+import pandas as pd
+pd.set_option('display.max_columns', None)
+
+url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
+
+df = pd.read_csv(url)
+
+# Explora los datos
+print("Mostrando información general del dataset:")
+info = None
+
+print("\nMostrando descripción estadística del dataset:")
+desc = None
+print(desc)
+
+# Verifica tu respuesta
 import verificar
-verificar.salon_1(respuesta)
+verificar.salon_11(info, desc)
 ```

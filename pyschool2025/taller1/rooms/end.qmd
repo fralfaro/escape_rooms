@@ -16,8 +16,7 @@ Sabes que lo que aprendiste aquí te acompañará en cada nuevo desafío.
 Y aunque nadie crea tu historia... tú sabes la verdad:  
 Ahora eres parte de la leyenda de PySchool.
 
----
 
 <center>
-<a href="../../taller2/taller2.html" class="btn btn-success" w-100 h-100>🔓 Continuar con el siguiente desafío</a>
+<a href="../../taller2/taller2.html" class="btn btn-success" >🔓 Continuar con el siguiente desafío</a>
 </center>

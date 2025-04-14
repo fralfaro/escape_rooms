@@ -83,10 +83,22 @@ def salon_00(url, df):
     if url is None or df is None:
         text("Debes asignar un valor a las variables `url` y `df`.", "info")
     elif url == url_correcta and len(df.columns) >= 10:
-        hyperlink("¡Correcto! Has restaurado el sistema del laboratorio. Avanza a la siguiente sala.", "end.html", "success")
+        hyperlink("¡Correcto! Has restaurado el sistema del laboratorio. Avanza a la siguiente sala.", "1.html", "success")
     else:
         text("Revisa bien las instrucciones... ¿Estás seguro que cargaste los datos correctamente?", "warning")
 
+
+def salon_11(info, desc):
+    import pandas as pd
+
+    if info is None or desc is None:
+        text("Debes asignar valores a las variables `info` y `desc` ejecutando `df.info()` y `df.describe()`.", "info")
+    
+    elif not isinstance(desc, pd.DataFrame):
+        text("La variable `desc` debe ser el resultado de `df.describe()`.", "warning")
+    
+    else:
+        hyperlink("¡Perfecto! Has explorado correctamente el dataset. Avanza a la siguiente sala.", "end.html", "success")
 
 if __name__ == "__main__":
     salon_0("PySchool2025")
