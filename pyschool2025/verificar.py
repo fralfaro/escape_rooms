@@ -74,35 +74,21 @@ def salon_5(min_length, letra):
 
 
 def salon_6():
-    # Función que retorna un mensaje según las condiciones del número x
-    def calcular_senal(x):
-        # Si x es divisible por 3 y 5 al mismo tiempo
-        if x % 3 == 0 and x % 5 == 0:
-            return "PySchool"
-
-        # Si x es divisible solo por 3
-        elif x % 3 == 0:
-            return "Py"
-
-        # Si x es divisible solo por 5
-        elif x % 5 == 0:
-            return "School"
-
-        # Si no cumple ninguna condición
+    try:
+        pruebas = [
+            calcular_senal(3) == "Py",
+            calcular_senal(5) == "School",
+            calcular_senal(15) == "PySchool",
+            calcular_senal(7) == "Sin señal"
+        ]
+        
+        if all(pruebas):
+            hyperlink("¡Excelente! Has activado la máquina correctamente y la puerta se abre.", "end.html", "success")
         else:
-            return "Sin señal"
-
-    pruebas = [
-        calcular_senal(3) == "Py",
-        calcular_senal(5) == "School",
-        calcular_senal(15) == "PySchool",
-        calcular_senal(7) == "Sin señal"
-    ]
+            text("Revisa tu función... La máquina no está respondiendo correctamente a todos los números secretos.", "warning")
     
-    if all(pruebas):
-        hyperlink("¡Excelente! Has completado todas las salas y logras salir victorioso del Escape Room PySchool.", "end.html", "success")
-    else:
-        text("Revisa tu función... Algunos casos no están devolviendo lo correcto.", "warning")
+    except Exception as e:
+        text("Revisa tu código... Parece que tu función no está bien definida.", "warning")
 
 
 
