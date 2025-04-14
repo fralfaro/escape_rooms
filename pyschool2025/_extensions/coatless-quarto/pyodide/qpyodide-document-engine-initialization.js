@@ -34,7 +34,7 @@ globalThis.qpyodideInstance = await import(
     // await loadedPyodide.runPythonAsync("globalScope = {}"); 
     
     // Update status to reflect the next stage of the procedure
-    qpyodideUpdateStatusHeaderSpinner("Initializing Python Packages");
+    qpyodideUpdateStatusHeaderSpinner("Cargando trampas...");
 
     // Load the `micropip` package to allow installation of packages.
     await mainPyodide.loadPackage("micropip");
@@ -43,6 +43,7 @@ globalThis.qpyodideInstance = await import(
     // Load the `pyodide_http` package to shim uses of `requests` and `urllib3`.
     // This allows for `pd.read_csv(url)` to work flawlessly.
     // Details: https://github.com/coatless-quarto/pyodide/issues/9
+    qpyodideUpdateStatusHeaderSpinner("Cargando serpientes...");
     await mainPyodide.loadPackage("pyodide_http");
     await mainPyodide.runPythonAsync(`
     import pyodide_http
@@ -59,6 +60,14 @@ globalThis.qpyodideInstance = await import(
     from matplotlib import pyplot as plt
     `);
 
+    // Load the verification file
+    await mainPyodide.runPythonAsync(`
+    import urllib.request
+    url = "https://raw.githubusercontent.com/sebastiandres/pyscape/refs/heads/main/quarto/verificar.py"
+    urllib.request.urlretrieve(url, "verificar.py");
+    `);
+    qpyodideUpdateStatusHeader("Cargando las habitaciones...");
+     
     // Unlock interactive buttons
     qpyodideSetInteractiveButtonState(
       `<i class="fa-solid fa-play qpyodide-icon-run-code"></i> <span>Run Code</span>`, 
@@ -66,9 +75,7 @@ globalThis.qpyodideInstance = await import(
     );
 
     // Set document status to viable
-    qpyodideUpdateStatusHeader(
-      "🟢 Ready!"
-    );
+    qpyodideUpdateStatusHeader("🟢 Escape room listo");
 
     // Assign Pyodide into the global environment
     globalThis.mainPyodide = mainPyodide;

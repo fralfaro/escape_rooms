@@ -1,0 +1,35 @@
+---
+title: "Habitación 2: Números"
+appendix: true
+page-layout: full
+---
+
+Comienzas a entender la rutina. Respondes correctamente, se abre una puerta, y apenas cruzas la puerta, la habitación se cierra.  
+En la nueva habitación hay una nueva nota esperándote:
+
+<div class="alert alert-info">
+Python puede usarse como una calculadora muy potente.  
+¿Puedes calcular el siguiente número?
+
+$$
+\frac{1.23 + 2.34}{1 + 43/2} + 3 \times 2^{1.5}
+$$
+</div>
+::: {.callout-tip title="Operaciones matemáticas en Python" collapse="true"}
+Las operaciones matemáticas en Python se realizan con los operadores habituales:
+
+* `+` para la suma
+* `-` para la resta
+* `*` para la multiplicación
+* `/` para la división
+* `**` para la potencia
+:::
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+respuesta = None
+
+# Verifica la respuesta
+import verificar
+verificar.salon_2(respuesta)
+```

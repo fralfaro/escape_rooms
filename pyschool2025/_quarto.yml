@@ -1,7 +1,7 @@
+# Project Configuration
 project:
   type: book
-  output-dir: ../docs/pyschool2025  # para que lo deje en docs/pyschool2025
-
+  output-dir: "../docs"
   
 book:
   title: "🐍 PySchool"
@@ -12,31 +12,38 @@ book:
 
   chapters:
     - index.qmd
-
-    - part: 🎯 Talleres
+    - intro.qmd
+    - part: 🎯 Python Básico
       chapters:
-        - material/taller/intro.qmd
-        - material/taller/taller_1.qmd
-        - material/taller/taller_2.qmd
-
+        - taller1/taller1.qmd
+        - taller1/rooms/0.qmd
+        - taller1/rooms/1.qmd
+        - taller1/rooms/2.qmd
+        - taller1/rooms/3.qmd
+    - part: 🎯 Ciencia de datos
+      chapters:
+        - taller2/taller2.qmd
+        - taller2/rooms/0.qmd
+        - taller2/rooms/1.qmd
+        - taller2/rooms/2.qmd
+        - taller2/rooms/3.qmd
     - part: 📜 Anexos
       chapters:
-        - material/anexos/cierre_evento.qmd
-        - material/anexos/autoria.qmd
-
+        - anexos/cierre_evento.qmd
+        - anexos/autoria.qmd
 
 lang: es
 
 format:
   html:
-    theme: flatly
+    theme: sketchy
+    css: "style.css"
     number-sections: false
     toc: false
     page-layout: full
   epub:
     cover-image: images/cover.png
 
-
+# Extensions
 filters: 
   - pyodide
-

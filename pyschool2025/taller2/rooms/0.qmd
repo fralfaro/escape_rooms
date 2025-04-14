@@ -1,0 +1,33 @@
+---
+title: "Habitación 0: Inicio"
+appendix: true
+page-layout: full
+---
+
+Despiertas poco a poco en un cuarto oscuro.  
+Solo recuerdas que aceptaste un desafío, algo llamado PySchool.  
+Las murallas son de piedra, y no hay ventanas. Una débil luz emana de una antorcha colgada en la pared.
+En una de las murallas, hay una puerta y una consola electrónica emitiendo un parpadeo de luz.  
+Te acercas a la consola y observas que sobre la pantalla hay una nota:
+
+<div class="alert alert-info">
+**¡Bienvenido a PySchool!**  
+Cada habitación tiene un enigma, que deberás resolver con Python.  
+Puedes realizar tantos intentos como desees.  
+Cada habitación tiene algunas explicaciones y pistas.  
+¡Buena suerte, futuro pythonista!
+</div>
+
+::: {.callout-tip title="Pistas y  Explicaciones" collapse="true"}
+En este tipo de celdas expandibles, encontrarás algunas pistas, explicaciones y enlaces de interés.  
+La primera habitación es muy fácil. Sólo tienes que ejecutar la celda haciendo click en "Run Code".
+:::
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+respuesta = "PySchool2025"
+
+# Verifica la respuesta
+import verificar
+verificar.salon_0(respuesta)
+```

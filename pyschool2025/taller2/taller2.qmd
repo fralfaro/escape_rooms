@@ -1,0 +1,18 @@
+# Objetivos del capítulo
+
+- Explorar y analizar un conjunto de datos de Pokémon utilizando Python.
+- Aprender técnicas básicas de exploración y visualización de datos.
+- Comprender cómo aplicar análisis de datos para obtener información relevante.
+- Desarrollar habilidades prácticas para visualizar datos de manera efectiva.
+
+::: {style="display: flex; justify-content: center; margin: 2rem 0;"}
+
+<iframe 
+    src="https://pyschool-v1.streamlit.app/taller2?embed=true"
+    frameborder="0"
+    width="950"
+    height="650"
+    style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);"
+></iframe>
+
+:::

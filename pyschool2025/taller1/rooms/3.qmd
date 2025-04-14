@@ -1,0 +1,35 @@
+---
+title: "Habitación 3: Operaciones Matemáticas"
+appendix: true
+page-layout: full
+---
+
+Luego de cruzar la segunda puerta, llegas a una nueva habitación.  
+Esta vez es una sala más iluminada, con símbolos matemáticos pintados en las paredes.
+
+Al centro hay un pedestal con una pantalla. En ella aparece el siguiente mensaje:
+
+<div class="alert alert-info">
+¡Muy bien! Ahora deberás resolver un pequeño desafío matemático.  
+¿Cuál es el resultado de multiplicar 7 por 6?
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda que en Python puedes realizar multiplicaciones usando el símbolo `*`.
+Por ejemplo:
+
+```python
+resultado = 2 * 3
+```
+:::
+
+Escribe tu respuesta en la variable `respuesta` y luego ejecuta la celda.
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+respuesta = 7 * 6
+
+# Verifica la respuesta
+import verificar
+verificar.salon_3(respuesta)
+```

@@ -1,0 +1,35 @@
+---
+title: "Habitación 1: Hola Mundo"
+appendix: true
+page-layout: full
+---
+
+Al responder correctamente el enigma, la puerta se abre. Al cruzar la puerta, la puerta se cierra y 
+te encuentras en una nueva habitación, exactamente como la habitación anterior, con una nueva nota sobre la pantalla electrónica:
+
+<div class="alert alert-info">
+La primera tarea de todo pythonista es escribir "Hola Mundo".  
+Cambia el valor de la variable `respuesta` por `"Hola Mundo"` y ejecuta la celda.
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda que en Python, los strings (cadenas de texto) se escriben entre comillas dobles o simples.  
+Puedes escribir 
+```python 
+respuesta="Hola Mundo"
+```
+o
+```python 
+respuesta='Hola Mundo'
+```
+:::
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+respuesta = None
+print(respuesta)
+
+# Verifica la respuesta
+import verificar
+verificar.salon_1(respuesta)
+```
