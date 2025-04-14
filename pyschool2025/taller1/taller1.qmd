@@ -1,10 +1,12 @@
 # Objetivos del capítulo
 
-- Aprender los conceptos básicos de Python.
-- Familiarizarse con la sintaxis y funcionalidad de Python.
-- Resolver problemas prácticos y entretenidos.
-- Experimentar con el código directamente en el navegador utilizando `Quarto-Pyodide`.
+- Comprender los conceptos fundamentales de Python de manera simple y práctica.  
+- Aprender a escribir código limpio y correcto utilizando la sintaxis básica de Python.  
+- Resolver desafíos interactivos que combinan programación y lógica.  
+- Desarrollar habilidades a partir de problemas reales y entretenidos dentro de un Escape Room temático.  
+- Escribir y probar código directamente en el navegador utilizando `Quarto-Pyodide`, sin necesidad de instalar nada.
+
 
 <center>
-<a href="rooms/0.html" class="btn btn-warning btn-lg w-100"> Iniciar Escape Room</a>
+<a href="rooms/0.html" class="btn btn-warning btn-lg w-100">🚀 Iniciar Escape Room</a>
 </center>

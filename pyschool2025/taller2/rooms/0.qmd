@@ -1,33 +1,66 @@
 ---
 title: "Habitación 0: Inicio"
-appendix: true
-page-layout: full
 ---
 
-Despiertas poco a poco en un cuarto oscuro.  
-Solo recuerdas que aceptaste un desafío, algo llamado PySchool.  
-Las murallas son de piedra, y no hay ventanas. Una débil luz emana de una antorcha colgada en la pared.
-En una de las murallas, hay una puerta y una consola electrónica emitiendo un parpadeo de luz.  
-Te acercas a la consola y observas que sobre la pantalla hay una nota:
+Despiertas dentro de un laboratorio muy conocido...  
+¡Es el Laboratorio del Profesor Oak!  
+Sin embargo, algo no anda bien... Las puertas están bloqueadas y el sistema de datos está caído.
+
+Un mensaje aparece en la pantalla principal:
 
 <div class="alert alert-info">
-**¡Bienvenido a PySchool!**  
-Cada habitación tiene un enigma, que deberás resolver con Python.  
-Puedes realizar tantos intentos como desees.  
-Cada habitación tiene algunas explicaciones y pistas.  
-¡Buena suerte, futuro pythonista!
+Para restaurar el sistema y poder avanzar, debes cargar correctamente los datos de Pokémon y revisar los primeros registros.
 </div>
 
-::: {.callout-tip title="Pistas y  Explicaciones" collapse="true"}
-En este tipo de celdas expandibles, encontrarás algunas pistas, explicaciones y enlaces de interés.  
-La primera habitación es muy fácil. Sólo tienes que ejecutar la celda haciendo click en "Run Code".
+::: {.callout-tip title="¿Cómo se cargan datos en Python?" collapse="true"}
+En Ciencia de Datos usamos `pandas` para trabajar con archivos y tablas.
+
+Pasos típicos:
+
+1. Importar la librería:
+
+```python
+import pandas as pd
+```
+
+2. Leer un archivo `.csv`:
+
+```python
+pokemon_data = pd.read_csv('url_o_ruta_del_archivo')
+```
+
+3. Ver las primeras filas:
+
+```python
+pokemon_data.head()
+```
 :::
 
-```{pyodide-python}
-# Escribe tu respuesta aquí
-respuesta = "PySchool2025"
+---
 
-# Verifica la respuesta
+## Desafío de la Sala
+
+Completa las siguientes variables:
+
+- `url`: con la dirección del archivo de datos.  
+- `df`: con el resultado de leer los datos usando `pd.read_csv(url)`.  
+
+Luego muestra las primeras filas usando `.head()`.
+
+---
+
+```{pyodide-python}
+# Completa los valores correctos
+import pandas as pd
+pd.set_option('display.max_columns', None)
+
+url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
+df = pd.read_csv(url)
+
+# Mostrar las primeras filas
+df.head()
+
+# Verifica tu respuesta
 import verificar
-verificar.salon_0(respuesta)
+verificar.salon_00(url, df)
 ```

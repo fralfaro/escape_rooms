@@ -1,18 +1,13 @@
 # Objetivos del capítulo
 
-- Explorar y analizar un conjunto de datos de Pokémon utilizando Python.
-- Aprender técnicas básicas de exploración y visualización de datos.
-- Comprender cómo aplicar análisis de datos para obtener información relevante.
-- Desarrollar habilidades prácticas para visualizar datos de manera efectiva.
+- Introducir los conceptos esenciales de Python aplicados al análisis de datos.  
+- Aprender a trabajar con conjuntos de datos reales y entender su estructura.  
+- Desarrollar habilidades de exploración, visualización y análisis de información.  
+- Escribir y ejecutar código directamente en el navegador utilizando `Quarto-Pyodide`, sin necesidad de instalaciones adicionales.
 
-::: {style="display: flex; justify-content: center; margin: 2rem 0;"}
 
-<iframe 
-    src="https://pyschool-v1.streamlit.app/taller2?embed=true"
-    frameborder="0"
-    width="950"
-    height="650"
-    style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);"
-></iframe>
 
-:::
+<center>
+<a href="rooms/0.html" class="btn btn-warning btn-lg w-100">🚀 Iniciar Escape Room</a>
+</center>
+

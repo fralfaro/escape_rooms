@@ -28,9 +28,8 @@ book:
       chapters:
         - taller2/taller2.qmd
         - taller2/rooms/0.qmd
-        - taller2/rooms/1.qmd
-        - taller2/rooms/2.qmd
-        - taller2/rooms/3.qmd
+        - taller2/rooms/end.qmd
+
     - part: 📜 Anexos
       chapters:
         - anexos/cierre_evento.qmd

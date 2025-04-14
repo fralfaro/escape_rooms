@@ -1,11 +1,23 @@
-# Fin
+# Habitación Final
 
-El sol golpea tus ojos. Has logrado escapar la última habitación.  
-Una vibración emerge del suelo y ves como la pirámide se desintegra.  
-En unos segundos la imponente pirámide se ha convertido en un montón de rocas y polvo.  
-Jamás te creerán tu gran aventura, pero tú sabes que has superado el reto y el conocimiento de Python que desde hoy te acompaña.
+Una luz intensa llena la sala.  
+El sol golpea tus ojos mientras cruzas la última puerta.  
+
+Has logrado escapar de la pirámide.  
+Una vibración recorre el suelo... las piedras tiemblan...  
+Frente a ti, la gran pirámide que te atrapó comienza a desintegrarse,  
+como si todo hubiera sido un antiguo hechizo esperando ser roto por un verdadero aprendiz de Python.
+
+En segundos, solo quedan ruinas... y un recuerdo imborrable:
+
+> No fue solo un Escape Room... fue tu primer gran paso en el mundo de la programación.
+
+Sabes que lo que aprendiste aquí te acompañará en cada nuevo desafío.  
+Y aunque nadie crea tu historia... tú sabes la verdad:  
+Ahora eres parte de la leyenda de PySchool.
+
+---
 
 <center>
-<a href="../index.html" class="btn btn-info" w-100 h-100>Regresar al Inicio</a>
+<a href="../../taller2/taller2.html" class="btn btn-success" w-100 h-100>🔓 Continuar con el siguiente desafío</a>
 </center>
-
