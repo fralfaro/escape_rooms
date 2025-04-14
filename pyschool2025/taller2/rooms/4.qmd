@@ -1,0 +1,74 @@
+---
+title: "Habitación 4: Visualización de Combate Pokémon"
+---
+
+La sala está llena de pantallas mostrando batallas Pokémon.  
+
+El Profesor Oak te deja un nuevo mensaje:
+
+<div class="alert alert-info">
+"Antes de elegir al Pokémon más fuerte, un buen Científico de Datos debe visualizar los datos.  
+No siempre sumar estadísticas tiene sentido... ¡Primero observa, luego decide!"
+</div>
+
+---
+
+## ¿Qué haremos?
+
+1. Elegir dos estadísticas de combate (`col_x` y `col_y`) — por ejemplo `Attack` y `Defense`.  
+2. Crear un gráfico de dispersión para ver cómo se relacionan.  
+3. Crear una nueva columna llamada `suma` sumando esas dos estadísticas.  
+4. Mostrar los 5 mejores Pokémon con mayor `suma`.  
+5. Definir en `respuesta` el nombre del Pokémon con la mayor `suma`.
+
+---
+
+::: {.callout-tip title="Recuerda"}  
+El gráfico de dispersión nos permite observar:  
+
+- Si las estadísticas están relacionadas.  
+- Si sumar tiene sentido o si las variables son muy distintas.  
+
+Luego de observar, podemos ordenar la tabla y tomar una mejor decisión.  
+:::
+
+---
+
+## Tu Código
+
+```{pyodide-python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
+df = pd.read_csv(url)
+
+# Elegir columnas
+col_x = None  # Por ejemplo: 'Attack', 'Defense', 'HP', 'Speed'
+col_y = None  # Por ejemplo: 'Attack', 'Defense', 'HP', 'Speed'
+color = None  # Por ejemplo: 'orange', 'green', 'blue', 'red'
+
+# Crear columna suma
+df['suma'] = df[col_x] + df[col_y]
+
+# Gráfico de dispersión
+plt.figure(figsize=(10, 6))
+plt.scatter(df[col_x], df[col_y], color=color)
+plt.title(f'{col_x} vs {col_y} de Pokémon')
+plt.xlabel(col_x)
+plt.ylabel(col_y)
+plt.grid()
+plt.show()
+
+# Mostrar Top 5 Pokémon
+print("Top 5 Pokémon con mayor suma entre", col_x, "y", col_y)
+tabla_top5 = df[['Name', col_x, col_y, 'suma']].sort_values('suma', ascending=False).head(5)
+print(tabla_top5)
+
+# Definir respuesta
+respuesta = None  # Escribe aquí el nombre del Pokémon con mayor suma
+
+# Verifica tu respuesta
+import verificar
+verificar.salon_44(col_x, col_y, respuesta)
+```
