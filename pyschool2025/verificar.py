@@ -111,7 +111,7 @@ def salon_22(respuesta):
 def salon_33(respuesta_ataque, respuesta_defensa):
     if respuesta_ataque is None or respuesta_defensa is None:
         text("Debes definir las variables `respuesta_ataque` y `respuesta_defensa`.", "info")
-    elif respuesta_ataque == 'Dragon' and respuesta_defensa == 'Fairy':
+    elif respuesta_ataque == 'Dragon' and respuesta_defensa == 'Normal':
         hyperlink("¡Correcto! Has identificado correctamente las fortalezas y debilidades. Avanza a la siguiente sala.", "4.html", "success")
     else:
         text("Revisa bien los datos... ¿Estás seguro de haber calculado los promedios correctamente?", "warning")
