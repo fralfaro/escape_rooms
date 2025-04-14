@@ -1,0 +1,54 @@
+---
+title: "Habitación 4: Ciclos"
+---
+
+La puerta se cierra tras de ti... y aparece un nuevo mensaje:
+
+<div class="alert alert-info">
+Para resolver este desafío debes mostrar los números **pares** (divisibles por 2)  
+entre 1 y 20 (incluyéndolos).
+</div>
+
+::: {.callout-tip title="Recuerda" collapse="true"}
+
+En Python puedes recorrer números con:
+
+```python
+for numero in range(inicio, fin + 1):
+    if numero % multiplo == 0:
+        print(numero)
+```
+
+Los múltiplos de 2 son los números pares.
+
+:::
+
+---
+
+## Desafío de la Sala
+
+Completa las siguientes variables:
+
+- `inicio`: número inicial del ciclo  
+- `fin`: número final del ciclo  
+- `multiplo`: número por el cual deben ser divisibles  
+
+Luego escribe un ciclo `for` que muestre solo esos números.
+
+---
+
+```{pyodide-python}
+# Completa los valores correctos
+inicio = None
+fin = None
+multiplo = None
+
+# Escribe tu código aquí
+for numero in range(inicio, fin + 1):
+    if numero % multiplo == 0:
+        print(numero)
+
+# Verifica tu respuesta
+import verificar
+verificar.salon_4(inicio, fin, multiplo)
+```

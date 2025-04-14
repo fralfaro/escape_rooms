@@ -53,6 +53,15 @@ def salon_3(edad, color_llave):
     else:
         text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
 
+def salon_4(inicio, fin, multiplo):
+    if inicio is None or fin is None or multiplo is None:
+        text("Debes asignar valores a las variables `inicio`, `fin` y `multiplo`.", "info")
+    elif inicio == 1 and fin == 20 and multiplo == 2:
+        hyperlink("¡Correcto! Avanza a la siguiente sala", "end.html", "success")
+    else:
+        text("Revisa bien las instrucciones... Debes mostrar los números pares entre 1 y 20.", "warning")
+
+
 if __name__ == "__main__":
     salon_0("PySchool2025")
     salon_1(None)

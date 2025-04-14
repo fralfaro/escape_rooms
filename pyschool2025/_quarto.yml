@@ -20,6 +20,7 @@ book:
         - taller1/rooms/1.qmd
         - taller1/rooms/2.qmd
         - taller1/rooms/3.qmd
+        - taller1/rooms/4.qmd
     - part: 🎯 Ciencia de datos
       chapters:
         - taller2/taller2.qmd
