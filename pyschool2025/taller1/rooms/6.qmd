@@ -69,13 +69,18 @@ def calcular_senal(x):
     else:
         return "Sin señal"
 
-# Prueba tu función
-print(calcular_senal(3))   # Py
-print(calcular_senal(5))   # School
-print(calcular_senal(15))  # PySchool
-print(calcular_senal(7))   # Sin señal
+# Pruebas de los números secretos
+senal_3 = calcular_senal(3)
+senal_5 = calcular_senal(5)
+senal_15 = calcular_senal(15)
+senal_7 = calcular_senal(7)
+
+print(senal_3)
+print(senal_5)
+print(senal_15)
+print(senal_7)
 
 # Verifica tu respuesta
 import verificar
-verificar.salon_6()
+verificar.salon_6(senal_3, senal_5, senal_15, senal_7)
 ```

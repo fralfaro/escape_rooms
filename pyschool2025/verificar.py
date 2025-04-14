@@ -69,28 +69,13 @@ def salon_5(min_length, letra):
     else:
         text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
 
-
-
-
-
-def salon_6():
-    try:
-        pruebas = [
-            calcular_senal(3) == "Py",
-            calcular_senal(5) == "School",
-            calcular_senal(15) == "PySchool",
-            calcular_senal(7) == "Sin señal"
-        ]
-        
-        if all(pruebas):
-            hyperlink("¡Excelente! Has activado la máquina correctamente y la puerta se abre.", "end.html", "success")
-        else:
-            text("Revisa tu función... La máquina no está respondiendo correctamente a todos los números secretos.", "warning")
-    
-    except Exception as e:
-        text("Revisa tu código... Parece que tu función no está bien definida.", "warning")
-
-
+def salon_6(senal_3, senal_5, senal_15, senal_7):
+    if senal_3 is None or senal_5 is None or senal_15 is None or senal_7 is None:
+        text("Debes asignar valores a las variables `senal_3`, `senal_5`, `senal_15` y `senal_7`.", "info")
+    elif senal_3 == "Py" and senal_5 == "School" and senal_15 == "PySchool" and senal_7 == "Sin señal":
+        hyperlink("¡Excelente! Has activado la máquina correctamente y la puerta se abre.", "end.html", "success")
+    else:
+        text("La puerta sigue cerrada... Revisa las instrucciones y verifica las respuestas esperadas.", "warning")
 
 if __name__ == "__main__":
     salon_0("PySchool2025")
