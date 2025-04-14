@@ -88,17 +88,17 @@ def salon_00(url, df):
         text("Revisa bien las instrucciones... ¿Estás seguro que cargaste los datos correctamente?", "warning")
 
 
-def salon_11(info, desc):
+def salon_11(desc):
     import pandas as pd
 
-    if info is None or desc is None:
-        text("Debes asignar valores a las variables `info` y `desc` ejecutando `df.info()` y `df.describe()`.", "info")
+    if desc is None:
+        text("Debes asignar valor a la variable `desc` ejecutando `df.describe()`.", "info")
     
     elif not isinstance(desc, pd.DataFrame):
         text("La variable `desc` debe ser el resultado de `df.describe()`.", "warning")
     
     else:
-        hyperlink("¡Perfecto! Has explorado correctamente el dataset. Avanza a la siguiente sala.", "end.html", "success")
+        hyperlink("¡Perfecto! Has explorado correctamente el dataset. Avanza a la siguiente sala.", "2.html", "success")
 
 if __name__ == "__main__":
     salon_0("PySchool2025")
