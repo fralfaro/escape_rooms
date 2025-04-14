@@ -108,6 +108,15 @@ def salon_22(respuesta):
     else:
         text("La puerta sigue cerrada... Revisa bien los datos y cuenta nuevamente los tipos de Pokémon.", "warning")
 
+def salon_33(respuesta_ataque, respuesta_defensa):
+    if respuesta_ataque is None or respuesta_defensa is None:
+        text("Debes definir las variables `respuesta_ataque` y `respuesta_defensa`.", "info")
+    elif respuesta_ataque == 'Dragon' and respuesta_defensa == 'Fairy':
+        hyperlink("¡Correcto! Has identificado correctamente las fortalezas y debilidades. Avanza a la siguiente sala.", "4.html", "success")
+    else:
+        text("Revisa bien los datos... ¿Estás seguro de haber calculado los promedios correctamente?", "warning")
+
+
 if __name__ == "__main__":
     salon_0("PySchool2025")
     salon_1(None)

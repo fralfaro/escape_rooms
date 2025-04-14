@@ -1,35 +1,72 @@
 ---
-title: "Habitación 3: Operaciones Matemáticas"
-appendix: true
-page-layout: full
+title: "Habitación 3: Estadísticas de Combate"
 ---
 
-Luego de cruzar la segunda puerta, llegas a una nueva habitación.  
-Esta vez es una sala más iluminada, con símbolos matemáticos pintados en las paredes.
-
-Al centro hay un pedestal con una pantalla. En ella aparece el siguiente mensaje:
+En esta sala aparece una gran pantalla que dice:
 
 <div class="alert alert-info">
-¡Muy bien! Ahora deberás resolver un pequeño desafío matemático.  
-¿Cuál es el resultado de multiplicar 7 por 6?
+"Cada tipo de Pokémon tiene fortalezas y debilidades.  
+Solo si logras descubrir qué tipo tiene mayor ataque promedio y cuál tiene menor defensa promedio...  
+podrás seguir avanzando."
 </div>
 
-::: {.callout-tip title="Pista" collapse="true"}
-Recuerda que en Python puedes realizar multiplicaciones usando el símbolo `*`.
+::: {.callout-tip title="Agrupar y Calcular Promedios" collapse="true"}
+
+Con `groupby()` y `mean()` podemos agrupar y calcular promedios de estadísticas.
+
 Por ejemplo:
 
 ```python
-resultado = 2 * 3
+promedio = df.groupby('Type 1')[['HP', 'Attack', 'Defense', 'Speed']].mean()
 ```
+
+Luego puedes usar:
+
+- `.idxmax()` → Para saber qué tipo tiene el mayor promedio en una columna.  
+- `.idxmin()` → Para saber qué tipo tiene el menor promedio en una columna.  
+
+Por ejemplo:
+
+```python
+tipo_mas_ataque = promedio['Attack'].idxmax()
+tipo_menos_defensa = promedio['Defense'].idxmin()
+```
+
 :::
 
-Escribe tu respuesta en la variable `respuesta` y luego ejecuta la celda.
+---
+
+## Desafío de la Sala
+
+1. Agrupa los Pokémon por `Type 1` y calcula el promedio de `HP`, `Attack`, `Defense`, `Speed`.  
+2. Guarda ese resultado en `promedio`.  
+3. Define la variable `respuesta_ataque` con el tipo de Pokémon que tiene mayor promedio de ataque.  
+4. Define la variable `respuesta_defensa` con el tipo de Pokémon que tiene menor promedio de defensa.  
+5. Muestra el resultado.
+
+---
 
 ```{pyodide-python}
-# Escribe tu respuesta aquí
-respuesta = 7 * 6
+# Cargar datos
+import pandas as pd
 
-# Verifica la respuesta
+url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
+df = pd.read_csv(url)
+
+# Agrupar y calcular promedio
+promedio = df.groupby('Type 1')[['HP', 'Attack', 'Defense', 'Speed']].mean()
+
+# Definir respuestas
+respuesta_ataque = None  # Tipo con mayor ataque promedio
+respuesta_defensa = None  # Tipo con menor defensa promedio
+
+print("Promedio por tipo:")
+print(promedio)
+
+print("Tipo con mayor ataque promedio:", respuesta_ataque)
+print("Tipo con menor defensa promedio:", respuesta_defensa)
+
+# Verifica tu respuesta
 import verificar
-verificar.salon_3(respuesta)
+verificar.salon_33(respuesta_ataque, respuesta_defensa)
 ```

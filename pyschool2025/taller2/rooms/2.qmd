@@ -62,5 +62,5 @@ respuesta = None  # ¿Cuántos tipos hay?
 
 # Verifica tu respuesta
 import verificar
-verificar.salon_22(conteo)
+verificar.salon_22(respuesta)
 ```
