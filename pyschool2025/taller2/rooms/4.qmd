@@ -1,5 +1,5 @@
 ---
-title: "Habitación 4: Visualización de Combate Pokémon"
+title: "Habitación 4: Visualización de Combate"
 ---
 
 La sala está llena de pantallas mostrando batallas Pokémon.  

@@ -1,7 +1,7 @@
 # PySchool
 
 ![example workflow](https://github.com/fralfaro/pyschool/actions/workflows/documentation.yml/badge.svg)
-[![documentation](https://img.shields.io/badge/📖-docs-brightgreen)](https://falfaro.xyz/pyschool/)
+[![documentation](https://img.shields.io/badge/📖-docs-brightgreen)](https://falfaro.xyz/pyschool/pyschool2025/)
 
 <img src="images/cover.png" width="300" align="center">
 

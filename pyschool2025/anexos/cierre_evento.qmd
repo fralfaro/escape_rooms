@@ -6,9 +6,9 @@ Nos encantaría saber que te ha parecido PySchool, y que podemos mejorar.
 Agradeceríamos contestaras la siguiente encuesta: 
 
 <center>
-<a href="https://forms.gle/MjQFihE1RiKzVgid9" target="_blank" rel="noopener noreferrer">
-<img src="../../images/qr_retroalimentacion.png" width="400">
-<p>https://forms.gle/MjQFihE1RiKzVgid9</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSchtlAH0Fx43sV8WYXBAYusE5mYWHQk5MjFC5v7xNKkR_oLqw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+<img src="../images/qr_pc.png" width="400">
+<p>Link de la encuesta</p>
 </a>
 </center>
 
