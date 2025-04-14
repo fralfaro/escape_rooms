@@ -1,0 +1,77 @@
+---
+title: "Habitación 5: Listas"
+---
+
+Una nueva nota aparece frente a ti:
+
+<div class="alert alert-info">
+En esta sala debes trabajar con listas de palabras y filtrar las que cumplen ciertas condiciones.
+</div>
+
+::: {.callout-tip title="¿Qué es una lista en Python?" collapse="true"}
+
+Una lista es una colección de elementos.  
+
+Se define usando `[]` y los elementos van separados por comas.  
+
+Por ejemplo:
+
+```python
+frutas = ["manzana", "pera", "platano"]
+```
+
+Podemos:
+
+- Consultar el largo de la lista con `len(frutas)`  
+- Acceder a un elemento por su posición: `frutas[0]` → "manzana"  
+- Recorrer la lista con un ciclo `for`:  
+
+```python
+for fruta in frutas:
+    print(fruta)
+```
+
+Si queremos filtrar elementos, combinamos condiciones dentro del ciclo:
+
+```python
+for fruta in frutas:
+    if "a" in fruta:
+        print(fruta)
+```
+
+:::
+
+---
+
+## Desafío de la Sala
+
+Debes mostrar solo las palabras que:
+
+1. Tienen más de un número mínimo de letras (`min_length`).  
+2. Contienen una letra específica (`letra`).  
+
+Lista de palabras:
+
+```python
+palabras = ["python", "code", "programacion", "loop", "variable", "data", "listado"]
+```
+
+---
+
+## Escribe tu código:
+
+```{pyodide-python}
+# Define los parámetros
+min_length = None  # ¿Cuántas letras debe tener como mínimo?
+letra = None       # ¿Qué letra debe tener la palabra?
+
+palabras = ["python", "code", "programacion", "loop", "variable", "data", "listado"]
+
+for palabra in palabras:
+    if len(palabra) > min_length and letra in palabra:
+        print(palabra)
+
+# Verifica tu respuesta
+import verificar
+verificar.salon_5(min_length, letra)
+```

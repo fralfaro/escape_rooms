@@ -57,9 +57,18 @@ def salon_4(inicio, fin, multiplo):
     if inicio is None or fin is None or multiplo is None:
         text("Debes asignar valores a las variables `inicio`, `fin` y `multiplo`.", "info")
     elif inicio == 1 and fin == 20 and multiplo == 2:
-        hyperlink("¡Correcto! Avanza a la siguiente sala", "end.html", "success")
+        hyperlink("¡Correcto! Avanza a la siguiente sala", "5.html", "success")
     else:
         text("Revisa bien las instrucciones... Debes mostrar los números pares entre 1 y 20.", "warning")
+
+def salon_5(min_length, letra):
+    if min_length is None or letra is None:
+        text("Debes asignar valores a las variables `min_length` y `letra`.", "info")
+    elif min_length == 5 and letra == "a":
+        hyperlink("¡Correcto! Avanza a la siguiente sala", "end.html", "success")
+    else:
+        text("Revisa bien las instrucciones... Debes mostrar las palabras con más de 5 letras y que contengan la letra 'a'.", "warning")
+
 
 
 if __name__ == "__main__":
