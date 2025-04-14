@@ -46,9 +46,9 @@ df = pd.DataFrame(data)
 
 **Taller Estudiantes**:
 
- -  [Primeros Pasos](./material/talleres/intro.html)
- -  [Matemáticas Divertidas](./material/talleres/taller_1.html)
- -  [Más alla del Infinito](./material/talleres/taller_2.html)
+ -  [Primeros Pasos](./intro.html)
+ -  [Python Básico](./taller1/taller1.html)
+ -  [Ciencia de datos](.//taller2/taller2.html)
 
 
 > 💡 **Consejo**: Para optimizar la experiencia en los talleres, se recomienda que cada estudiante disponga de su propio notebook, o que la actividad se realice en un entorno adecuado, como un laboratorio de computación.
