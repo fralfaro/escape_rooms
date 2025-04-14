@@ -100,18 +100,13 @@ def salon_11(desc):
     else:
         hyperlink("¡Perfecto! Has explorado correctamente el dataset. Avanza a la siguiente sala.", "2.html", "success")
 
-def salon_22(conteo):
-    import pandas as pd
-
-    if conteo is None:
-        text("Debes asignar la variable `conteo` usando `df['Type 1'].value_counts()`.", "info")
-    elif not isinstance(conteo, pd.Series):
-        text("La variable `conteo` debe ser el resultado de `value_counts()`.", "warning")
-    elif conteo.index.name != 'Type 1':
-        text("Revisa bien... ¿Estás contando los Pokémon por su tipo (`Type 1`)?", "warning")
+def salon_22(respuesta):
+    if respuesta is None:
+        text("Debes asignar el número total de tipos de Pokémon a la variable `respuesta`.", "info")
+    elif respuesta == 18:
+        hyperlink("¡Correcto! Existen 18 tipos de Pokémon. Avanza a la siguiente sala.", "3.html", "success")
     else:
-        hyperlink("¡Perfecto! Has respondido correctamente. Avanza a la siguiente sala.", "end.html", "success")
-
+        text("La puerta sigue cerrada... Revisa bien los datos y cuenta nuevamente los tipos de Pokémon.", "warning")
 
 if __name__ == "__main__":
     salon_0("PySchool2025")

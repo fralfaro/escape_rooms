@@ -57,7 +57,10 @@ plt.ylabel('Cantidad')
 plt.xticks(rotation=45)
 plt.show()
 
+# Número total de tipos de Pokémon
+respuesta = None  # ¿Cuántos tipos hay?
+
 # Verifica tu respuesta
 import verificar
-verificar.salon_2(conteo)
+verificar.salon_22(conteo)
 ```
