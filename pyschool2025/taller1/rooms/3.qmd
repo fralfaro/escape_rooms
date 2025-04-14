@@ -1,35 +1,53 @@
 ---
-title: "Habitación 3: Operaciones Matemáticas"
-appendix: true
-page-layout: full
+title: "Habitación 3: Condicionales"
 ---
 
-Luego de cruzar la segunda puerta, llegas a una nueva habitación.  
-Esta vez es una sala más iluminada, con símbolos matemáticos pintados en las paredes.
-
-Al centro hay un pedestal con una pantalla. En ella aparece el siguiente mensaje:
+La puerta se cierra tras de ti...  
+En la pared aparece un nuevo mensaje:
 
 <div class="alert alert-info">
-¡Muy bien! Ahora deberás resolver un pequeño desafío matemático.  
-¿Cuál es el resultado de multiplicar 7 por 6?
+En Python podemos tomar decisiones usando condicionales (`if`).  
+Solo podrás salir de esta sala si cumples con las condiciones correctas.
 </div>
 
-::: {.callout-tip title="Pista" collapse="true"}
-Recuerda que en Python puedes realizar multiplicaciones usando el símbolo `*`.
-Por ejemplo:
+::: {.callout-tip title="Condicionales en Python" collapse="true"}
+La estructura básica es:
 
 ```python
-resultado = 2 * 3
+if condicion:
+    # hacer algo
+else:
+    # hacer otra cosa
 ```
+
+Los operadores más usados son:
+
+- `==` igual  
+- `!=` distinto  
+- `>=` mayor o igual  
+- `<=` menor o igual  
+- `and` ambas condiciones deben cumplirse  
+- `or` al menos una debe cumplirse  
 :::
 
-Escribe tu respuesta en la variable `respuesta` y luego ejecuta la celda.
+Solo podrás salir si:
+
+> Tienes al menos 18 años `y` tu llave es de color `dorado`.
+
+Escribe tu código y muestra el mensaje correspondiente.
+
 
 ```{pyodide-python}
-# Escribe tu respuesta aquí
-respuesta = 7 * 6
+# Completa tu código aquí
+edad = None
+color_llave = None
 
-# Verifica la respuesta
+if edad >= 18 and color_llave == "dorado":
+    print("La puerta se abre 🚪")
+else:
+    print("La puerta sigue cerrada ❌")
+
+# Verifica tu respuesta
 import verificar
-verificar.salon_3(respuesta)
+verificar.salon_3(edad, color_llave)
 ```

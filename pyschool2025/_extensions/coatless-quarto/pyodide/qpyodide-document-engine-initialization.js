@@ -63,7 +63,7 @@ globalThis.qpyodideInstance = await import(
     // Load the verification file
     await mainPyodide.runPythonAsync(`
     import urllib.request
-    url = "https://raw.githubusercontent.com/fralfaro/pyschool/blob/main/pyschool2025/verificar.py"
+    url = "https://raw.githubusercontent.com/fralfaro/pyschool/refs/heads/main/pyschool2025/verificar.py"
     urllib.request.urlretrieve(url, "verificar.py");
     `);
     qpyodideUpdateStatusHeader("Cargando las habitaciones...");

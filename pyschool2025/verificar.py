@@ -45,13 +45,13 @@ def salon_2(answer):
     else:
         text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
-def salon_3(answer):
-    if answer == 42:
-        hyperlink("¡Correcto! Avanza a la siguiente página", "end.html", "success")
-    elif answer is None:
-        text("Indica la solución asignando algún valor a la variable `respuesta`.", "info")
+def salon_3(edad, color_llave):
+    if edad is None or color_llave is None:
+        text("Debes asignar valores a las variables `edad` y `color_llave`.", "info")
+    elif edad >= 18 and color_llave == "dorado":
+        hyperlink("¡Correcto! Avanza a la siguiente sala", "4.html", "success")
     else:
-        text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
+        text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
 
 if __name__ == "__main__":
     salon_0("PySchool2025")
