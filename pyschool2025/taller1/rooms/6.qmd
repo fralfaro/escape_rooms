@@ -1,0 +1,81 @@
+---
+title: "Habitación 6: Funciones"
+---
+
+Has llegado a la última sala...  
+El mensaje en la pared dice:
+
+<div class="alert alert-info">
+En Python usamos las funciones para organizar mejor el código.  
+Una función recibe datos de entrada y devuelve un resultado.
+</div>
+
+::: {.callout-tip title="¿Cómo se escribe una función?" collapse="true"}
+
+Una función se define así:
+
+```python
+def nombre_funcion(parametros):
+    # instrucciones
+    return resultado
+```
+
+Por ejemplo:
+
+```python
+def saludar(nombre):
+    return f"Hola {nombre}"
+```
+
+Y se usa así:
+
+```python
+print(saludar("Francisco"))
+```
+:::
+
+---
+
+## Desafío de la Sala
+
+La puerta final solo se abrirá si creas una función llamada `calcular_senal` que:
+
+1. Reciba un número `x`.  
+2. Si `x` es divisible por 3 → devuelve `"Py"`.  
+3. Si `x` es divisible por 5 → devuelve `"School"`.  
+4. Si es divisible por ambos → devuelve `"PySchool"`.  
+5. Si no cumple ninguna condición → devuelve `"Sin señal"`.
+
+---
+
+Completa el siguiente código:
+
+```{pyodide-python}
+# Escribe tu función aquí
+def calcular_senal(x):
+    # Si x es divisible por 3 y 5 al mismo tiempo
+    if x % 3 == 0 and x % 5 == 0:  # Completa la condición
+        return "PySchool"
+    
+    # Si x es divisible solo por 3
+    elif None:  # Completa la condición
+        return "Py"
+    
+    # Si x es divisible solo por 5
+    elif None:  # Completa la condición
+        return "School"
+    
+    # Si no cumple ninguna condición
+    else:
+        return "Sin señal"
+
+# Prueba tu función
+print(calcular_senal(3))   # Py
+print(calcular_senal(5))   # School
+print(calcular_senal(15))  # PySchool
+print(calcular_senal(7))   # Sin señal
+
+# Verifica tu respuesta
+import verificar
+verificar.salon_6()
+```

@@ -45,10 +45,11 @@ for fruta in frutas:
 
 ## Desafío de la Sala
 
-Debes mostrar solo las palabras que:
-
-1. Tienen más de un número mínimo de letras (`min_length`).  
-2. Contienen una letra específica (`letra`).  
+Para avanzar, debes encontrar las palabras mágicas ocultas.  
+Estas palabras cumplen dos condiciones muy especiales:
+  
+1. Deben tener más letras que el número de esta habitación.  
+2. Deben contener la segunda vocal de la palabra `"lista"`.
 
 Lista de palabras:
 

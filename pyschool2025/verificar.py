@@ -59,15 +59,50 @@ def salon_4(inicio, fin, multiplo):
     elif inicio == 1 and fin == 20 and multiplo == 2:
         hyperlink("¡Correcto! Avanza a la siguiente sala", "5.html", "success")
     else:
-        text("Revisa bien las instrucciones... Debes mostrar los números pares entre 1 y 20.", "warning")
+        text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
 
 def salon_5(min_length, letra):
     if min_length is None or letra is None:
         text("Debes asignar valores a las variables `min_length` y `letra`.", "info")
     elif min_length == 5 and letra == "a":
-        hyperlink("¡Correcto! Avanza a la siguiente sala", "end.html", "success")
+        hyperlink("¡Correcto! Avanza a la siguiente sala", "6.html", "success")
     else:
-        text("Revisa bien las instrucciones... Debes mostrar las palabras con más de 5 letras y que contengan la letra 'a'.", "warning")
+        text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
+
+
+
+
+
+def salon_6():
+    # Función que retorna un mensaje según las condiciones del número x
+    def calcular_senal(x):
+        # Si x es divisible por 3 y 5 al mismo tiempo
+        if x % 3 == 0 and x % 5 == 0:
+            return "PySchool"
+
+        # Si x es divisible solo por 3
+        elif x % 3 == 0:
+            return "Py"
+
+        # Si x es divisible solo por 5
+        elif x % 5 == 0:
+            return "School"
+
+        # Si no cumple ninguna condición
+        else:
+            return "Sin señal"
+
+    pruebas = [
+        calcular_senal(3) == "Py",
+        calcular_senal(5) == "School",
+        calcular_senal(15) == "PySchool",
+        calcular_senal(7) == "Sin señal"
+    ]
+    
+    if all(pruebas):
+        hyperlink("¡Excelente! Has completado todas las salas y logras salir victorioso del Escape Room PySchool.", "end.html", "success")
+    else:
+        text("Revisa tu función... Algunos casos no están devolviendo lo correcto.", "warning")
 
 
 
