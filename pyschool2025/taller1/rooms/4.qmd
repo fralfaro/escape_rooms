@@ -1,5 +1,5 @@
 ---
-title: "Habitación 4: Ciclos"
+title: "Habitación 4"
 ---
 
 <center>

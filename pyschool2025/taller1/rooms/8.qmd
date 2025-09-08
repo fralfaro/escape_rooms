@@ -1,6 +1,6 @@
 
 ---
-title: "Habitación 8: Funciones"
+title: "Habitación 8"
 ---
 
 <center>

@@ -1,5 +1,5 @@
 ---
-title: "Habitación 2: Números"
+title: "Habitación 2"
 ---
 
 
@@ -45,8 +45,6 @@ c = 0
 d = 0
 e = 0
 f = 0
-g = 0
-h = 0
 
 # Fórmula
 respuesta = (a + b) / (1 + (c / 2)) + (d * (e ** f))

@@ -1,5 +1,5 @@
 ---
-title: "Habitación 0: Inicio"
+title: "Habitación 0"
 ---
 
 <h2 class="text-center">

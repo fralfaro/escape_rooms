@@ -1,5 +1,5 @@
 ---
-title: "Habitación 7: Funciones"
+title: "Habitación 7"
 ---
 
 <center>
@@ -61,9 +61,9 @@ diccionario = {
 
 ```{pyodide-python}
 # Escribe tu respuesta aquí
-
 respuesta = None
 print(respuesta)
+
 # Verifica la respuesta
 import verificar
 verificar.salon_7(respuesta)

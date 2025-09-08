@@ -1,5 +1,5 @@
 ---
-title: "Habitación 3: Listas"
+title: "Habitación 3"
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Habitación 6: Funciones"
+title: "Habitación 6"
 ---
 
 <center>
