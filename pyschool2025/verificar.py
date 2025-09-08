@@ -86,13 +86,16 @@ def salon_5(autorizar_acceso):
     else:
         text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
-def salon_6(senal_3, senal_5, senal_15, senal_7):
-    if senal_3 is None or senal_5 is None or senal_15 is None or senal_7 is None:
-        text("Debes asignar valores a las variables `senal_3`, `senal_5`, `senal_15` y `senal_7`.", "info")
-    elif senal_3 == "Py" and senal_5 == "School" and senal_15 == "PySchool" and senal_7 == "Sin señal":
-        hyperlink("¡Excelente! Has activado la máquina correctamente y la puerta se abre.", "end.html", "success")
+def salon_6(respuesta):
+    suma = sum(range(1,1001))
+    if respuesta == None:
+        text("Intenta cambiar el valor de la variable `respuesta`.", "info")
+    elif respuesta == suma:
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "sala_07.html", "success")
     else:
-        text("La puerta sigue cerrada... Revisa las instrucciones y verifica las respuestas esperadas.", "warning")
+        text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
+
+
 
 
 def salon_00(url, df):

@@ -2,85 +2,42 @@
 title: "Habitación 6: Funciones"
 ---
 
-Has llegado a la última sala...  
-El mensaje en la pared dice:
+<center>
+<img src="./img/sala_05.png" width="650">
+</center>
 
-<div class="alert alert-info">
-En Python usamos las funciones para organizar mejor el código.  
-Una función recibe datos de entrada y devuelve un resultado.
+<br/>
+
+Frente a ti, una compuerta metálica  de alta seguridad se mantiene cerrada 🔒. En su pantalla, un mensaje parpadea
+sin cesar:
+
+<div class=" text-center">
+🧮 *“Ingresa la suma correcta de la secuencia del 1 al 1000 para desbloquear el sistema.”*
 </div>
 
-::: {.callout-tip title="¿Cómo se escribe una función?" collapse="true"}
+<div class="alert alert-info">
+Asigna los valores correspondientes a las variables `a` y `b`.
+</div>
 
-Una función se define así:
-
-```python
-def nombre_funcion(parametros):
-    # instrucciones
-    return resultado
-```
-
-Por ejemplo:
-
-```python
-def saludar(nombre):
-    return f"Hola {nombre}"
-```
-
-Y se usa así:
-
-```python
-print(saludar("Francisco"))
-```
+::: {.callout-tip title="Calcular promedio con funciones de python" collapse="true"}
+* `range(a,b)` crea un rango numérico desde `a` hasta el valor anterior de `b`. Por ejemplo `range(5,10)` crea rango del 5 al 9.
+* `for numero in range(a,b)` es un ciclo que repite todos los valores dado por la función `range(a,b)`.
 :::
 
----
-
-## Desafío de la Sala
-
-La puerta final solo se abrirá si creas una función llamada `calcular_senal` que:
-
-1. Reciba un número `x`.  
-2. Si `x` es divisible por 3 → devuelve `"Py"`.  
-3. Si `x` es divisible por 5 → devuelve `"School"`.  
-4. Si es divisible por ambos → devuelve `"PySchool"`.  
-5. Si no cumple ninguna condición → devuelve `"Sin señal"`.
-
----
-
-Completa el siguiente código:
-
 ```{pyodide-python}
-# Escribe tu función aquí
-def calcular_senal(x):
-    # Si x es divisible por 3 y 5 al mismo tiempo
-    if x % 3 == 0 and x % 5 == 0:  # Completa la condición
-        return "PySchool"
-    
-    # Si x es divisible solo por 3
-    elif None:  # Completa la condición
-        return "Py"
-    
-    # Si x es divisible solo por 5
-    elif None:  # Completa la condición
-        return "School"
-    
-    # Si no cumple ninguna condición
-    else:
-        return "Sin señal"
+# Escribe tu respuesta aquí
 
-# Pruebas de los números secretos
-senal_3 = calcular_senal(3)
-senal_5 = calcular_senal(5)
-senal_15 = calcular_senal(15)
-senal_7 = calcular_senal(7)
+a=0     # indica valor inicial del rango
+b=1     # indica que su valor anterior es el final del rango
+suma = 0
 
-print(senal_3)
-print(senal_5)
-print(senal_15)
-print(senal_7)
+for numero in range(a,b): # variable numero repite el valor actual de range(a,b)
+    suma = numero + suma # acumula los valores de los números
 
-# Verifica tu respuesta
+respuesta = suma
+print(respuesta)
+
+# Verifica la respuesta
 import verificar
-verificar.salon_6(senal_3, senal_5, senal_15, senal_7)
+verificar.salon_6(respuesta)
 ```

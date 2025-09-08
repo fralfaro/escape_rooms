@@ -52,6 +52,6 @@ def autorizar_acceso(acceso, resistencia):
 
 # Verifica la respuesta
 import verificar
-verificar.salon_5(respuesta)
+verificar.salon_5(autorizar_acceso)
 ```
 
