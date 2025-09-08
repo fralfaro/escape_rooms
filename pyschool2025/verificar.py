@@ -1,4 +1,7 @@
 # types: warning, danger, success, info, primary
+
+import statistics
+
 ########################################################
 # UTILIDADES
 ########################################################
@@ -44,13 +47,14 @@ def salon_2(answer):
     else:
         text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
-def salon_3(edad, color_llave):
-    if edad is None or color_llave is None:
-        text("Debes asignar valores a las variables `edad` y `color_llave`.", "info")
-    elif edad >= 18 and color_llave == "dorado":
-        hyperlink("¡Correcto! Avanza a la siguiente sala", "4.html", "success")
+def salon_3(respuesta):
+    mean = statistics.mean([19.5, 22.3, 12, 10.01, 32, 29.99, 20.89])
+    if respuesta == None:
+        text("Intenta cambiar el valor de la variable `respuesta`.", "info")
+    elif respuesta == mean:
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "sala_05.html", "success")
     else:
-        text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
+        text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
 def salon_4(inicio, fin, multiplo):
     if inicio is None or fin is None or multiplo is None:

@@ -1,53 +1,48 @@
 ---
-title: "Habitación 3: Condicionales"
+title: "Habitación 3: Listas"
 ---
 
-La puerta se cierra tras de ti...  
-En la pared aparece un nuevo mensaje:
+
+<center>
+<img src="./img/sala_04.png" width="650">
+</center>
+
+<br/>
+
+¡El sistema de la estación se está descontrolando!  
+Las lecturas de temperatura muestran valores completamente inconsistentes 🧊🔥.  
+
+⚙️ Debes ajustar el sistema de climatización interna para evitar golpes térmicos y estabilizar el ambiente.  
+
+🖥️ Para lograrlo, calcula el **valor promedio** de las siguientes mediciones registradas por los sensores:
+
+$$
+19.5,\; 22.3,\; 12,\; 10.01,\; 32,\; 29.99,\; 20.89
+$$
 
 <div class="alert alert-info">
-En Python podemos tomar decisiones usando condicionales (`if`).  
-Solo podrás salir de esta sala si cumples con las condiciones correctas.
+**Instrucción:**  
+Agrega los números en la variable `numeros`, separados por comas `,`.  
+Recuerda que:  
+- Una **lista** en Python se define con corchetes `[]`.  
+- Los números decimales usan punto `.` en lugar de coma `,`.
 </div>
 
-::: {.callout-tip title="Condicionales en Python" collapse="true"}
-La estructura básica es:
-
+::: {.callout-tip title="Pista" collapse="true"}
+Ejemplo de lista en Python:
 ```python
-if condicion:
-    # hacer algo
-else:
-    # hacer otra cosa
-```
+numeros = [1.2, 2, 3.5, 4]
+````
 
-Los operadores más usados son:
-
-- `==` igual  
-- `!=` distinto  
-- `>=` mayor o igual  
-- `<=` menor o igual  
-- `and` ambas condiciones deben cumplirse  
-- `or` al menos una debe cumplirse  
 :::
 
-Solo podrás salir si:
-
-> Tienes al menos 18 años `y` tu llave es de color `dorado`.
-
-Escribe tu código y muestra el mensaje correspondiente.
-
-
 ```{pyodide-python}
-# Completa tu código aquí
-edad = None
-color_llave = None
+# Escribe tu respuesta aquí
+numeros = []
+respuesta = sum(numeros) / len(numeros)
+print(respuesta)
 
-if edad >= 18 and color_llave == "dorado":
-    print("La puerta se abre 🚪")
-else:
-    print("La puerta sigue cerrada ❌")
-
-# Verifica tu respuesta
+# Verifica la respuesta
 import verificar
-verificar.salon_3(edad, color_llave)
+verificar.salon_3(respuesta)
 ```
