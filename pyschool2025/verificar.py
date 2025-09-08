@@ -24,6 +24,25 @@ def autorizar_acceso(acceso, resistencia):
     else:
         return False
 
+def es_primo(numero):
+
+    if numero <= 3: return True
+    else:
+        for i in range(2, numero - 1):
+            if numero % i == 0: return False
+        return True
+
+def suma_numeros_primos(codigo_secreto):
+    suma = 0
+    numero = 2
+    contador = 0
+    for _ in range(1, 1000):
+        if es_primo(numero):
+            suma += numero
+            contador += 1
+        numero += 1
+        if contador == codigo_secreto: break
+    return suma
 
 ########################################################
 # SALONES
@@ -91,10 +110,29 @@ def salon_6(respuesta):
     if respuesta == None:
         text("Intenta cambiar el valor de la variable `respuesta`.", "info")
     elif respuesta == suma:
-        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "sala_07.html", "success")
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "7.html", "success")
     else:
         text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
+def salon_7(respuesta):
+    diccionario = {'PS004': 80, 'PS014': 120, 'PS104': 50}
+
+    if respuesta == None:
+        text("Intenta cambiar el valor de la variable `respuesta`.", "info")
+    elif respuesta == diccionario:
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "8.html", "success")
+    else:
+        text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
+
+def salon_8(respuesta):
+    codigo_salida = 963
+
+    if respuesta == None:
+        text("Intenta cambiar el valor de la variable `respuesta`.", "info")
+    elif respuesta == codigo_salida:
+        hyperlink("¡Correcto! Haz click aquí para despegar de vuelta a la Tierra", "end.html", "success")
+    else:
+        text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
 
 

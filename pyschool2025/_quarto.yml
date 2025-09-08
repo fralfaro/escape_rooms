@@ -25,6 +25,8 @@ book:
         - taller1/rooms/4.qmd
         - taller1/rooms/5.qmd
         - taller1/rooms/6.qmd
+        - taller1/rooms/7.qmd
+        - taller1/rooms/8.qmd
         - taller1/rooms/end.qmd
     - part: Laboratorio Pokemon 🧪
       chapters:

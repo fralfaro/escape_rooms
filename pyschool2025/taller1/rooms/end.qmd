@@ -1,22 +1,41 @@
-# Habitación Final
+---
+title: "Habitación Final"
+---
 
-Una luz intensa llena la sala.  
-El sol golpea tus ojos mientras cruzas la última puerta.  
+<center>
 
-Has logrado escapar de la pirámide.  
-Una vibración recorre el suelo... las piedras tiemblan...  
-Frente a ti, la gran pirámide que te atrapó comienza a desintegrarse,  
-como si todo hubiera sido un antiguo hechizo esperando ser roto por un verdadero aprendiz de Python.
+<h2>
+🌟 ¡Misión cumplida equipo! 🚀
+</h2>
 
-En segundos, solo quedan ruinas... y un recuerdo imborrable:
 
-> No fue solo un Escape Room... fue tu primer gran paso en el mundo de la programación.
+Después de superar desafíos matemáticos, decodificar mensajes ocultos 🧠, reparar sistemas críticos ⚙️ y enfrentarse a momentos de alta tensión 💥...
 
-Sabes que lo que aprendiste aquí te acompañará en cada nuevo desafío.  
-Y aunque nadie crea tu historia... tú sabes la verdad:  
-Ahora eres parte de la leyenda de PySchool.
+💫 ¡La estación espacial ha sido estabilizada con éxito!
+
+El núcleo está seguro, las compuertas abiertas, y los sistemas vitales funcionan a la perfección. Gracias a su ingenio, trabajo en equipo y habilidades con Python 🐍💻, han salvado a la tripulación y asegurado el futuro de la misión espacial.
+
+🛰️ Ahora, el módulo de retorno está listo para el viaje de vuelta. Desde el firmamento, se encienden luces que indican una trayectoria directa a casa. 🌍💫
+
+🎉 La Tierra los espera con orgullo, y ustedes regresan como héroes galácticos.<br/>¡Cada línea de código fue un paso hacia el éxito! 🛸👩‍🚀
+
+</center>
+
+<br/>
+
+<center>
+<img src="./img/sala_final.png" width="650">
+</center>
+
+<br/>
+
+<center>
+🧪 Fin del Escape Room: Misión Estación Espacial 🧪<br/>
+¡Gracias por formar parte de esta aventura intergaláctica
+</center>
 
 
 <center>
-<a href="../../taller2/taller2.html" class="btn btn-success" >🔓 Continuar con el siguiente desafío</a>
+<a href="../taller1.html" class="btn btn-info" w-100 h-100>Regresar al Inicio</a>
 </center>
+
