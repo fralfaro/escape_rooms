@@ -134,7 +134,7 @@ def salon_44(col_x, col_y, respuesta):
 
 
 if __name__ == "__main__":
-    salon_0("PySchool2025")
+    salon_0("PYTHON-25")
     salon_1(None)
     salon_1(5)
     salon_1("2")
