@@ -91,18 +91,7 @@
     "href": "taller1/rooms/6.html",
     "title": "Habitación 6: Funciones",
     "section": "",
-    "text": "Desafío de la Sala\nHas llegado a la última sala…\nEl mensaje en la pared dice:\nLa puerta final solo se abrirá si creas una función llamada calcular_senal que:\nCompleta el siguiente código:",
-    "crumbs": [
-      "Estación Espacial 🛰️",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Habitación 6: Funciones</span>"
-    ]
-  },
-  {
-    "objectID": "taller1/rooms/6.html#desafío-de-la-sala",
-    "href": "taller1/rooms/6.html#desafío-de-la-sala",
-    "title": "Habitación 6: Funciones",
-    "section": "",
-    "text": "Reciba un número x.\n\nSi x es divisible por 3 → devuelve \"Py\".\n\nSi x es divisible por 5 → devuelve \"School\".\n\nSi es divisible por ambos → devuelve \"PySchool\".\n\nSi no cumple ninguna condición → devuelve \"Sin señal\".\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Frente a ti, una compuerta metálica de alta seguridad se mantiene cerrada 🔒. En su pantalla, un mensaje parpadea sin cesar:\n\n🧮 “Ingresa la suma correcta de la secuencia del 1 al 1000 para desbloquear el sistema.”\n\n\nAsigna los valores correspondientes a las variables a y b.\n\n\n\n\n\n\n\nCalcular promedio con funciones de python\n\n\n\n\n\n\nrange(a,b) crea un rango numérico desde a hasta el valor anterior de b. Por ejemplo range(5,10) crea rango del 5 al 9.\nfor numero in range(a,b) es un ciclo que repite todos los valores dado por la función range(a,b).\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Estación Espacial 🛰️",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Habitación 6: Funciones</span>"
