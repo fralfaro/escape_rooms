@@ -80,29 +80,7 @@
     "href": "taller1/rooms/5.html",
     "title": "Habitación 5: Listas",
     "section": "",
-    "text": "Desafío de la Sala\nUna nueva nota aparece frente a ti:\nPara avanzar, debes encontrar las palabras mágicas ocultas.\nEstas palabras cumplen dos condiciones muy especiales:\nLista de palabras:",
-    "crumbs": [
-      "Estación Espacial 🛰️",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Habitación 5: Listas</span>"
-    ]
-  },
-  {
-    "objectID": "taller1/rooms/5.html#desafío-de-la-sala",
-    "href": "taller1/rooms/5.html#desafío-de-la-sala",
-    "title": "Habitación 5: Listas",
-    "section": "",
-    "text": "Deben tener más letras que el número de esta habitación.\n\nDeben contener la segunda vocal de la palabra \"lista\".\n\n\npalabras = [\"python\", \"code\", \"programacion\", \"loop\", \"variable\", \"data\", \"listado\"]",
-    "crumbs": [
-      "Estación Espacial 🛰️",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Habitación 5: Listas</span>"
-    ]
-  },
-  {
-    "objectID": "taller1/rooms/5.html#escribe-tu-código",
-    "href": "taller1/rooms/5.html#escribe-tu-código",
-    "title": "Habitación 5: Listas",
-    "section": "Escribe tu código:",
-    "text": "Escribe tu código:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "🔥 La tripulación debe reparar una filtración de altas temperaturas provocada por la avería de un panel solar ☀️.\nDebes asegurarte de que se cumpla el protocolo de ingreso y, para ello, activar el sistema de seguridad 🛡️🚨.\nIngresarán tres tripulantes:\n\n👨‍🚀 Tripulante uno: credencial con acceso permitido (True) ✅ y traje con resistencia Alta 🧤.\n👨‍🚀 Tripulante dos: credencial con acceso permitido (True) ✅ y traje con resistencia Baja ⚠️.\n👨‍🚀 Tripulante tres: credencial con acceso denegado (False) ❌ y traje con resistencia Alta 🧤.\n\n\nOcupa las sentencias if, elif, else para ejecutar código cuando se cumplen ciertas condiciones. No siempre es necesario ocupar if, elif y else, a veces basta con ocupar if o if y else dependiendo del caso.\nPor ejemplo:\nif cielo == 'Muy nublado':\n    return 'lluvia'\nelif cielo == 'Nublado':\n    return 'frio'\nelse:\n    return 'templado'\n\n\n\n\n\n\n\nPista\n\n\n\n\n\nLas sentencias ya están aplicadas, pero están igualadas (==) a valores erróneos. Reemplaza los valores None por True o \"Alta\" dependiendo de la variable con la que se iguala.\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Estación Espacial 🛰️",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Habitación 5: Listas</span>"

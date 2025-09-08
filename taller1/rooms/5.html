@@ -265,7 +265,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# Define los parámetros\nmin_length = None  # ¿Cuántas letras debe tener como mínimo?\nletra = None       # ¿Qué letra debe tener la palabra?\n\npalabras = [\"python\", \"code\", \"programacion\", \"loop\", \"variable\", \"data\", \"listado\"]\n\nfor palabra in palabras:\n    if len(palabra) > min_length and letra in palabra:\n        print(palabra)\n\n# Verifica tu respuesta\nimport verificar\nverificar.salon_5(min_length, letra)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"\ndef autorizar_acceso(acceso, resistencia):\n    # Reemplaza las apariciones de None por los valores correctos\n    if acceso == None and resistencia == None:\n        return True\n    else:\n        return False\n\n# Verifica la respuesta\nimport verificar\nverificar.salon_5(respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -685,64 +685,48 @@ globalThis._qpyodideGetInstance = function() {
 </header>
 
 
-<p>Una nueva nota aparece frente a ti:</p>
+<center>
+<img src="./img/sala_08.png" width="650">
+</center>
+<p><br></p>
+<p>🔥 La tripulación debe reparar una filtración de altas temperaturas provocada por la avería de un panel solar ☀️.<br>
+Debes asegurarte de que se cumpla el protocolo de ingreso y, para ello, activar el sistema de seguridad 🛡️🚨.</p>
+<p>Ingresarán tres tripulantes:</p>
+<ul>
+<li>👨‍🚀 Tripulante uno: <strong>credencial</strong> con acceso permitido (<code>True</code>) ✅ y <strong>traje</strong> con resistencia <em>Alta</em> 🧤.</li>
+<li>👨‍🚀 Tripulante dos: <strong>credencial</strong> con acceso permitido (<code>True</code>) ✅ y <strong>traje</strong> con resistencia <em>Baja</em> ⚠️.</li>
+<li>👨‍🚀 Tripulante tres: <strong>credencial</strong> con acceso denegado (<code>False</code>) ❌ y <strong>traje</strong> con resistencia <em>Alta</em> 🧤.</li>
+</ul>
 <div class="alert alert-info">
-<p>En esta sala debes trabajar con listas de palabras y filtrar las que cumplen ciertas condiciones.</p>
+<p>Ocupa las sentencias <code>if, elif, else</code> para ejecutar código cuando se cumplen ciertas condiciones. No siempre es necesario ocupar <code>if</code>, <code>elif</code> y <code>else</code>, a veces basta con ocupar <code>if</code> o <code>if</code> y <code>else</code> dependiendo del caso.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> cielo <span class="op">==</span> <span class="st">'Muy nublado'</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'lluvia'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> cielo <span class="op">==</span> <span class="st">'Nublado'</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'frio'</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'templado'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="¿Qué es una lista en Python?">
+<div class="callout callout-style-default callout-tip callout-titled" title="Pista">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-¿Qué es una lista en Python?
+Pista
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Una lista es una colección de elementos.</p>
-<p>Se define usando <code>[]</code> y los elementos van separados por comas.</p>
-<p>Por ejemplo:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>frutas <span class="op">=</span> [<span class="st">"manzana"</span>, <span class="st">"pera"</span>, <span class="st">"platano"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Podemos:</p>
-<ul>
-<li>Consultar el largo de la lista con <code>len(frutas)</code><br>
-</li>
-<li>Acceder a un elemento por su posición: <code>frutas[0]</code> → “manzana”<br>
-</li>
-<li>Recorrer la lista con un ciclo <code>for</code>:</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruta <span class="kw">in</span> frutas:</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(fruta)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Si queremos filtrar elementos, combinamos condiciones dentro del ciclo:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruta <span class="kw">in</span> frutas:</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"a"</span> <span class="kw">in</span> fruta:</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(fruta)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Las sentencias ya están aplicadas, pero están igualadas (<code>==</code>) a valores erróneos. Reemplaza los valores <code>None</code> por <code>True</code> o <code>"Alta"</code> dependiendo de la variable con la que se iguala.</p>
 </div>
 </div>
 </div>
-<hr>
-<section id="desafío-de-la-sala" class="level2">
-<h2 class="anchored" data-anchor-id="desafío-de-la-sala">Desafío de la Sala</h2>
-<p>Para avanzar, debes encontrar las palabras mágicas ocultas.<br>
-Estas palabras cumplen dos condiciones muy especiales:</p>
-<ol type="1">
-<li>Deben tener más letras que el número de esta habitación.<br>
-</li>
-<li>Deben contener la segunda vocal de la palabra <code>"lista"</code>.</li>
-</ol>
-<p>Lista de palabras:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>palabras <span class="op">=</span> [<span class="st">"python"</span>, <span class="st">"code"</span>, <span class="st">"programacion"</span>, <span class="st">"loop"</span>, <span class="st">"variable"</span>, <span class="st">"data"</span>, <span class="st">"listado"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="escribe-tu-código" class="level2">
-<h2 class="anchored" data-anchor-id="escribe-tu-código">Escribe tu código:</h2>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
