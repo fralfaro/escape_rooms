@@ -56,12 +56,12 @@
   {
     "objectID": "taller1/rooms/3.html",
     "href": "taller1/rooms/3.html",
-    "title": "Habitación 3: Condicionales",
+    "title": "Habitación 3: Listas",
     "section": "",
-    "text": "La puerta se cierra tras de ti…\nEn la pared aparece un nuevo mensaje:\n\nEn Python podemos tomar decisiones usando condicionales (if).\nSolo podrás salir de esta sala si cumples con las condiciones correctas.\n\n\n\n\n\n\n\nCondicionales en Python\n\n\n\n\n\nLa estructura básica es:\nif condicion:\n    # hacer algo\nelse:\n    # hacer otra cosa\nLos operadores más usados son:\n\n== igual\n\n!= distinto\n\n&gt;= mayor o igual\n\n&lt;= menor o igual\n\nand ambas condiciones deben cumplirse\n\nor al menos una debe cumplirse\n\n\n\n\n\nSolo podrás salir si:\n\nTienes al menos 18 años y tu llave es de color dorado.\n\nEscribe tu código y muestra el mensaje correspondiente.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "¡El sistema de la estación se está descontrolando!\nLas lecturas de temperatura muestran valores completamente inconsistentes 🧊🔥.\n⚙️ Debes ajustar el sistema de climatización interna para evitar golpes térmicos y estabilizar el ambiente.\n🖥️ Para lograrlo, calcula el valor promedio de las siguientes mediciones registradas por los sensores:\n\\[\n19.5,\\; 22.3,\\; 12,\\; 10.01,\\; 32,\\; 29.99,\\; 20.89\n\\]\n\nInstrucción:\nAgrega los números en la variable numeros, separados por comas ,.\nRecuerda que:\n- Una lista en Python se define con corchetes [].\n- Los números decimales usan punto . en lugar de coma ,.\n\n\n\n\n\n\n\nPista\n\n\n\n\n\nEjemplo de lista en Python:\nnumeros = [1.2, 2, 3.5, 4]\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Estación Espacial 🛰️",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Habitación 3: Condicionales</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Habitación 3: Listas</span>"
     ]
   },
   {
