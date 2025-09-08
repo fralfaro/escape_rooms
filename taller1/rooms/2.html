@@ -230,7 +230,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# Escribe tu respuesta aquí\nrespuesta = None\n\n# Verifica la respuesta\nimport verificar\nverificar.salon_2(respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"# Escribe tu respuesta aquí\na = 0\nb = 1\nc = 1\nd = 0\nrespuesta = (a + b) * c**d\n\n# Verifica la respuesta\nimport verificar\nverificar.salon_2(respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -679,14 +679,23 @@ window.Quarto = {
 </header>
 
 
-<p>Comienzas a entender la rutina. Respondes correctamente, se abre una puerta, y apenas cruzas la puerta, la habitación se cierra.<br>
-En la nueva habitación hay una nueva nota esperándote:</p>
-<div class="alert alert-info">
-<p>Python puede usarse como una calculadora muy potente.<br>
-¿Puedes calcular el siguiente número?</p>
+<center>
+<img src="./img/sala_02.png" width="650">
+</center>
+<p><br></p>
+<p>Mientras flotas por el pasillo de gravedad cero 🛰️, llegas al laboratorio químico.<br>
+La compuerta está sellada y un panel intermitente muestra un mensaje dejado por los primeros astronautas:</p>
+<p>🧩 <strong>“Solo quienes dominen los números podrán acceder.”</strong></p>
+<div class="d-flex justify-content-center">
+<div class="alert alert-warning text-center font-weight-bold">
 <p><span class="math display">\[
-\frac{1.23 + 2.34}{1 + 43/2} + 3 \times 2^{1.5}
+(201 + 759) \times 2^{3}
 \]</span></p>
+</div>
+</div>
+<div class="alert alert-info">
+<p><strong>Tu tarea:</strong> asigna a cada variable su respectivo valor numérico según la fórmula.<br>
+Por ejemplo: <code>a = 55</code></p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Operaciones matemáticas en Python">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -700,13 +709,17 @@ Operaciones matemáticas en Python
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Las operaciones matemáticas en Python se realizan con los operadores habituales:</p>
+<p>En Python, las operaciones matemáticas se escriben con los siguientes operadores:</p>
 <ul>
-<li><code>+</code> para la suma</li>
-<li><code>-</code> para la resta</li>
-<li><code>*</code> para la multiplicación</li>
-<li><code>/</code> para la división</li>
-<li><code>**</code> para la potencia</li>
+<li><code>+</code> → suma<br>
+</li>
+<li><code>-</code> → resta<br>
+</li>
+<li><code>*</code> → multiplicación<br>
+</li>
+<li><code>/</code> → división<br>
+</li>
+<li><code>**</code> → potencia (ejemplo: <code>2**3</code> = 8)</li>
 </ul>
 </div>
 </div>

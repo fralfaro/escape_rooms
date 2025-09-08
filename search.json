@@ -47,7 +47,7 @@
     "href": "taller1/rooms/2.html",
     "title": "Habitación 2: Números",
     "section": "",
-    "text": "Comienzas a entender la rutina. Respondes correctamente, se abre una puerta, y apenas cruzas la puerta, la habitación se cierra.\nEn la nueva habitación hay una nueva nota esperándote:\n\nPython puede usarse como una calculadora muy potente.\n¿Puedes calcular el siguiente número?\n\\[\n\\frac{1.23 + 2.34}{1 + 43/2} + 3 \\times 2^{1.5}\n\\]\n\n\n\n\n\n\n\nOperaciones matemáticas en Python\n\n\n\n\n\nLas operaciones matemáticas en Python se realizan con los operadores habituales:\n\n+ para la suma\n- para la resta\n* para la multiplicación\n/ para la división\n** para la potencia\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Mientras flotas por el pasillo de gravedad cero 🛰️, llegas al laboratorio químico.\nLa compuerta está sellada y un panel intermitente muestra un mensaje dejado por los primeros astronautas:\n🧩 “Solo quienes dominen los números podrán acceder.”\n\n\n\\[\n(201 + 759) \\times 2^{3}\n\\]\n\n\n\nTu tarea: asigna a cada variable su respectivo valor numérico según la fórmula.\nPor ejemplo: a = 55\n\n\n\n\n\n\n\nOperaciones matemáticas en Python\n\n\n\n\n\nEn Python, las operaciones matemáticas se escriben con los siguientes operadores:\n\n+ → suma\n\n- → resta\n\n* → multiplicación\n\n/ → división\n\n** → potencia (ejemplo: 2**3 = 8)\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Estación Espacial 🛰️",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Habitación 2: Números</span>"
