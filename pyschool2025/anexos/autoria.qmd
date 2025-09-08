@@ -1,21 +1,7 @@
-Este espacio ha sido creado con el objetivo de motivar a los estudiantes a conocer y aprender el lenguaje de programación Python. 
-
-PySchool es una iniciativa de la organización Python Chile y DUOC. 
-
-Nuestro objetivo es proporcionar a la comunidad los recursos necesarios para aprender y mejorar sus habilidades en Python.
-
-<center>
-<img src="../../images/pythonchile.png" width="270">
-<img src="../../images/cover.png" width="200">
-<img src="../../images/DUOC_1.png" width="300">
-</center>
-
 # Autoría
 
-Este proyecto es una iniciativa protegida por derechos de autor bajo la organización Python Chile. Los contribuyentes clave incluyen a Francisco Alfaro, Sebastián Flores y Valeska Caneles, cuya dedicación ha sido esencial para el desarrollo y mantenimiento continuo del proyecto. 
+Este material ha sido creado por [Francisco Alfaro](https://www.linkedin.com/in/faam/) y [Valeska Canales](https://www.linkedin.com/in/vcanalesp/) para apoyar las Olimpiadas de Matemática del [Departamento de Matemáticas](https://matematica.usm.cl/departamento/) de la UTFSM, Campus San Joaquín.
 
-## Reconocimientos adicionales
+Su objetivo es motivar a los estudiantes a aprender Python y disfrutar de las matemáticas mediante herramientas y recursos que faciliten la comprensión y el interés en estos temas. Ofrecemos ejemplos prácticos, problemas entretenidos y actividades interactivas para desarrollar habilidades en Python y profundizar en los conceptos matemáticos presentados en las olimpiadas.
 
-Queremos extender un agradecimiento especial a todos los colaboradores y miembros de nuestra comunidad que han enriquecido este proyecto con sus ideas, sugerencias y aportes de código. Su participación ha sido crucial y es enormemente valorada.
-
-Para obtener más información sobre los autores y colaboradores, o para descubrir cómo puedes contribuir, te invitamos a visitar la [página oficial de Python Chile](https://pythonchile.cl). ¡Agradecemos tu apoyo y nos complace contar contigo en nuestra comunidad!
+Para más información, no dudes en contactarnos a través de nuestros correos electrónicos:  `francisco.alfaro.496@gmail.com`, `valeska.canales.p@gmail.com`.

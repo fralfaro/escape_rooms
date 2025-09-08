@@ -1,0 +1,13 @@
+---
+title: "Escape Rooms Disponibles"
+include-in-header: remove_sidebar.html
+
+---
+
+<div style="height: 100px;"></div>
+
+<center>
+<a href="taller1/taller1.html" target="_blank"><img src="./images/spacestation_600x800.png" height="400"></a>
+<span style="width: 50px;"></span>
+<a href="taller2/taller2.html" target="_blank"><img src="./images/oak_600x800.png" height="400"></a>
+</center>

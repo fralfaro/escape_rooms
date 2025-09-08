@@ -1,0 +1,11 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Eliminar todas las clases del elemento con id quarto-content
+        x = document.querySelector('#quarto-content');
+        x.classList.remove('page-layout-article');
+        x.classList.remove('page-columns');
+        // Eliminar el sidebar (id quarto-sidebar y quarto-sidebar-container)
+        document.querySelector('#quarto-sidebar').remove();
+        document.querySelector('#quarto-sidebar-container').remove();
+    });
+</script>

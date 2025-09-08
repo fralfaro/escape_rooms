@@ -1,0 +1,11 @@
+---
+title: "Actividad para profesores"
+include-in-header: remove_sidebar.html
+
+---
+
+<div style="height: 100px;"></div>
+
+<center>
+<a href="https://sethnut.com/talks/infinity_2024/presentacion.html#/title-slide" target="_blank"><img src="./images/infinitos.jpg" height="400"></a>
+</center>

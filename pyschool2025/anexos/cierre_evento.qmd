@@ -1,10 +1,8 @@
-# Cierre PySchool
+# Cierre Evento
 
 ### 🎯 **Retroalimentación**
 
-Nos encantaría saber que te ha parecido PySchool, y que podemos mejorar.
-Agradeceríamos contestaras la siguiente encuesta: 
-
+Nos encantaría conocer tu opinión sobre esta experiencia y saber en qué aspectos podemos mejorar. Te agradeceríamos mucho que tomaras unos minutos para completar la siguiente encuesta:
 <center>
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSchtlAH0Fx43sV8WYXBAYusE5mYWHQk5MjFC5v7xNKkR_oLqw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
 <img src="../images/qr_pc.png" width="400">
