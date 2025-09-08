@@ -1,56 +1,62 @@
+
 ---
-title: "Habitación 0: Inicio"
+title: "Habitación 0"
 ---
 
-Despiertas dentro de un laboratorio muy conocido...  
-¡Es el Laboratorio del Profesor Oak!  
-Sin embargo, algo no anda bien... Las puertas están bloqueadas y el sistema de datos está caído.
+<h2 class="text-center">
+🔬 Bienvenido al Laboratorio del Profesor Oak 🧑‍🔬✨  
+Tu misión como aprendiz de científico Pokémon está a punto de comenzar.
+</h2>
 
-Un mensaje aparece en la pantalla principal:
+<br/>
 
-<div class="alert alert-info">
-Para restaurar el sistema y poder avanzar, debes cargar correctamente los datos de Pokémon y revisar los primeros registros.
+<center>
+<img src="./img/sala_p0.png" width="650">
+</center>
+
+<br/>
+
+<div class="font-italic">
+Te despiertas sobresaltado en el **Laboratorio del Profesor Oak**.  
+Las luces parpadean, las máquinas zumban sin control y un mensaje aparece en la pantalla central:  
 </div>
 
-::: {.callout-tip title="¿Cómo se cargan datos en Python?" collapse="true"}
-En Ciencia de Datos usamos `pandas` para trabajar con archivos y tablas.
+<div class="alert alert-warning">
+⚠️ **¡Sistema de datos colapsado!**  
+Para reiniciar el laboratorio, debes **cargar la base de datos de Pokémon** y verificar los primeros registros.  
+Solo así las puertas podrán desbloquearse y avanzarás al siguiente desafío.
+</div>
 
+
+
+## 🔎 Desafío de la Sala
+
+Tu tarea es:
+
+1. Importar la librería **pandas**.  
+2. Leer el archivo de datos de Pokémon desde la `url`.  
+3. Guardarlo en un DataFrame llamado `df`.  
+4. Mostrar las **primeras filas** para confirmar que todo está en orden.  
+
+
+
+::: {.callout-tip title="Ayuda para Cargar Datos" collapse="true"}
+En ciencia de datos usamos `pandas` para trabajar con tablas.  
 Pasos típicos:
-
-1. Importar la librería:
 
 ```python
 import pandas as pd
-```
+df = pd.read_csv("url_del_archivo.csv")
+df.head()
+````
 
-2. Leer un archivo `.csv`:
-
-```python
-pokemon_data = pd.read_csv('url_o_ruta_del_archivo')
-```
-
-3. Ver las primeras filas:
-
-```python
-pokemon_data.head()
-```
+Con `.head()` puedes ver las primeras 5 filas.
 :::
 
----
 
-## Desafío de la Sala
-
-Completa las siguientes variables:
-
-- `url`: con la dirección del archivo de datos.  
-- `df`: con el resultado de leer los datos usando `pd.read_csv(url)`.  
-
-Luego muestra las primeras filas usando `.head()`.
-
----
 
 ```{pyodide-python}
-# Completa los valores correctos
+# 🧩 Completa los valores correctos
 import pandas as pd
 pd.set_option('display.max_columns', None)
 
@@ -59,6 +65,12 @@ df = pd.read_csv(url)
 
 # Mostrar las primeras filas
 df.head()
+```
+
+```{pyodide-python}
+# BONUS: explora un poco más
+print("Cantidad de registros:", len(df))
+print("Columnas disponibles:", df.columns.tolist())
 
 # Verifica tu respuesta
 import verificar

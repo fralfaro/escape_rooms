@@ -1,42 +1,73 @@
 ---
-title: "Habitación 2: Tipos de Pokémon"
+title: "Habitación 2"
 ---
 
-El sistema del laboratorio sigue bloqueado...  
-En la pantalla aparece un nuevo mensaje del Profesor Oak:
+<h2 class="text-center">
+🔥 Sala de Clasificación de Pokémon  
+</h2>
+
+<br/>
+
+<center>
+<img src="./img/sala_p2.png" width="600">
+</center>
+
+<br/>
+
+El sistema del laboratorio sigue bloqueado…  
+La pantalla del Profesor Oak vuelve a encenderse y muestra un nuevo reto:
 
 <div class="alert alert-info">
 "Un buen Científico de Datos debe ser capaz de responder preguntas simples con datos.  
-¿Cuántos Pokémon de cada tipo existen?"
+¿Cuántos Pokémon existen de cada tipo?  
+¿Cuál es el tipo más común?  
+¿Y cuál es el menos frecuente?"
 </div>
 
-::: {.callout-tip title="Contar y Graficar Datos" collapse="true"}
 
-Para contar cuántos Pokémon hay por tipo puedes usar:
+
+## 🎯 Objetivo de la sala
+
+1. Contar cuántos Pokémon existen de cada tipo (`Type 1`).  
+2. Contar los tipos más comunes y menos frecuentes.
+3. Crear una lista llamada **`respuesta`** con:  
+   - El número total de tipos distintos.  
+   - El tipo más común.  
+   - El tipo menos frecuente.  
+
+::: {.callout-tip title="Contar y Graficar Datos" collapse="true"}
+Para contar los Pokémon por tipo:
 
 ```python
 conteo = df['Type 1'].value_counts()
-```
+````
 
-Para graficar los resultados:
+Para graficar el conteo:
 
 ```python
 import matplotlib.pyplot as plt
-
 conteo.plot(kind='bar')
 plt.show()
 ```
+
+Para calcular el número total de tipos distintos (cuántos tipos existen en el dataset):
+
+```python
+total_tipos = df['Type 1'].nunique()
+```  
+
+Para obtener los tipos más y menos frecuentes:
+
+```python
+mas_comun = conteo.idxmax()
+menos_frecuente = conteo.idxmin()
+```
+
 :::
 
----
 
-## Desafío de la Sala
 
-1. Crea la variable `conteo` que contenga la cantidad de Pokémon por `Type 1`.  
-2. Genera un gráfico de barras con ese conteo.  
-3. Verifica tu respuesta.
-
----
+## 🧩 Desafío de la Sala
 
 ```{pyodide-python}
 # Cargar nuevamente el dataset
@@ -46,21 +77,48 @@ import matplotlib.pyplot as plt
 url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
 df = pd.read_csv(url)
 
-# Contar Pokémon por tipo
-conteo = None  # Usa df['Type 1'].value_counts()
+# 1) Contar Pokémon por tipo
+conteo = None
+print("Conteo de Pokémon por tipo:")
+print(conteo)
+```
 
-# Crear gráfico de barras
-conteo.plot(kind='bar')
-plt.title('Cantidad de Pokémon por Tipo')
-plt.xlabel('Tipo')
-plt.ylabel('Cantidad')
-plt.xticks(rotation=45)
+```{pyodide-python}
+# 2) Crear gráfico de barras mejorado
+plt.figure(figsize=(12,7))
+
+# Ordenar de mayor a menor para que sea más claro
+conteo.sort_values(ascending=False).plot(
+    kind='bar',
+    color='skyblue',
+    edgecolor='black'
+)
+
+# Títulos y etiquetas
+plt.title('🔢 Cantidad de Pokémon por Tipo', fontsize=16, fontweight='bold')
+plt.xlabel('Tipo de Pokémon', fontsize=12)
+plt.ylabel('Cantidad', fontsize=12)
+
+# Rotación y estilo de los nombres en el eje X
+plt.xticks(rotation=45, ha='right', fontsize=10)
+
+# Rejilla ligera en el eje Y
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Ajustar márgenes para que no se corte texto
 plt.show()
+```
 
-# Número total de tipos de Pokémon
-respuesta = None  # ¿Cuántos tipos hay?
+```{pyodide-python}
+# 3) Crear la respuesta como lista
+num_tipos = None
+mas_comun = None
+menos_frecuente = None
 
-# Verifica tu respuesta
+respuesta = [num_tipos, mas_comun, menos_frecuente]
+print("Respuesta final:", respuesta)
+
+# Verificación de la sala
 import verificar
 verificar.salon_22(respuesta)
 ```

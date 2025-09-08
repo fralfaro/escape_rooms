@@ -161,7 +161,7 @@ def salon_11(desc):
 def salon_22(respuesta):
     if respuesta is None:
         text("Debes asignar el número total de tipos de Pokémon a la variable `respuesta`.", "info")
-    elif respuesta == 18:
+    elif respuesta == [18, 'Water', 'Flying']:
         hyperlink("¡Correcto! Existen 18 tipos de Pokémon. Avanza a la siguiente sala.", "3.html", "success")
     else:
         text("La puerta sigue cerrada... Revisa bien los datos y cuenta nuevamente los tipos de Pokémon.", "warning")

@@ -1,15 +1,25 @@
 ---
-title: "Habitación 1: Explorador de Datos"
+title: "Habitación 1"
 ---
 
-El sistema se ha reiniciado parcialmente...  
-Pero las puertas siguen bloqueadas.  
+<h2 class="text-center">
+🛰️ Sala de Diagnóstico de Datos  
+</h2>
 
-En la pantalla aparece un mensaje del Profesor Oak:
+<br/>
+
+<center>
+<img src="./img/sala_p1.png" width="400">
+</center>
+
+<br/>
+
+La energía volvió… pero las puertas siguen selladas.  
+La pantalla del laboratorio muestra un nuevo mensaje del **Profesor Oak**:
 
 <div class="alert alert-info">
-"Un verdadero Maestro Pokémon debe conocer bien sus datos antes de analizarlos.  
-Solo podrás avanzar si logras explorar la estructura y características de los Pokémon."
+"Un verdadero Maestro Pokémon primero conoce sus datos: estructura, tipos, valores faltantes y estadísticas.  
+Demuestra que sabes explorarlos y el sistema te dejará avanzar."
 </div>
 
 ::: {.callout-tip title="Explorar Datos en Python" collapse="true"}
@@ -31,9 +41,7 @@ df.describe()
 
 ## Desafío de la Sala
 
-Ya cargaste los datos en la sala anterior (`df`).
-
-Ahora:
+Ya cargaste los datos en la sala anterior (`df`). Ahora:
 
 1. Crea una variable llamada `info` que almacene el resultado de `df.info()` (solo ejecutarlo está bien).  
 2. Crea una variable llamada `desc` que almacene el resultado de `df.describe()`.
@@ -49,10 +57,14 @@ url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8
 
 df = pd.read_csv(url)
 
-# Explora los datos
+# Completa los valores correcto
 print("Mostrando información general del dataset:")
 info = None
+print(info)
+```
 
+```{pyodide-python}
+# Completa los valores correcto
 print("\nMostrando descripción estadística del dataset:")
 desc = None
 print(desc)
