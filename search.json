@@ -47,7 +47,7 @@
     "href": "taller1/rooms/2.html",
     "title": "Habitación 2: Números",
     "section": "",
-    "text": "Mientras flotas por el pasillo de gravedad cero 🛰️, llegas al laboratorio químico.\nLa compuerta está sellada y un panel intermitente muestra un mensaje dejado por los primeros astronautas:\n🧩 “Solo quienes dominen los números podrán acceder.”\n\n\n\\[\n(201 + 759) \\times 2^{3}\n\\]\n\n\n\nTu tarea: asigna a cada variable su respectivo valor numérico según la fórmula.\nPor ejemplo: a = 55\n\n\n\n\n\n\n\nOperaciones matemáticas en Python\n\n\n\n\n\nEn Python, las operaciones matemáticas se escriben con los siguientes operadores:\n\n+ → suma\n\n- → resta\n\n* → multiplicación\n\n/ → división\n\n** → potencia (ejemplo: 2**3 = 8)\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Mientras flotas por el pasillo de gravedad cero 🛰️, llegas al laboratorio químico.\nLa compuerta está sellada y un panel intermitente muestra un mensaje dejado por los primeros astronautas:\n🧩 “Solo quienes dominen los números podrán acceder.”\n\n\n\\[\n\\left( \\frac{(1,23 + 2,34)}{(1 + (43/2))} \\right) + (3 \\times 2^{1,5})\n\\]\n\n\n\n\nTu tarea: asigna a cada variable su respectivo valor numérico según la fórmula. Por ejemplo: a = 55\nLos números decimales se escriben con “.”. Por ejemplo para 33,5 se puede escribir como a = 33.5.\n\n\n\n\n\n\n\n\nOperaciones matemáticas en Python\n\n\n\n\n\nEn Python, las operaciones matemáticas se escriben con los siguientes operadores:\n\n+ → suma\n\n- → resta\n\n* → multiplicación\n\n/ → división\n\n** → potencia (ejemplo: 2**3 = 8)\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Estación Espacial 🛰️",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Habitación 2: Números</span>"
@@ -113,7 +113,40 @@
     "href": "taller1/rooms/8.html",
     "title": "Habitación 8: Funciones",
     "section": "",
-    "text": "El equipo ha llegado al núcleo de la estación espacial 🌌. Se encuentran con una compuerta blindada que bloquea el paso a la sala final.\nLas luces parpadean y una pantalla muestra el siguiente mensaje 👽:\n\n\n🧠 Según los registros, la contraseña se obtiene utilizando el código secreto… ese mismo número clave que han encontrado antes en su viaje. 🔎\n\n\n!Es imprescindible encontrar la contraseña correcta para continuar 🧩!\n🔢 Suma todos los números primos requeridos. La cantidad de números a sumar está determinada por el código secreto. Sólo así se podrá revelar la última contraseña 🔓.\n\nObtén la suma desde el primer número primo hasta el indicado en el código secreto. Ten en consideración que se debe recorrer todos los números enteros positivos y en caso que cumpla con ser número primo, sumarlo, así sucesivamente hasta obtener la suma total.\nPor ejemplo:\ndef es_primo(numero):\n    if numero % 1 == 0:\n        return True\n    elif numero % 2 == 0:\n        return False\n    elif numero % 3 == 0:\n        return False\n    elif numero % numero == 0:\n        return True\n\nfor numero in numeros:\n    if es_primo(numero):\n        suma = suma + numero\n\n\n\n\n\n\n\nPista\n\n\n\n\n\nConsidera lo siguiente para el algoritmo de la suma de los primeros N números primos:\n\nPara saber si es un número primo, debe ser divisible por el número 1 y por si mismo. Ejemplo: A % 1 == 0 y A % A == 0.\nCrear variable que cuente cuántos números primos se han sumado, sin que pase el valor del código secreto.\nCrear variable que vaya acumulando la suma de los primeros N números primos.\n\nsuma = 0\ncontador_numeros = 0\nfor numero in numeros:\n    if es_primo(numero):\n        suma = suma + numero\n        contador_numeros = contador_numeros + 1\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "🔢 Tu misión\nEl equipo ha llegado al núcleo de la estación espacial 🌌.\nUna compuerta blindada bloquea el acceso a la sala final.\nLas luces parpadean y, de pronto, en la pantalla aparece un mensaje 👽:\n✨ ¡Es imprescindible encontrar la contraseña correcta para abrir la última puerta! 🔓\nDebes escribir un programa que:\n1. Calcule los primeros N números primos, donde N corresponde al código secreto.\n2. Obtenga la suma total de esos números primos.\n3. Devuelva el resultado como la contraseña final.",
+    "crumbs": [
+      "Estación Espacial 🛰️",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Habitación 8: Funciones</span>"
+    ]
+  },
+  {
+    "objectID": "taller1/rooms/8.html#tu-misión",
+    "href": "taller1/rooms/8.html#tu-misión",
+    "title": "Habitación 8: Funciones",
+    "section": "",
+    "text": "💡 Recuerda:\n- Un número primo es aquel que solo es divisible entre 1 y él mismo.\n- No basta con revisar si es divisible por 2 o 3; debes comprobar que ningún número menor lo divida (salvo 1).",
+    "crumbs": [
+      "Estación Espacial 🛰️",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Habitación 8: Funciones</span>"
+    ]
+  },
+  {
+    "objectID": "taller1/rooms/8.html#apoyo",
+    "href": "taller1/rooms/8.html#apoyo",
+    "title": "Habitación 8: Funciones",
+    "section": "🛠️ Apoyo",
+    "text": "🛠️ Apoyo\nLa siguiente función nos da la fórmula para saber si un número es primo:\ndef es_primo(numero):\n    if numero &lt; 2:\n        return False\n    for i in range(2, numero):\n        if numero % i == 0:\n            return False\n    return True\nCon esto, puedes recorrer los números positivos e ir guardando los primeros N primos hasta obtener la suma.\n\n\n\n\n\n\nPista\n\n\n\n\n\n\nFunción es_primo:\n\nRetorna True si el número es primo y False en caso contrario.\nEmpieza descartando los menores a 2.\nRecorre divisores desde 2 hasta numero-1.\n\nVariables auxiliares:\n\nsuma = 0 → para acumular la suma de primos.\ncontador = 0 → para contar cuántos primos llevas.\n\nBucle principal:\n\nComienza desde 1 en adelante.\nSi un número es primo → lo sumas y aumentas el contador.\nDetén el bucle cuando contador == codigo_secreto.\n\nEntrega la suma:\n\nEsa suma será la contraseña final.\n\nsuma = 0\ncontador = 0\nnumero = 1\n\nwhile contador &lt; codigo_secreto:\n    if es_primo(numero):\n        suma = suma + numero\n        contador = contador + 1\n    numero = numero + 1\n\n\n\n\n\n\n\n\n\n\nPista 2\n\n\n\n\n\nEl código de la chapa solo puede contener los números 2, 4 y 7.\nPuede ser uno de ellos, una combinación de dos, o incluso los tres en distinto orden.\nEjemplos: 24, 72, 247, 742.",
+    "crumbs": [
+      "Estación Espacial 🛰️",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Habitación 8: Funciones</span>"
+    ]
+  },
+  {
+    "objectID": "taller1/rooms/8.html#escribe-tu-solución",
+    "href": "taller1/rooms/8.html#escribe-tu-solución",
+    "title": "Habitación 8: Funciones",
+    "section": "👩‍💻 Escribe tu solución",
+    "text": "👩‍💻 Escribe tu solución\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Estación Espacial 🛰️",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Habitación 8: Funciones</span>"

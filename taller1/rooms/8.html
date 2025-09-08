@@ -265,7 +265,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"\n# Escribe aquí función para saber si un número es primo\n\n# Escribe tu respuesta\nrespuesta = None\nprint(respuesta)\n\n# Verifica la respuesta\nimport verificar\nverificar.salon_8(respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"# 1. Define la función para verificar si un número es primo\ndef es_primo(numero):\n    # TODO: reemplaza por una versión correcta\n    return True\n\n# 2. Crea una función que calcule la suma de los primeros N primos\ndef suma_primos(codigo_secreto):\n    # TODO: implementa el algoritmo con un bucle y contador\n    suma = 0\n    contador = 0\n    numero = 1\n    return suma\n\n# 3. Prueba tu función\ncodigo_secreto = 5  # Ejemplo\nrespuesta = suma_primos(codigo_secreto)\nprint(\"Contraseña encontrada:\", respuesta)\n\n# 4. Verificación automática\nimport verificar\nverificar.salon_8(respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -696,35 +696,42 @@ globalThis._qpyodideGetInstance = function() {
 
 
 <center>
-<img src="./img/sala_17.png" width="650">
+<img src="./img/sala_171.png" width="650">
 </center>
 <p><br></p>
-<p>El equipo ha llegado al núcleo de la estación espacial 🌌. Se encuentran con una compuerta blindada que bloquea el paso a la sala final.</p>
-<p>Las luces parpadean y una pantalla muestra el siguiente mensaje 👽:</p>
+<p>El equipo ha llegado al <strong>núcleo de la estación espacial</strong> 🌌.<br>
+Una compuerta blindada bloquea el acceso a la sala final.</p>
+<p>Las luces parpadean y, de pronto, en la pantalla aparece un mensaje 👽:</p>
 <div class="d-flex justify-content-center">
 <div class="alert alert-warning">
-<p>🧠 Según los registros, la contraseña se obtiene utilizando el código secreto… ese mismo número clave que han encontrado antes en su viaje. 🔎</p>
+<p>🧠 <strong>“La contraseña se obtiene sumando los primeros números primos…</strong><br>
+Ese número secreto que encontraron antes indica cuántos deben sumar.” 🔎</p>
 </div>
 </div>
-<p>!Es imprescindible encontrar la contraseña correcta para continuar 🧩!</p>
-<p>🔢 Suma todos los números primos requeridos. La cantidad de números a sumar está determinada por el código secreto. Sólo así se podrá revelar la última contraseña 🔓.</p>
+<p>✨ ¡Es imprescindible encontrar la contraseña correcta para abrir la última puerta! 🔓</p>
+<section id="tu-misión" class="level2">
+<h2 class="anchored" data-anchor-id="tu-misión">🔢 Tu misión</h2>
+<p>Debes escribir un programa que:<br>
+1. Calcule los <strong>primeros <code>N</code> números primos</strong>, donde <code>N</code> corresponde al <strong>código secreto</strong>.<br>
+2. Obtenga la <strong>suma total</strong> de esos números primos.<br>
+3. Devuelva el resultado como la contraseña final.</p>
 <div class="alert alert-info">
-<p>Obtén la suma desde el primer número primo hasta el indicado en el <code>código secreto</code>. Ten en consideración que se debe recorrer todos los números enteros positivos y en caso que cumpla con ser número primo, sumarlo, así sucesivamente hasta obtener la suma total.</p>
-<p>Por ejemplo:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> es_primo(numero):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> numero <span class="op">%</span> <span class="dv">1</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> numero <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> numero <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> numero <span class="op">%</span> numero <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> numero <span class="kw">in</span> numeros:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> es_primo(numero):</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        suma <span class="op">=</span> suma <span class="op">+</span> numero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>💡 Recuerda:<br>
+- Un número primo es aquel que solo es divisible entre <code>1</code> y él mismo.<br>
+- No basta con revisar si es divisible por 2 o 3; debes comprobar que ningún número menor lo divida (salvo 1).</p>
 </div>
+</section>
+<section id="apoyo" class="level2">
+<h2 class="anchored" data-anchor-id="apoyo">🛠️ Apoyo</h2>
+<p>La siguiente función nos da la fórmula para saber si un número es primo:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> es_primo(numero):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> numero <span class="op">&lt;</span> <span class="dv">2</span>:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, numero):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> numero <span class="op">%</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Con esto, puedes recorrer los números positivos e ir guardando los primeros <code>N</code> primos hasta obtener la suma.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Pista">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -737,25 +744,67 @@ Pista
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Considera lo siguiente para el algoritmo de la suma de los primeros <code>N</code> números primos:</p>
+<ol type="1">
+<li><p><strong>Función <code>es_primo</code>:</strong></p>
 <ul>
-<li>Para saber si es un número primo, debe ser divisible por el número 1 y por si mismo. Ejemplo: <code>A % 1 == 0</code> y <code>A % A == 0</code>.</li>
-<li>Crear variable que cuente cuántos números primos se han sumado, sin que pase el valor del <code>código secreto</code>.</li>
-<li>Crear variable que vaya acumulando la suma de los primeros <code>N</code> números primos.</li>
+<li>Retorna <code>True</code> si el número es primo y <code>False</code> en caso contrario.</li>
+<li>Empieza descartando los menores a 2.</li>
+<li>Recorre divisores desde <code>2</code> hasta <code>numero-1</code>.</li>
+</ul></li>
+<li><p><strong>Variables auxiliares:</strong></p>
+<ul>
+<li><code>suma = 0</code> → para acumular la suma de primos.</li>
+<li><code>contador = 0</code> → para contar cuántos primos llevas.</li>
+</ul></li>
+<li><p><strong>Bucle principal:</strong></p>
+<ul>
+<li>Comienza desde <code>1</code> en adelante.</li>
+<li>Si un número es primo → lo sumas y aumentas el contador.</li>
+<li>Detén el bucle cuando <code>contador == codigo_secreto</code>.</li>
+</ul></li>
+<li><p><strong>Entrega la suma:</strong></p>
+<ul>
+<li>Esa suma será la <strong>contraseña final</strong>.</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>suma <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>contador_numeros <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> numero <span class="kw">in</span> numeros:</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> es_primo(numero):</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        suma <span class="op">=</span> suma <span class="op">+</span> numero</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        contador_numeros <span class="op">=</span> contador_numeros <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>contador <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>numero <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> contador <span class="op">&lt;</span> codigo_secreto:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> es_primo(numero):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        suma <span class="op">=</span> suma <span class="op">+</span> numero</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        contador <span class="op">=</span> contador <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    numero <span class="op">=</span> numero <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Pista 2">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pista 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El código de la chapa <strong>solo puede contener los números 2, 4 y 7</strong>.<br>
+Puede ser uno de ellos, una combinación de dos, o incluso los tres en distinto orden.<br>
+Ejemplos: <code>24</code>, <code>72</code>, <code>247</code>, <code>742</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="escribe-tu-solución" class="level2">
+<h2 class="anchored" data-anchor-id="escribe-tu-solución">👩‍💻 Escribe tu solución</h2>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
