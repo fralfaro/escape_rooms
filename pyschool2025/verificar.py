@@ -56,13 +56,15 @@ def salon_3(respuesta):
     else:
         text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
-def salon_4(inicio, fin, multiplo):
-    if inicio is None or fin is None or multiplo is None:
-        text("Debes asignar valores a las variables `inicio`, `fin` y `multiplo`.", "info")
-    elif inicio == 1 and fin == 20 and multiplo == 2:
-        hyperlink("¡Correcto! Avanza a la siguiente sala", "5.html", "success")
+def salon_4(respuesta):
+    lista = [150, 375, 890]
+
+    if respuesta == None:
+        text("Intenta cambiar el valor de la variable `respuesta`.", "info")
+    elif respuesta == lista:
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "sala_08.html", "success")
     else:
-        text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
+        text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
 def salon_5(min_length, letra):
     if min_length is None or letra is None:
