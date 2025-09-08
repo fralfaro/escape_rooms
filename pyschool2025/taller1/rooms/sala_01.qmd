@@ -1,0 +1,58 @@
+---
+title: "Habitación 1: Hola Mundo"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_01.py"; </script>'
+---
+<h2 class="text-center">
+👨‍🚀 Llegada a la estación espacial ️ exitosa 🛰<br/>
+¡Buena suerte en tú misión! 💫
+</h2>
+
+<br/>
+
+<center>
+<img src="./img/sala_01.png" width="650">
+</center>
+
+<br/>
+
+La terminal del sistema de oxígeno comienza a parpadear en rojo... algo no está bien.
+
+<div class="d-flex justify-content-center">
+<div class="alert alert-danger text-center text-danger font-weight-bold">
+⚠️ **¡Peligro!** ⚠️
+
+Se ha detectado pérdida de oxígeno en la sala B9-2.
+</div>
+</div>
+
+🕹️ ¡Rápido! Activa la puerta de emergencia. Usa la terminal para enviar la señal correcta y
+poder cerrar la sala antes que se agote el oxígeno por completo.
+
+<div class="alert alert-info">
+La primera tarea es escribir "Cerrar".
+Cambia el valor de la variable `respuesta` por `"Cerrar"` y ejecuta la celda.
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda que en Python, los strings (cadenas de texto) se escriben entre comillas dobles o simples.  
+Puedes escribir 
+```python 
+respuesta="Ejemplo"
+```
+o
+```python 
+respuesta='Ejemplo'
+```
+:::
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+respuesta = None
+print(respuesta)
+
+# Verifica la respuesta
+import sala
+sala.revisar(respuesta)
+```

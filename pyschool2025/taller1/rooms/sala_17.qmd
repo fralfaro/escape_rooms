@@ -1,0 +1,83 @@
+---
+title: "Habitación 17:"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_17.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_17.png" width="650">
+</center>
+
+<br/>
+
+El equipo ha llegado al núcleo de la estación espacial 🌌. Se encuentran con una compuerta blindada que bloquea el
+paso a la sala final.
+
+Las luces parpadean y una pantalla muestra el siguiente mensaje 👽:
+
+<div class="d-flex justify-content-center">
+<div class="alert alert-warning">
+🧠 Según los registros, la contraseña se obtiene utilizando el código secreto... ese mismo número clave que han
+encontrado antes en su viaje. 🔎
+</div>
+</div>
+
+!Es imprescindible encontrar la contraseña correcta para continuar 🧩!
+
+🔢 Suma todos los números primos requeridos. La cantidad de números a sumar está
+determinada por el código secreto. Sólo así se podrá revelar la última contraseña 🔓.
+
+<div class="alert alert-info">
+Obtén la suma desde el primer número primo hasta el indicado en el `código secreto`. Ten en consideración que se debe recorrer todos
+los números enteros positivos y en caso que cumpla con ser número primo, sumarlo, así sucesivamente hasta obtener la suma total.
+
+Por ejemplo:
+
+```python
+def es_primo(numero):
+    if numero % 1 == 0:
+        return True
+    elif numero % 2 == 0:
+        return False
+    elif numero % 3 == 0:
+        return False
+    elif numero % numero == 0:
+        return True
+
+for numero in numeros:
+    if es_primo(numero):
+        suma = suma + numero
+```
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Considera lo siguiente para el algoritmo de la suma de los primeros `N` números primos:
+
+- Para saber si es un número primo, debe ser divisible por el número 1 y por si mismo. Ejemplo: `A % 1 == 0`  y `A % A == 0`.
+- Crear variable que cuente cuántos números primos se han sumado, sin que pase el valor del `código secreto`.
+- Crear variable que vaya acumulando la suma de los primeros `N` números primos.
+
+```python
+suma = 0
+contador_numeros = 0
+for numero in numeros:
+    if es_primo(numero):
+        suma = suma + numero
+        contador_numeros = contador_numeros + 1
+```
+
+:::
+
+```{pyodide-python}
+
+# Escribe aquí función para saber si un número es primo
+
+# Escribe tu respuesta
+respuesta = None
+print(respuesta)
+
+# Verifica la respuesta
+import sala
+sala.revisar(respuesta)
+```

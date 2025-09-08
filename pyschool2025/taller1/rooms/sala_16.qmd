@@ -1,0 +1,68 @@
+---
+title: "Habitación 16:"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_16.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_16.png" width="650">
+</center>
+
+<br/>
+
+El sistema para monitorear las temperaturas 🌡️ de las salas principales está fallando, hay salas que se están enfriando
+como otras que su temperatura está subiendo ❄️🔥... ¡todo esto sin alarmas de avisos para poder regularlas!😱.
+
+🛠️ Arregla la función del sistema cuanto antes, ya que este monitoreo es primordial para el
+funcionamiento de la estación espacial 🚨. Este debe funcionar con grados `fahrenheit`.
+
+El monitoreo debe respetar los siguientes rangos:
+
+- 🧊 Si la tempratura es menor o igual a -2C° debe indicar nivel `muy bajo`.
+- ❄️ Si la temperatura es mayor a -2C° y menor o igual a 12C° debe indicar nivel `bajo`.
+- 🌤️ Si la temperatura es mayor a 12°C y menor o igual a 18°C debe indicar nivel `medio`.
+- 🔥 Si la temperatura es mayor a 18°C debe indicar nivel `alto`
+
+<div class="alert alert-info">
+Modifica la función de monitoreo para que pueda recibir temperaturas en `celsius`, tranformarlas a su equivalente en `fahrenheit` y crear una `lista`
+que contenga en el **mismo orden** que los grados celsius, su nivel de temperatura.
+
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Al momento de recorrer la `lista` de grados celsius, transforma y luego evalúa a qué nivel corresponde cada grado, para luego agregar su valor
+ en dicha `lista` de niveles.
+
+```python
+grados_celsius = [0, 2]
+lista_niveles = []
+def monitoreo(grados_celsius):
+    for grado in grados_celsius:
+        grado_fahrenheit = celsius_a_fahrenheit(grado)
+
+        if grado_fahrenheit < 25:
+            lista_niveles.append('alta')
+        else:
+            lista_niveles.append('baja')
+```
+:::
+
+```{pyodide-python}
+temperaturas = [-2, 0, 25, -1, 16]
+
+# Arregla la función para que cumpla las condiciones
+def monitoreo_temperatura(temperaturas):
+    for temperatura in temperaturas:
+        if temperatura <= -2:
+            return 'bajo'
+        elif temperatura > 20:
+            return 'alt'`
+        else:
+            return 'medio'
+
+respuesta = monitoreo_temperatura(temperaturas)
+
+import sala
+sala.revisar(respuesta)
+```

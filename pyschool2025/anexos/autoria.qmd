@@ -4,4 +4,4 @@ Este material ha sido creado por [Francisco Alfaro](https://www.linkedin.com/in/
 
 Su objetivo es motivar a los estudiantes a aprender Python y disfrutar de las matemáticas mediante herramientas y recursos que faciliten la comprensión y el interés en estos temas. Ofrecemos ejemplos prácticos, problemas entretenidos y actividades interactivas para desarrollar habilidades en Python y profundizar en los conceptos matemáticos presentados en las olimpiadas.
 
-Para más información, no dudes en contactarnos a través de nuestros correos electrónicos:  `francisco.alfaro.496@gmail.com`, `valeska.canales.p@gmail.com`.
+> Para más información, no dudes en contactarnos a través de nuestros correos electrónicos:  `francisco.alfaro@usm.cl` y `vcanalesp@usm.cl`. 

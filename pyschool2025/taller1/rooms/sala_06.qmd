@@ -1,0 +1,64 @@
+---
+title: "Habitación 6:"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_06.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_06.png" width="650">
+</center>
+
+<br/>
+
+Mientras te acercas al núcleo de comunicaciones, detectas un patrón pulsante en la pantalla del sistema cifrado. Es la
+secuencia de Fibonacci, transmitida como una señal de emergencia desde un satélite perdido hace años 🛰️✨.
+
+💾 Extrae y analiza ciertas posiciones para encontrar la clave de acceso y así poder avanzar al siguiente nivel.
+
+<div class="alert alert-info">
+De la lista de Fibonacci generada, extrae los elementos (números) en los índices **0, 2, 10, -2**. Luego obtén el
+promedio de los números extraídos.
+</div>
+
+::: {.callout-tip title="Acceder a elementos de una lista" collapse="true"}
+Para acceder a un elemento se neceita indicar su índice, los índices comienzan desde el valor **0** hasta **n-1** dónde **n** igual a cantidad de elementos de la lista.
+
+En Python los indices pueden ser también negativos `-1, -2, -3, ..., -n` pero estos se cuentan de derecha a izquierda.
+
+
+teniendo la siguiente lista lista = [1, 2, 3, 4, 5, 6]
+
+índices positivos:
+
+* 0 para obtener 1
+* 2 para obtener 3
+* 3 para obtener 4
+
+índices negativos:
+
+* -6 para obtener 1
+* -3 para obtener 4
+* -1 para obtener 6
+
+Ejemplo
+```python 
+lista = [1, 2, 3, 4]
+lista[0] # Obtiene valor 1
+lista[3] # Obtiene valor 3
+lista[-3] # Obtiene valor 2
+```
+:::
+
+```{pyodide-python}
+import statistics
+# Escribe tu respuesta aquí
+
+lista_fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+promedio = statistics.mean([])
+print(promedio)
+
+# Verifica la respuesta
+import sala
+sala.revisar(promedio)
+```

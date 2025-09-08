@@ -1,0 +1,49 @@
+---
+title: "Habitación 9:"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_09.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_09.png" width="650">
+</center>
+
+<br/>
+
+Desde el área de mantenimiento 🔧 han enviado un listado objetos de la estación espacial por reparar, sin embargo, el listado está
+mezclado con objetos que ya están en perfecto estado ✅.
+
+⚠️ ¡Cuidado! No gastes recursos en hacer mantenciones innecesarias. Crea un listado nuevo 📋 separando
+solo los objetos que realmente necesitan dicha mantención ⚙️.
+
+<div class="alert alert-info">
+Aplica los siguientes elementos para tener una `lista` de objetos para la mantención:
+
+- Recorrer la lista `objetos`.
+- Sentencia `if` para verificar si los `objetos` no están (`not in`) en lista de `reparados`.
+- Agregar elementos a la lista `por reparar` si la sentencia `if` se cumple.
+
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Ten en consideración lo siguiente:
+
+- Para recorrer una lista tiene el formato `for` objeto in lista, en este caso la _lista_ es `objetos
+- Basta con una sentencia `if objeto not in reparados` para verificar que `objeto` no está dentro de lista de `reparados`
+- Se debe agregar el `objeto` que cumpla la sentencia a la lista `por reparar` con la función `.append(objeto)`
+
+:::
+
+```{pyodide-python}
+# No elimines estas líneas
+import sala
+objetos = ["linterna", "audífonos", "monitor principal", "motor de enfriador","monitor de repuesto", "antena", "filtro gases", "lentes infrarojo", "teclado"]
+reparados= ["monitor de repuesto", "audífonos", "motor de enfriador"]
+por_reparar = []
+
+# Escribe tu respuesta aquí
+
+# No elimines esta línea
+sala.revisar(por_reparar)
+```

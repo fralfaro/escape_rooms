@@ -1,0 +1,47 @@
+---
+title: "Habitación 15:"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_15.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_15.png" width="650">
+</center>
+
+<br/>
+
+Durante la revisión de los sistemas exteriores ⚙️ , se detectó una serie de coordenadas espaciales que parecen estar alteradas 🧮.
+Para asegurar el camino de regreso, necesitas identificar 🔎 todas las combinaciones de coordenadas (x, y) cuya suma total sea exactamente 50.
+
+⚠️ Estas coordenadas están definidas en un rango del 1 al 30.
+Si no encuentras todas las combinaciones correctas, podrías enviar a la tripulación hacia una zona de meteoritos 💥.
+
+<div class="alert alert-info">
+Guarda todas las combinaciones posibles en una `lista` con el formato `(x,y)`. Para esto debes ocupar un ciclo `for`
+dentro de otro ciclo `for` para obtener todas las combinaciones existentes y dentro de estas, rescatar las correspondientes.
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Los ciclos `for` anidados funcionan de la siguiente manera. Por cada recorrido del **primer ciclo for** se hace un recorrido
+completo del **segundo ciclo for**, es decir, el segundo ciclo for se repite cada vez que el primer ciclo for avanza.
+
+Para almacenar los valores pares `(x,y)` en una lista se hace de la forma `lista.append((1,2))`
+
+Ejemplo:
+```python
+for exterior in exteriores: #  Se avanza un valor por cada recorrido completo del segundo for
+    for interior in interiores: # Se recorre completo
+        lista.append((exterior, interior))
+```
+:::
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+respuesta = None
+print(respuesta)
+
+# Verifica la respuesta
+import sala
+sala.revisar(respuesta)
+```

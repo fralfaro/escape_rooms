@@ -15,9 +15,7 @@ book:
   chapters:
     - index.qmd
     - students.qmd
-    - teachers.qmd
-    - intro.qmd
-    - part: 🎯 Python Básico
+    - part: Estación Espacial 🛰️
       chapters:
         - taller1/taller1.qmd
         - taller1/rooms/0.qmd
@@ -28,7 +26,7 @@ book:
         - taller1/rooms/5.qmd
         - taller1/rooms/6.qmd
         - taller1/rooms/end.qmd
-    - part: 🎯 Ciencia de datos
+    - part: Laboratorio Pokemon 🧪
       chapters:
         - taller2/taller2.qmd
         - taller2/rooms/0.qmd
@@ -38,10 +36,13 @@ book:
         - taller2/rooms/4.qmd
         - taller2/rooms/end.qmd
 
-    - part: 📜 Anexos
+    - part: Anexos 📚
       chapters:
+        - intro.qmd
+        - teachers.qmd
         - anexos/cierre_evento.qmd
         - anexos/autoria.qmd
+
 
 lang: es
 

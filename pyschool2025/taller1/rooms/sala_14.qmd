@@ -1,0 +1,62 @@
+---
+title: "Habitación 14:"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_14.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_14.png" width="650">
+</center>
+
+<br/>
+
+Mientras exploras el módulo de comunicaciones de la estación espacial 🛰️, encuentras un panel que emite señales de luz
+en un extraño patrón de puntos (` . `) y rayas (` _ `) ... ¡código morse! 😲🕵️‍♂️.
+
+Los sistemas están caídos ⚠️ y no hay forma de acceder a los registros...
+
+Pero junto a los cables🔌, encuentras un diccionario 📖 de claves escondido. Parece que alguien dejó un mensaje importante codificado en este sistema.
+
+✨ ¡Procura leer el mensaje! ya que es un dato importante a futuro.
+
+<div class="alert alert-info">
+Ocupando el diccionario, debes decifrar el mensaje recorriendo la lista `mensaje`
+y obtener el valor correspondiente desde el `diccionario`, para luego unir todos estos valores en una sola variable, y poder obtener la respuesta decifrada.
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Por cada `elemento` de `mensaje` obten el valor desde `diccionario[elemento]` para acumularlos en una lista `[]` y juntar estos caracteres en un solo texto
+con la función `.join()`.
+
+Por ejenplo:
+```python
+mensaje_espanol = []
+conector_palabras= '-'
+for elemento in mensaje:
+    valor = diccionario[elemento]
+    mensaje_espanol.append(valor)
+mensaje_decodificado = conector_palabras.join(mensaje_espanol)
+```
+
+:::
+
+```{pyodide-python}
+mensaje = [ '.', '._..', '__._.', '_._.', '___', '_..', '..', '__.', '___', '__._.', '...', '.', '_._.', '._.', '.', '_', '___', '__._.',
+            '__._', '.._', '.', '__._.', '...', '.', '__._.', '_..', '.', '_...', '.', '__._.', '___', '_._.', '.._', '.__.', '._', '._.',
+            '__._.', '.', '_.', '__._.', '.', '._..', '__._.', '.._', '._..', '_', '..', '__', '___', '__._.','_..', '.', '...', '._', '.._.',
+            '..', '___', '__._.', '.', '...', '__._.', '..___', '...._']
+
+diccionario = { '._': 'a', '_...': 'b', '_._.': 'c', '_..': 'd', '.': 'e', '.._.': 'f', '__.': 'g', '....': 'h', '..': 'i', '.___': 'j', '_._': 'k', '._..': 'l',
+                '__': 'm', '_.': 'n', '___': 'o', '.__.': 'p', '__._': 'q', '._.': 'r', '...': 's', '_': 't', '.._': 'u', '..._': 'v', '.__': 'w', '_.._': 'x', '_.__': 'y',
+                '__..': 'z', '__._.': ' ','_____': '0', '.____': '1', '..___': '2', '...__': '3', '...._': '4','.....': '5', '_....': '6', '__...': '7', '___..': '8',
+                '____.': '9' }
+
+# Escribe tu respuesta aquí
+respuesta = None
+pint(respuesta)
+
+# Verifica la respuesta
+import sala
+sala.revisar(respuesta)
+```

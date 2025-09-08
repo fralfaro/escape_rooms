@@ -1,0 +1,53 @@
+---
+title: "Habitación 4: "
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_04.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_04.png" width="650">
+</center>
+
+<br/>
+
+¡El sistema de la estación se está volviendo loco!... Está recibiendo lecturas de
+temperatura completamente inconsistentes 🧊🔥.
+
+⚙️ Ajusta el sistema para arreglar el clima interno y evitar posibles golpes térmicos.
+
+🖥️ Para tomar decisiones automáticas y estabilizar el ambiente, debes calcular el valor promedio
+de las siguientes mediciones:
+
+$$
+19,5 - 22,3 - 12 - 10,01 - 32 - 29,99 - 20,89
+$$
+
+<div class="alert alert-info">
+Agrega los números en la variable `numeros` y separa cada uno con una coma `,`.
+
+Ten en mente que la variable `numeros` es una `lista` y estas se definen por encerrar sus elementos
+entre corchetes `[]`. También considera que los números decimales en el código se escriben ocupando un punto `.` en lugar
+de una coma `,`.
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+
+Para escribir los números dentro de`[]` sigue el siguiente ejemplo:
+```python 
+numeros = [1.2, 2, 3.5, 4]
+```
+:::
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+import statistics
+numeros = []
+respuesta = statistics.mean(numeros)
+print(respuesta)
+
+
+# Verifica la respuesta
+import sala
+sala.revisar(respuesta)
+```

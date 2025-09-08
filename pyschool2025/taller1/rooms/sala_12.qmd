@@ -1,0 +1,73 @@
+---
+title: "Habitación 12:"
+include-in-header:
+  - file: setup.html
+  - text: '<script> window.ROOM_CHALLENGE_URL = window.REPO_URL + "/sala_12.py"; </script>'
+---
+
+<center>
+<img src="./img/sala_12.png" width="650">
+</center>
+
+<br/>
+
+La estación espacial 🛰️ está comenzando a presentar errores en el suministro de energía ⚡. La terminal principal
+necesita saber cuántos módulos están operativos y cuánta energía sumistra cada uno 🔋.
+
+💡 Crea un **diccionario** con los tres siguientes módulos más sus respectivos niveles de energía:
+
+- Módulo **PS004** con nivel de energía **80**
+- Módulo **PS014** con nivel de energía **120**
+- Módulo **PS104** con nivel de energía **50**
+
+
+<div class="alert alert-info">
+Los diccionarios son un tipo de datos en el mundo de la programación que contienen **valores pares** compuestos por
+**llave** y **valor** por ejemplo:
+
+```python
+diccionario = {
+ 'llave': 'valor',
+ 'llave_dos': 'valor_dos'
+ }
+```
+
+En el ejemplo `llave` o `llave_dos` puede ser cualquier texto, este último sirve para obtener el `valor` o `valor_dos`:
+
+```python
+diccionario['llave'] # Se obtiene 'valor'
+diccionario['llave_dos'] # Se obtiene 'valor_dos'
+```
+
+Las variables de `valor` pueden ser cualquier dato, tanto texto como numérico u otros:
+
+```python
+altura_metros = {
+ 'cabina': 1.5,
+ 'radio': 0.4,
+ 'parlante': 1
+ }
+```
+</div>
+
+::: {.callout-tip title="Pista" collapse="true"}
+Crea un diccionario ocupando como `llave` los nombres de los módulos y como `valor` el número que corresponde a cada módulo.
+
+Por ejempo para módulo PS00 con energía 10:
+
+```python 
+diccionario = {
+    'PS00': 10
+}
+```
+:::
+
+```{pyodide-python}
+# Escribe tu respuesta aquí
+
+respuesta = None
+print(respuesta)
+# Verifica la respuesta
+import sala
+sala.revisar(respuesta)
+```
