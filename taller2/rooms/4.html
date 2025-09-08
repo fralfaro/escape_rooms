@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Habitación 4: Visualización de Combate – Escape Rooms</title>
+<title>Habitación 4 – Escape Rooms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -230,7 +230,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"import pandas as pd\nimport matplotlib.pyplot as plt\n\nurl = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'\ndf = pd.read_csv(url)\n\n# Elegir columnas\ncol_x = None  # Por ejemplo: 'Attack', 'Defense', 'HP', 'Speed'\ncol_y = None  # Por ejemplo: 'Attack', 'Defense', 'HP', 'Speed'\ncolor = None  # Por ejemplo: 'orange', 'green', 'blue', 'red'\n\n# Crear columna suma\ndf['suma'] = df[col_x] + df[col_y]\n\n# Gráfico de dispersión\nplt.figure(figsize=(10, 6))\nplt.scatter(df[col_x], df[col_y], color=color)\nplt.title(f'{col_x} vs {col_y} de Pokémon')\nplt.xlabel(col_x)\nplt.ylabel(col_y)\nplt.grid()\nplt.show()\n\n# Mostrar Top 5 Pokémon\nprint(\"Top 5 Pokémon con mayor suma entre\", col_x, \"y\", col_y)\ntabla_top5 = df[['Name', col_x, col_y, 'suma']].sort_values('suma', ascending=False).head(5)\nprint(tabla_top5)\n\n# Definir respuesta\nrespuesta = None  # Escribe aquí el nombre del Pokémon con mayor suma\n\n# Verifica tu respuesta\nimport verificar\nverificar.salon_44(col_x, col_y, respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# --- Cargar datos ---\nurl = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'\ndf = pd.read_csv(url)\n\nprint(\"Mostrando primeras filas:\")\nprint(df.head())","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# --- Parámetros personalizables ---\n# Elige dos estadísticas para comparar:\ncol_x = 'Attack'   # Cambia por: 'HP', 'Attack', 'Defense', 'Speed'\ncol_y = 'Defense'  # Cambia por: 'HP', 'Attack', 'Defense', 'Speed'\n\n# Estética del gráfico:\ncolor_puntos = 'tab:blue'  # 'tab:orange', 'tab:green', 'red', etc.\nalpha_puntos = 0.7\ntamano_base = 40           # tamaño de los puntos\ntamano_por = None          # opcional: 'HP', 'Speed' para escalar tamaño por una columna, o None\n\n# Línea de tendencia:\ndibujar_tendencia = True\n\n# --- Validaciones simples ---\nstats_validas = ['HP', 'Attack', 'Defense', 'Speed']\nif col_x not in stats_validas or col_y not in stats_validas:\n    raise ValueError(f\"Elige columnas dentro de {stats_validas}\")\n\n# --- Columna suma y Top 5 ---\ndf['suma'] = df[col_x] + df[col_y]\ntabla_top5 = df[['Name', col_x, col_y, 'suma']].sort_values('suma', ascending=False).head(5)\n\n# --- Tamaños adaptativos (opcional) ---\nif tamano_por in stats_validas:\n    # Escala simple para que no explote el tamaño\n    vals = df[tamano_por].fillna(df[tamano_por].median())\n    sizes = tamano_base * (vals - vals.min()) / (vals.max() - vals.min() + 1e-9) + tamano_base\nelse:\n    sizes = tamano_base\n\n# --- Gráfico de dispersión ---\nplt.figure(figsize=(8, 7))\nplt.scatter(df[col_x], df[col_y], s=sizes, alpha=alpha_puntos, edgecolor='k', linewidth=0.3, color=color_puntos)\n\nplt.title(f'Relación entre {col_x} y {col_y} (Pokémon)', fontsize=15, fontweight='bold')\nplt.xlabel(col_x)\nplt.ylabel(col_y)\nplt.grid(alpha=0.4)\n\n# Línea de tendencia (mínimos cuadrados)\nif dibujar_tendencia:\n    m, b = np.polyfit(df[col_x], df[col_y], 1)\n    xs = np.linspace(df[col_x].min(), df[col_x].max(), 200)\n    ys = m * xs + b\n    plt.plot(xs, ys, linestyle='--', linewidth=2)\n\nplt.show()","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# --- (Medir correlación ---\nprint(\"\\nMatriz de correlación (Pearson):\")\nprint(df[[col_x, col_y]].corr().round(3))\n\n# Tipo de correlación:\nrespuesta = None\n\n# --- Verificación ---\nimport verificar\nverificar.salon_44(respuesta)","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -441,7 +441,7 @@ globalThis._qpyodideGetInstance = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/4.html"><span class="chapter-title">Habitación 4: Visualización de Combate</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/4.html"><span class="chapter-title">Habitación 4</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -576,12 +576,12 @@ globalThis._qpyodideGetInstance = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../taller2/rooms/3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Habitación 3: Estadísticas de Combate</span></a>
+  <a href="../../taller2/rooms/3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Habitación 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../taller2/rooms/4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Habitación 4: Visualización de Combate</span></a>
+  <a href="../../taller2/rooms/4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Habitación 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -641,9 +641,9 @@ globalThis._qpyodideGetInstance = function() {
   });
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/4.html"><span class="chapter-title">Habitación 4: Visualización de Combate</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/4.html"><span class="chapter-title">Habitación 4</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Habitación 4: Visualización de Combate</span></h1>
+<h1 class="title"><span class="chapter-title">Habitación 4</span></h1>
 </div>
 
 
@@ -660,51 +660,64 @@ globalThis._qpyodideGetInstance = function() {
 </header>
 
 
-<p>La sala está llena de pantallas mostrando batallas Pokémon.</p>
-<p>El Profesor Oak te deja un nuevo mensaje:</p>
+<h2 class="text-center anchored">
+🎯 Relación entre diferentes estadísticas
+</h2>
+<center>
+<img src="./img/sala_p4.png" width="500">
+</center>
+<p><br></p>
+<p>La sala está llena de pantallas mostrando batallas Pokémon.<br>
+La pantalla principal muestra un nuevo mensaje del <strong>Profesor Oak</strong>:</p>
 <div class="alert alert-info">
-<p>“Antes de elegir al Pokémon más fuerte, un buen Científico de Datos debe visualizar los datos.<br>
-No siempre sumar estadísticas tiene sentido… ¡Primero observa, luego decide!”</p>
+<p>“Antes de elegir al Pokémon más fuerte, observa la relación entre sus estadísticas.<br>
+¿Ataque y Defensa crecen juntos, compiten entre sí… o no parecen relacionarse?”</p>
 </div>
-<hr>
+<section id="pregunta-principal" class="level2">
+<h2 class="anchored" data-anchor-id="pregunta-principal">✅ Pregunta principal</h2>
+<p><strong>¿Qué tan relacionada está <code>Attack</code> con <code>Defense</code>?</strong><br>
+Observa el gráfico de dispersión y comenta si la relación parece <strong>positiva</strong>, <strong>negativa</strong> o <strong>débil/nula</strong>.<br>
+Luego, explora <strong>otros pares</strong> de estadísticas para comparar patrones.</p>
+</section>
 <section id="qué-haremos" class="level2">
-<h2 class="anchored" data-anchor-id="qué-haremos">¿Qué haremos?</h2>
+<h2 class="anchored" data-anchor-id="qué-haremos">🧪 Qué haremos</h2>
 <ol type="1">
-<li>Elegir dos estadísticas de combate (<code>col_x</code> y <code>col_y</code>) — por ejemplo <code>Attack</code> y <code>Defense</code>.<br>
+<li>Elegir dos estadísticas de combate (<code>col_x</code> y <code>col_y</code>) — por defecto <code>Attack</code> y <code>Defense</code>.<br>
 </li>
-<li>Crear un gráfico de dispersión para ver cómo se relacionan.<br>
+<li>Crear un <strong>gráfico de dispersión personalizable</strong> (color, tamaño, línea de tendencia opcional).<br>
 </li>
-<li>Crear una nueva columna llamada <code>suma</code> sumando esas dos estadísticas.<br>
-</li>
-<li>Mostrar los 5 mejores Pokémon con mayor <code>suma</code>.<br>
-</li>
-<li>Definir en <code>respuesta</code> el nombre del Pokémon con la mayor <code>suma</code>.</li>
+<li>Definir en <strong><code>respuesta</code></strong> el <strong>tipo</strong> de correlación entre las estadísticas seleccionadas.</li>
 </ol>
-<hr>
-<div class="callout callout-style-default callout-tip callout-titled" title="Recuerda">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-tip callout-titled" title="Sugerencias para analizar">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Recuerda
+Sugerencias para analizar
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>El gráfico de dispersión nos permite observar:</p>
 <ul>
-<li>Si las estadísticas están relacionadas.<br>
+<li>Si los puntos suben hacia la derecha, la relación es <strong>positiva</strong>; si bajan, <strong>negativa</strong>; si están dispersos, <strong>débil o nula</strong>.<br>
 </li>
-<li>Si sumar tiene sentido o si las variables son muy distintas.</li>
+<li>Una “suma” puede sesgar si las escalas son distintas; como alternativa, podrías estandarizar (z-score) antes de sumar.<br>
+</li>
+<li><strong>Opcional</strong>: calcula la correlación de Pearson con <code>df[[col_x, col_y]].corr()</code>.</li>
 </ul>
-<p>Luego de observar, podemos ordenar la tabla y tomar una mejor decisión.</p>
 </div>
 </div>
-<hr>
+</div>
 </section>
 <section id="tu-código" class="level2">
 <h2 class="anchored" data-anchor-id="tu-código">Tu Código</h2>
 <div id="qpyodide-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qpyodide-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 

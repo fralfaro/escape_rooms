@@ -254,56 +254,67 @@
   {
     "objectID": "taller2/rooms/3.html",
     "href": "taller2/rooms/3.html",
-    "title": "Habitación 3: Estadísticas de Combate",
+    "title": "Habitación 3",
     "section": "",
-    "text": "Desafío de la Sala\nEn esta sala aparece una gran pantalla que dice:",
+    "text": "🎯 Objetivo de la sala\nLa pantalla principal se ilumina y muestra un nuevo mensaje del Profesor Oak:",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Habitación 3: Estadísticas de Combate</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Habitación 3</span>"
+    ]
+  },
+  {
+    "objectID": "taller2/rooms/3.html#objetivo-de-la-sala",
+    "href": "taller2/rooms/3.html#objetivo-de-la-sala",
+    "title": "Habitación 3",
+    "section": "",
+    "text": "Agrupa por Type 1 y calcula el promedio de HP, Attack, Defense, Speed.\n\nGuarda la tabla resultante en promedio.\n\nDefine:\n\nrespuesta_lista = lista con el tipo ganador por promedio en este orden: ['HP','Attack','Defense','Speed'].\n\n\n\n\n\n\n\n\nAgrupar y seleccionar estadísticas\n\n\n\n\n\nPromedios por tipo:\npromedio = df.groupby('Type 1')[['HP','Attack','Defense','Speed']].mean().round(2)\nTipo con mayor/menor promedio:\ntipo_mas_ataque   = promedio['Attack'].idxmax()\ntipo_menos_ataque = promedio['Attack'].idxmin()\nLista de ganadores por estadística (en orden fijo):\norden = ['HP','Attack','Defense','Speed']\nrespuesta_lista = [promedio[c].idxmax() for c in orden]",
+    "crumbs": [
+      "Laboratorio Pokemon 🧪",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Habitación 3</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/3.html#desafío-de-la-sala",
     "href": "taller2/rooms/3.html#desafío-de-la-sala",
-    "title": "Habitación 3: Estadísticas de Combate",
-    "section": "",
-    "text": "Agrupa los Pokémon por Type 1 y calcula el promedio de HP, Attack, Defense, Speed.\n\nGuarda ese resultado en promedio.\n\nDefine la variable respuesta_ataque con el tipo de Pokémon que tiene mayor promedio de ataque.\n\nDefine la variable respuesta_defensa con el tipo de Pokémon que tiene menor promedio de defensa.\n\nMuestra el resultado.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "title": "Habitación 3",
+    "section": "🧩 Desafío de la Sala",
+    "text": "🧩 Desafío de la Sala\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Habitación 3: Estadísticas de Combate</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Habitación 3</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/4.html",
     "href": "taller2/rooms/4.html",
-    "title": "Habitación 4: Visualización de Combate",
+    "title": "Habitación 4",
     "section": "",
-    "text": "¿Qué haremos?\nLa sala está llena de pantallas mostrando batallas Pokémon.\nEl Profesor Oak te deja un nuevo mensaje:",
+    "text": "✅ Pregunta principal\nLa sala está llena de pantallas mostrando batallas Pokémon.\nLa pantalla principal muestra un nuevo mensaje del Profesor Oak:\n¿Qué tan relacionada está Attack con Defense?\nObserva el gráfico de dispersión y comenta si la relación parece positiva, negativa o débil/nula.\nLuego, explora otros pares de estadísticas para comparar patrones.",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Habitación 4: Visualización de Combate</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Habitación 4</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/4.html#qué-haremos",
     "href": "taller2/rooms/4.html#qué-haremos",
-    "title": "Habitación 4: Visualización de Combate",
-    "section": "",
-    "text": "Elegir dos estadísticas de combate (col_x y col_y) — por ejemplo Attack y Defense.\n\nCrear un gráfico de dispersión para ver cómo se relacionan.\n\nCrear una nueva columna llamada suma sumando esas dos estadísticas.\n\nMostrar los 5 mejores Pokémon con mayor suma.\n\nDefinir en respuesta el nombre del Pokémon con la mayor suma.\n\n\n\n\n\n\n\n\nRecuerda\n\n\n\nEl gráfico de dispersión nos permite observar:\n\nSi las estadísticas están relacionadas.\n\nSi sumar tiene sentido o si las variables son muy distintas.\n\nLuego de observar, podemos ordenar la tabla y tomar una mejor decisión.",
+    "title": "Habitación 4",
+    "section": "🧪 Qué haremos",
+    "text": "🧪 Qué haremos\n\nElegir dos estadísticas de combate (col_x y col_y) — por defecto Attack y Defense.\n\nCrear un gráfico de dispersión personalizable (color, tamaño, línea de tendencia opcional).\n\nDefinir en respuesta el tipo de correlación entre las estadísticas seleccionadas.\n\n\n\n\n\n\n\nSugerencias para analizar\n\n\n\n\n\n\nSi los puntos suben hacia la derecha, la relación es positiva; si bajan, negativa; si están dispersos, débil o nula.\n\nUna “suma” puede sesgar si las escalas son distintas; como alternativa, podrías estandarizar (z-score) antes de sumar.\n\nOpcional: calcula la correlación de Pearson con df[[col_x, col_y]].corr().",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Habitación 4: Visualización de Combate</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Habitación 4</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/4.html#tu-código",
     "href": "taller2/rooms/4.html#tu-código",
-    "title": "Habitación 4: Visualización de Combate",
+    "title": "Habitación 4",
     "section": "Tu Código",
-    "text": "Tu Código\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Tu Código\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Habitación 4: Visualización de Combate</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Habitación 4</span>"
     ]
   },
   {
@@ -311,7 +322,7 @@
     "href": "taller2/rooms/end.html",
     "title": "Habitación Final",
     "section": "",
-    "text": "La última puerta se abre lentamente…\nSientes una brisa fresca y el sonido de la naturaleza vuelve a rodearte.\nHas logrado superar todos los desafíos del laboratorio del Profesor Oak.\nNo solo atrapaste datos… aprendiste a analizarlos, entenderlos y usarlos a tu favor.\nFrente a ti, una gran Pokébola holográfica aparece en el cielo y proyecta un mensaje:\n\n“Los verdaderos Maestros Pokémon no solo entrenan en batalla… también dominan el poder de los datos.”\n\nSabes que esta aventura no fue solo un juego.\nHas dado tus primeros pasos como Científico de Datos Pokémon.\nY esto… es solo el comienzo.\n\n🏆 Cierre PySchool",
+    "text": "🌟 ¡Misión completada, equipo Pokémon! 🏆\n\nDespués de limpiar datos, explorar estadísticas 🧠, comparar tipos y visualizar batallas 📊⚔️…\n💫 ¡El Laboratorio del Profesor Oak ha sido restaurado con éxito!\nLos sistemas vuelven a la normalidad, las compuertas se abren y el profesor confirma que tu dominio de pandas y visualización marcó la diferencia. Gracias a tu criterio y trabajo con Python 🐍💻, ahora la región cuenta con una base de conocimiento más fuerte que nunca.\n🧪 Tu aventura demostró que entrenar no es solo pelear: es medir, analizar y decidir con evidencia.\nEl viaje continúa… y tus próximos equipos serán más inteligentes que nunca. 🔬🎮\n\n\n\n\n\n\n\n🧪 Fin del Escape Room: Laboratorio del Profesor Oak 🧪 ¡Gracias por formar parte de esta aventura de Ciencia de Datos Pokémon!\n\n\n🏁 Cierre del Taller",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Habitación Final</span>"
