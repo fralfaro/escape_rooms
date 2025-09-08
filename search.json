@@ -177,67 +177,78 @@
   {
     "objectID": "taller2/rooms/0.html",
     "href": "taller2/rooms/0.html",
-    "title": "Habitación 0: Inicio",
+    "title": "Habitación 0",
     "section": "",
-    "text": "Desafío de la Sala\nDespiertas dentro de un laboratorio muy conocido…\n¡Es el Laboratorio del Profesor Oak!\nSin embargo, algo no anda bien… Las puertas están bloqueadas y el sistema de datos está caído.\nUn mensaje aparece en la pantalla principal:\nCompleta las siguientes variables:\nLuego muestra las primeras filas usando .head().",
+    "text": "🔎 Desafío de la Sala\nTu tarea es:",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Habitación 0: Inicio</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Habitación 0</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/0.html#desafío-de-la-sala",
     "href": "taller2/rooms/0.html#desafío-de-la-sala",
-    "title": "Habitación 0: Inicio",
+    "title": "Habitación 0",
     "section": "",
-    "text": "url: con la dirección del archivo de datos.\n\ndf: con el resultado de leer los datos usando pd.read_csv(url).\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Importar la librería pandas.\n\nLeer el archivo de datos de Pokémon desde la url.\n\nGuardarlo en un DataFrame llamado df.\n\nMostrar las primeras filas para confirmar que todo está en orden.\n\n\n\n\n\n\n\nAyuda para Cargar Datos\n\n\n\n\n\nEn ciencia de datos usamos pandas para trabajar con tablas.\nPasos típicos:\nimport pandas as pd\ndf = pd.read_csv(\"url_del_archivo.csv\")\ndf.head()\nCon .head() puedes ver las primeras 5 filas.\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Habitación 0: Inicio</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Habitación 0</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/1.html",
     "href": "taller2/rooms/1.html",
-    "title": "Habitación 1: Explorador de Datos",
+    "title": "Habitación 1",
     "section": "",
-    "text": "Desafío de la Sala\nEl sistema se ha reiniciado parcialmente…\nPero las puertas siguen bloqueadas.\nEn la pantalla aparece un mensaje del Profesor Oak:\nYa cargaste los datos en la sala anterior (df).\nAhora:",
+    "text": "Desafío de la Sala\nLa energía volvió… pero las puertas siguen selladas.\nLa pantalla del laboratorio muestra un nuevo mensaje del Profesor Oak:\nYa cargaste los datos en la sala anterior (df). Ahora:",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Habitación 1: Explorador de Datos</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Habitación 1</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/1.html#desafío-de-la-sala",
     "href": "taller2/rooms/1.html#desafío-de-la-sala",
-    "title": "Habitación 1: Explorador de Datos",
+    "title": "Habitación 1",
     "section": "",
-    "text": "Crea una variable llamada info que almacene el resultado de df.info() (solo ejecutarlo está bien).\n\nCrea una variable llamada desc que almacene el resultado de df.describe().\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Crea una variable llamada info que almacene el resultado de df.info() (solo ejecutarlo está bien).\n\nCrea una variable llamada desc que almacene el resultado de df.describe().\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Habitación 1: Explorador de Datos</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Habitación 1</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/2.html",
     "href": "taller2/rooms/2.html",
-    "title": "Habitación 2: Tipos de Pokémon",
+    "title": "Habitación 2",
     "section": "",
-    "text": "Desafío de la Sala\nEl sistema del laboratorio sigue bloqueado…\nEn la pantalla aparece un nuevo mensaje del Profesor Oak:",
+    "text": "🎯 Objetivo de la sala\nEl sistema del laboratorio sigue bloqueado…\nLa pantalla del Profesor Oak vuelve a encenderse y muestra un nuevo reto:",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Habitación 2: Tipos de Pokémon</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Habitación 2</span>"
+    ]
+  },
+  {
+    "objectID": "taller2/rooms/2.html#objetivo-de-la-sala",
+    "href": "taller2/rooms/2.html#objetivo-de-la-sala",
+    "title": "Habitación 2",
+    "section": "",
+    "text": "Contar cuántos Pokémon existen de cada tipo (Type 1).\n\nContar los tipos más comunes y menos frecuentes.\nCrear una lista llamada respuesta con:\n\nEl número total de tipos distintos.\n\nEl tipo más común.\n\nEl tipo menos frecuente.\n\n\n\n\n\n\n\n\nContar y Graficar Datos\n\n\n\n\n\nPara contar los Pokémon por tipo:\nconteo = df['Type 1'].value_counts()\nPara graficar el conteo:\nimport matplotlib.pyplot as plt\nconteo.plot(kind='bar')\nplt.show()\nPara calcular el número total de tipos distintos (cuántos tipos existen en el dataset):\ntotal_tipos = df['Type 1'].nunique()\nPara obtener los tipos más y menos frecuentes:\nmas_comun = conteo.idxmax()\nmenos_frecuente = conteo.idxmin()",
+    "crumbs": [
+      "Laboratorio Pokemon 🧪",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Habitación 2</span>"
     ]
   },
   {
     "objectID": "taller2/rooms/2.html#desafío-de-la-sala",
     "href": "taller2/rooms/2.html#desafío-de-la-sala",
-    "title": "Habitación 2: Tipos de Pokémon",
-    "section": "",
-    "text": "Crea la variable conteo que contenga la cantidad de Pokémon por Type 1.\n\nGenera un gráfico de barras con ese conteo.\n\nVerifica tu respuesta.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "title": "Habitación 2",
+    "section": "🧩 Desafío de la Sala",
+    "text": "🧩 Desafío de la Sala\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Laboratorio Pokemon 🧪",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Habitación 2: Tipos de Pokémon</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Habitación 2</span>"
     ]
   },
   {

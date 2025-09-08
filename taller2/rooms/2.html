@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Habitación 2: Tipos de Pokémon – Escape Rooms</title>
+<title>Habitación 2 – Escape Rooms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -265,7 +265,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# Cargar nuevamente el dataset\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nurl = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'\ndf = pd.read_csv(url)\n\n# Contar Pokémon por tipo\nconteo = None  # Usa df['Type 1'].value_counts()\n\n# Crear gráfico de barras\nconteo.plot(kind='bar')\nplt.title('Cantidad de Pokémon por Tipo')\nplt.xlabel('Tipo')\nplt.ylabel('Cantidad')\nplt.xticks(rotation=45)\nplt.show()\n\n# Número total de tipos de Pokémon\nrespuesta = None  # ¿Cuántos tipos hay?\n\n# Verifica tu respuesta\nimport verificar\nverificar.salon_22(respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"# Cargar nuevamente el dataset\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nurl = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'\ndf = pd.read_csv(url)\n\n# 1) Contar Pokémon por tipo\nconteo = None\nprint(\"Conteo de Pokémon por tipo:\")\nprint(conteo)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# 2) Crear gráfico de barras mejorado\nplt.figure(figsize=(12,7))\n\n# Ordenar de mayor a menor para que sea más claro\nconteo.sort_values(ascending=False).plot(\n    kind='bar',\n    color='skyblue',\n    edgecolor='black'\n)\n\n# Títulos y etiquetas\nplt.title('🔢 Cantidad de Pokémon por Tipo', fontsize=16, fontweight='bold')\nplt.xlabel('Tipo de Pokémon', fontsize=12)\nplt.ylabel('Cantidad', fontsize=12)\n\n# Rotación y estilo de los nombres en el eje X\nplt.xticks(rotation=45, ha='right', fontsize=10)\n\n# Rejilla ligera en el eje Y\nplt.grid(axis='y', linestyle='--', alpha=0.7)\n\n# Ajustar márgenes para que no se corte texto\nplt.show()","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# 3) Crear la respuesta como lista\nnum_tipos = None\nmas_comun = None\nmenos_frecuente = None\n\nrespuesta = [num_tipos, mas_comun, menos_frecuente]\nprint(\"Respuesta final:\", respuesta)\n\n# Verificación de la sala\nimport verificar\nverificar.salon_22(respuesta)","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -476,7 +476,7 @@ globalThis._qpyodideGetInstance = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/2.html"><span class="chapter-title">Habitación 2: Tipos de Pokémon</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/2.html"><span class="chapter-title">Habitación 2</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -596,17 +596,17 @@ globalThis._qpyodideGetInstance = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../taller2/rooms/0.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Habitación 0: Inicio</span></a>
+  <a href="../../taller2/rooms/0.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Habitación 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../taller2/rooms/1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Habitación 1: Explorador de Datos</span></a>
+  <a href="../../taller2/rooms/1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Habitación 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../taller2/rooms/2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Habitación 2: Tipos de Pokémon</span></a>
+  <a href="../../taller2/rooms/2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Habitación 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -676,9 +676,9 @@ globalThis._qpyodideGetInstance = function() {
   });
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/2.html"><span class="chapter-title">Habitación 2: Tipos de Pokémon</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../taller2/taller2.html">Laboratorio Pokemon 🧪</a></li><li class="breadcrumb-item"><a href="../../taller2/rooms/2.html"><span class="chapter-title">Habitación 2</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Habitación 2: Tipos de Pokémon</span></h1>
+<h1 class="title"><span class="chapter-title">Habitación 2</span></h1>
 </div>
 
 
@@ -695,12 +695,37 @@ globalThis._qpyodideGetInstance = function() {
 </header>
 
 
+<h2 class="text-center anchored">
+🔥 Sala de Clasificación de Pokémon
+</h2>
+<p><br></p>
+<center>
+<img src="./img/sala_p2.png" width="600">
+</center>
+<p><br></p>
 <p>El sistema del laboratorio sigue bloqueado…<br>
-En la pantalla aparece un nuevo mensaje del Profesor Oak:</p>
+La pantalla del Profesor Oak vuelve a encenderse y muestra un nuevo reto:</p>
 <div class="alert alert-info">
 <p>“Un buen Científico de Datos debe ser capaz de responder preguntas simples con datos.<br>
-¿Cuántos Pokémon de cada tipo existen?”</p>
+¿Cuántos Pokémon existen de cada tipo?<br>
+¿Cuál es el tipo más común?<br>
+¿Y cuál es el menos frecuente?”</p>
 </div>
+<section id="objetivo-de-la-sala" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-de-la-sala">🎯 Objetivo de la sala</h2>
+<ol type="1">
+<li>Contar cuántos Pokémon existen de cada tipo (<code>Type 1</code>).<br>
+</li>
+<li>Contar los tipos más comunes y menos frecuentes.</li>
+<li>Crear una lista llamada <strong><code>respuesta</code></strong> con:
+<ul>
+<li>El número total de tipos distintos.<br>
+</li>
+<li>El tipo más común.<br>
+</li>
+<li>El tipo menos frecuente.</li>
+</ul></li>
+</ol>
 <div class="callout callout-style-default callout-tip callout-titled" title="Contar y Graficar Datos">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -713,28 +738,28 @@ Contar y Graficar Datos
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Para contar cuántos Pokémon hay por tipo puedes usar:</p>
+<p>Para contar los Pokémon por tipo:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>conteo <span class="op">=</span> df[<span class="st">'Type 1'</span>].value_counts()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Para graficar los resultados:</p>
+<p>Para graficar el conteo:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>conteo.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>conteo.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para calcular el número total de tipos distintos (cuántos tipos existen en el dataset):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>total_tipos <span class="op">=</span> df[<span class="st">'Type 1'</span>].nunique()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para obtener los tipos más y menos frecuentes:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mas_comun <span class="op">=</span> conteo.idxmax()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>menos_frecuente <span class="op">=</span> conteo.idxmin()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-<hr>
+</section>
 <section id="desafío-de-la-sala" class="level2">
-<h2 class="anchored" data-anchor-id="desafío-de-la-sala">Desafío de la Sala</h2>
-<ol type="1">
-<li>Crea la variable <code>conteo</code> que contenga la cantidad de Pokémon por <code>Type 1</code>.<br>
-</li>
-<li>Genera un gráfico de barras con ese conteo.<br>
-</li>
-<li>Verifica tu respuesta.</li>
-</ol>
-<hr>
+<h2 class="anchored" data-anchor-id="desafío-de-la-sala">🧩 Desafío de la Sala</h2>
 <div id="qpyodide-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qpyodide-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
