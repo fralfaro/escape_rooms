@@ -2,32 +2,50 @@
 title: "Habitación 2: Números"
 ---
 
-Comienzas a entender la rutina. Respondes correctamente, se abre una puerta, y apenas cruzas la puerta, la habitación se cierra.  
-En la nueva habitación hay una nueva nota esperándote:
 
-<div class="alert alert-info">
-Python puede usarse como una calculadora muy potente.  
-¿Puedes calcular el siguiente número?
+<center>
+<img src="./img/sala_02.png" width="650">
+</center>
 
+<br/>
+
+Mientras flotas por el pasillo de gravedad cero 🛰️, llegas al laboratorio químico.  
+La compuerta está sellada y un panel intermitente muestra un mensaje dejado por los primeros astronautas:
+
+🧩 **"Solo quienes dominen los números podrán acceder."**
+
+<div class="d-flex justify-content-center">
+<div class="alert alert-warning text-center font-weight-bold">
 $$
-\frac{1.23 + 2.34}{1 + 43/2} + 3 \times 2^{1.5}
+(201 + 759) \times 2^{3}
 $$
 </div>
-::: {.callout-tip title="Operaciones matemáticas en Python" collapse="true"}
-Las operaciones matemáticas en Python se realizan con los operadores habituales:
+</div>
 
-* `+` para la suma
-* `-` para la resta
-* `*` para la multiplicación
-* `/` para la división
-* `**` para la potencia
+<div class="alert alert-info">
+**Tu tarea:** asigna a cada variable su respectivo valor numérico según la fórmula.  
+Por ejemplo: `a = 55`
+</div>
+
+::: {.callout-tip title="Operaciones matemáticas en Python" collapse="true"}
+En Python, las operaciones matemáticas se escriben con los siguientes operadores:  
+
+* `+` → suma  
+* `-` → resta  
+* `*` → multiplicación  
+* `/` → división  
+* `**` → potencia (ejemplo: `2**3` = 8)
 :::
 
 ```{pyodide-python}
 # Escribe tu respuesta aquí
-respuesta = None
+a = 0
+b = 1
+c = 1
+d = 0
+respuesta = (a + b) * c**d
 
 # Verifica la respuesta
 import verificar
 verificar.salon_2(respuesta)
-```
+````

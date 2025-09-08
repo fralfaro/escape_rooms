@@ -54,7 +54,7 @@ respuesta = None
 print(respuesta)
 
 # Verifica la respuesta
-import sala
+import verificar
 verificar.salon_1(respuesta)
 ```
 

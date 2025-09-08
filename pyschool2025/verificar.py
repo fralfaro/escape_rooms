@@ -35,8 +35,7 @@ def salon_1(answer):
 
 
 def salon_2(answer):
-    #\frac{1.23 + 2.34}{1 + 43/2} + 3 \times 2^{1.5}
-    true_answer = (1.23 + 2.34) / (1 + 43/2) + 3 * 2**1.5
+    true_answer = 7680
     epsilon = 0.000001
     if type(answer) in [float, int] and abs(answer - true_answer) < epsilon:
         hyperlink("¡Correcto! Avanza a la siguiente página", "3.html", "success")
