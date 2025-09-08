@@ -2,77 +2,56 @@
 title: "Habitación 5: Listas"
 ---
 
-Una nueva nota aparece frente a ti:
+
+<center>
+<img src="./img/sala_08.png" width="650">
+</center>
+
+<br/>
+
+🔥 La tripulación debe reparar una filtración de altas temperaturas provocada por la avería de un panel solar ☀️.  
+Debes asegurarte de que se cumpla el protocolo de ingreso y, para ello, activar el sistema de seguridad 🛡️🚨.
+
+Ingresarán tres tripulantes:
+
+- 👨‍🚀 Tripulante uno: **credencial** con acceso permitido (`True`) ✅ y **traje** con resistencia _Alta_ 🧤.
+- 👨‍🚀 Tripulante dos: **credencial** con acceso permitido (`True`) ✅ y **traje** con resistencia _Baja_ ⚠️.
+- 👨‍🚀 Tripulante tres: **credencial** con acceso denegado (`False`) ❌ y **traje** con resistencia _Alta_ 🧤.
 
 <div class="alert alert-info">
-En esta sala debes trabajar con listas de palabras y filtrar las que cumplen ciertas condiciones.
-</div>
 
-::: {.callout-tip title="¿Qué es una lista en Python?" collapse="true"}
-
-Una lista es una colección de elementos.  
-
-Se define usando `[]` y los elementos van separados por comas.  
+Ocupa las sentencias `if, elif, else` para ejecutar código cuando se cumplen ciertas condiciones. No siempre
+es necesario ocupar `if`, `elif` y `else`, a veces basta con ocupar `if` o `if` y `else` dependiendo del caso.
 
 Por ejemplo:
-
 ```python
-frutas = ["manzana", "pera", "platano"]
+if cielo == 'Muy nublado':
+    return 'lluvia'
+elif cielo == 'Nublado':
+    return 'frio'
+else:
+    return 'templado'
 ```
 
-Podemos:
+</div>
 
-- Consultar el largo de la lista con `len(frutas)`  
-- Acceder a un elemento por su posición: `frutas[0]` → "manzana"  
-- Recorrer la lista con un ciclo `for`:  
-
-```python
-for fruta in frutas:
-    print(fruta)
-```
-
-Si queremos filtrar elementos, combinamos condiciones dentro del ciclo:
-
-```python
-for fruta in frutas:
-    if "a" in fruta:
-        print(fruta)
-```
+::: {.callout-tip title="Pista" collapse="true"}
+Las sentencias ya están aplicadas, pero están igualadas (`==`) a valores erróneos. Reemplaza
+ los valores `None` por `True` o `"Alta"` dependiendo de la variable con la que se iguala.
 
 :::
 
----
-
-## Desafío de la Sala
-
-Para avanzar, debes encontrar las palabras mágicas ocultas.  
-Estas palabras cumplen dos condiciones muy especiales:
-  
-1. Deben tener más letras que el número de esta habitación.  
-2. Deben contener la segunda vocal de la palabra `"lista"`.
-
-Lista de palabras:
-
-```python
-palabras = ["python", "code", "programacion", "loop", "variable", "data", "listado"]
-```
-
----
-
-## Escribe tu código:
-
 ```{pyodide-python}
-# Define los parámetros
-min_length = None  # ¿Cuántas letras debe tener como mínimo?
-letra = None       # ¿Qué letra debe tener la palabra?
 
-palabras = ["python", "code", "programacion", "loop", "variable", "data", "listado"]
+def autorizar_acceso(acceso, resistencia):
+    # Reemplaza las apariciones de None por los valores correctos
+    if acceso == None and resistencia == None:
+        return True
+    else:
+        return False
 
-for palabra in palabras:
-    if len(palabra) > min_length and letra in palabra:
-        print(palabra)
-
-# Verifica tu respuesta
+# Verifica la respuesta
 import verificar
-verificar.salon_5(min_length, letra)
+verificar.salon_5(respuesta)
 ```
+

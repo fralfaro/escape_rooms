@@ -16,6 +16,15 @@ def hyperlink(text, url, type="info"):
     print(text_str)
 
 
+def autorizar_acceso(acceso, resistencia):
+
+    # Escribe tu respuesta aquí
+    if acceso == True and resistencia == "Alta":
+        return True
+    else:
+        return False
+
+
 ########################################################
 # SALONES
 ########################################################
@@ -52,7 +61,7 @@ def salon_3(respuesta):
     if respuesta == None:
         text("Intenta cambiar el valor de la variable `respuesta`.", "info")
     elif respuesta == mean:
-        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "sala_05.html", "success")
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "4.html", "success")
     else:
         text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
@@ -62,17 +71,20 @@ def salon_4(respuesta):
     if respuesta == None:
         text("Intenta cambiar el valor de la variable `respuesta`.", "info")
     elif respuesta == lista:
-        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "sala_08.html", "success")
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "5.html", "success")
     else:
         text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
-def salon_5(min_length, letra):
-    if min_length is None or letra is None:
-        text("Debes asignar valores a las variables `min_length` y `letra`.", "info")
-    elif min_length == 5 and letra == "a":
-        hyperlink("¡Correcto! Avanza a la siguiente sala", "6.html", "success")
+def salon_5(autorizar_acceso):
+
+    acceso_tripulante_uno = autorizar_acceso(True, "Alta")
+    acceso_tripulante_dos = autorizar_acceso(True, "Baja")
+    acceso_tripulante_tres = autorizar_acceso(False, "Alta")
+
+    if acceso_tripulante_uno == True and acceso_tripulante_dos == False and acceso_tripulante_tres == False:
+        hyperlink("¡Correcto! Haz click aquí para avanzar al siguiente desafío", "6.html", "success")
     else:
-        text("La puerta sigue cerrada... Revisa las condiciones.", "warning")
+        text("No es la respuesta correcta. Inténtalo nuevamente.", "warning")
 
 def salon_6(senal_3, senal_5, senal_15, senal_7):
     if senal_3 is None or senal_5 is None or senal_15 is None or senal_7 is None:
