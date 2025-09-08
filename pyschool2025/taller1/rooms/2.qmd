@@ -17,14 +17,14 @@ La compuerta está sellada y un panel intermitente muestra un mensaje dejado por
 <div class="d-flex justify-content-center">
 <div class="alert alert-warning text-center font-weight-bold">
 $$
-(201 + 759) \times 2^{3}
+\left( \frac{(1,23 + 2,34)}{(1 + (43/2))} \right) + (3 \times 2^{1,5})
 $$
 </div>
 </div>
 
 <div class="alert alert-info">
-**Tu tarea:** asigna a cada variable su respectivo valor numérico según la fórmula.  
-Por ejemplo: `a = 55`
+* **Tu tarea:** asigna a cada variable su respectivo valor numérico según la fórmula.  Por ejemplo: `a = 55`
+* Los números decimales se escriben con ".". Por ejemplo para **33,5** se puede escribir como `a = 33.5`.
 </div>
 
 ::: {.callout-tip title="Operaciones matemáticas en Python" collapse="true"}
@@ -40,10 +40,16 @@ En Python, las operaciones matemáticas se escriben con los siguientes operadore
 ```{pyodide-python}
 # Escribe tu respuesta aquí
 a = 0
-b = 1
-c = 1
+b = 0
+c = 0
 d = 0
-respuesta = (a + b) * c**d
+e = 0
+f = 0
+g = 0
+h = 0
+
+# Fórmula
+respuesta = (a + b) / (1 + (c / 2)) + (d * (e ** f))
 
 # Verifica la respuesta
 import verificar

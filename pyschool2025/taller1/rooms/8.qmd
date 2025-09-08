@@ -1,80 +1,130 @@
+
 ---
 title: "Habitación 8: Funciones"
 ---
 
 <center>
-<img src="./img/sala_17.png" width="650">
+<img src="./img/sala_171.png" width="650">
 </center>
 
 <br/>
 
-El equipo ha llegado al núcleo de la estación espacial 🌌. Se encuentran con una compuerta blindada que bloquea el
-paso a la sala final.
+El equipo ha llegado al **núcleo de la estación espacial** 🌌.  
+Una compuerta blindada bloquea el acceso a la sala final.  
 
-Las luces parpadean y una pantalla muestra el siguiente mensaje 👽:
+Las luces parpadean y, de pronto, en la pantalla aparece un mensaje 👽:
 
 <div class="d-flex justify-content-center">
 <div class="alert alert-warning">
-🧠 Según los registros, la contraseña se obtiene utilizando el código secreto... ese mismo número clave que han
-encontrado antes en su viaje. 🔎
+🧠 <strong>“La contraseña se obtiene sumando los primeros números primos…</strong>  
+Ese número secreto que encontraron antes indica cuántos deben sumar.” 🔎
 </div>
 </div>
 
-!Es imprescindible encontrar la contraseña correcta para continuar 🧩!
+✨ ¡Es imprescindible encontrar la contraseña correcta para abrir la última puerta! 🔓  
 
-🔢 Suma todos los números primos requeridos. La cantidad de números a sumar está
-determinada por el código secreto. Sólo así se podrá revelar la última contraseña 🔓.
+
+
+## 🔢 Tu misión
+Debes escribir un programa que:  
+1. Calcule los **primeros `N` números primos**, donde `N` corresponde al **código secreto**.  
+2. Obtenga la **suma total** de esos números primos.  
+3. Devuelva el resultado como la contraseña final.  
+
 
 <div class="alert alert-info">
-Obtén la suma desde el primer número primo hasta el indicado en el `código secreto`. Ten en consideración que se debe recorrer todos
-los números enteros positivos y en caso que cumpla con ser número primo, sumarlo, así sucesivamente hasta obtener la suma total.
+💡 Recuerda:  
+- Un número primo es aquel que solo es divisible entre <code>1</code> y él mismo.  
+- No basta con revisar si es divisible por 2 o 3; debes comprobar que ningún número menor lo divida (salvo 1).  
+</div>
 
-Por ejemplo:
+
+
+## 🛠️ Apoyo
+La siguiente función nos da la fórmula para saber si un número es primo:
 
 ```python
 def es_primo(numero):
-    if numero % 1 == 0:
-        return True
-    elif numero % 2 == 0:
+    if numero < 2:
         return False
-    elif numero % 3 == 0:
-        return False
-    elif numero % numero == 0:
-        return True
+    for i in range(2, numero):
+        if numero % i == 0:
+            return False
+    return True
+````
 
-for numero in numeros:
-    if es_primo(numero):
-        suma = suma + numero
-```
-</div>
+Con esto, puedes recorrer los números positivos e ir guardando los primeros `N` primos hasta obtener la suma.
+
+
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Considera lo siguiente para el algoritmo de la suma de los primeros `N` números primos:
 
-- Para saber si es un número primo, debe ser divisible por el número 1 y por si mismo. Ejemplo: `A % 1 == 0`  y `A % A == 0`.
-- Crear variable que cuente cuántos números primos se han sumado, sin que pase el valor del `código secreto`.
-- Crear variable que vaya acumulando la suma de los primeros `N` números primos.
+1. **Función `es_primo`:**
 
-```python
-suma = 0
-contador_numeros = 0
-for numero in numeros:
-    if es_primo(numero):
-        suma = suma + numero
-        contador_numeros = contador_numeros + 1
-```
+   * Retorna `True` si el número es primo y `False` en caso contrario.
+   * Empieza descartando los menores a 2.
+   * Recorre divisores desde `2` hasta `numero-1`.
+
+2. **Variables auxiliares:**
+
+   * `suma = 0` → para acumular la suma de primos.
+   * `contador = 0` → para contar cuántos primos llevas.
+
+3. **Bucle principal:**
+
+   * Comienza desde `1` en adelante.
+   * Si un número es primo → lo sumas y aumentas el contador.
+   * Detén el bucle cuando `contador == codigo_secreto`.
+
+4. **Entrega la suma:**
+
+   * Esa suma será la **contraseña final**.
+
+    ```python
+    suma = 0
+    contador = 0
+    numero = 1
+
+    while contador < codigo_secreto:
+        if es_primo(numero):
+            suma = suma + numero
+            contador = contador + 1
+        numero = numero + 1
+    ```
 
 :::
 
+::: {.callout-tip title="Pista 2" collapse="true"}
+El código de la chapa **solo puede contener los números 2, 4 y 7**.  
+Puede ser uno de ellos, una combinación de dos, o incluso los tres en distinto orden.  
+Ejemplos: `24`, `72`, `247`, `742`.  
+:::
+
+
+## 👩‍💻 Escribe tu solución
+
 ```{pyodide-python}
+# 1. Define la función para verificar si un número es primo
+def es_primo(numero):
+    # TODO: reemplaza por una versión correcta
+    return True
 
-# Escribe aquí función para saber si un número es primo
+# 2. Crea una función que calcule la suma de los primeros N primos
+def suma_primos(codigo_secreto):
+    # TODO: implementa el algoritmo con un bucle y contador
+    suma = 0
+    contador = 0
+    numero = 1
+    return suma
 
-# Escribe tu respuesta
-respuesta = None
-print(respuesta)
+# 3. Prueba tu función
+codigo_secreto = 5  # Ejemplo
+respuesta = suma_primos(codigo_secreto)
+print("Contraseña encontrada:", respuesta)
 
-# Verifica la respuesta
+# 4. Verificación automática
 import verificar
 verificar.salon_8(respuesta)
 ```
+
+
