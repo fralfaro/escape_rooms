@@ -1,72 +1,112 @@
 ---
-title: "Habitación 3: Estadísticas de Combate"
+title: "Habitación 3"
 ---
 
-En esta sala aparece una gran pantalla que dice:
+<h2 class="text-center">
+⚔️ Sala de Análisis de Estadísticas
+</h2>
+
+<br/>
+
+<center>
+<img src="./img/sala_p3.png" width="700">
+</center>
+
+<br/>
+
+La pantalla principal se ilumina y muestra un nuevo mensaje del **Profesor Oak**:
 
 <div class="alert alert-info">
 "Cada tipo de Pokémon tiene fortalezas y debilidades.  
-Solo si logras descubrir qué tipo tiene mayor ataque promedio y cuál tiene menor defensa promedio...  
-podrás seguir avanzando."
+Responde con precisión:  
+<b>¿Qué tipo posee el promedio más alto de HP, Attack, Defense y Speed?</b>  
 </div>
 
-::: {.callout-tip title="Agrupar y Calcular Promedios" collapse="true"}
+## 🎯 Objetivo de la sala
 
-Con `groupby()` y `mean()` podemos agrupar y calcular promedios de estadísticas.
+1. Agrupa por `Type 1` y calcula el **promedio** de `HP`, `Attack`, `Defense`, `Speed`.  
+2. Guarda la tabla resultante en **`promedio`**.  
+3. Define:  
+   - **`respuesta_lista`** = lista con el tipo ganador por promedio en **este orden**: `['HP','Attack','Defense','Speed']`.  
 
-Por ejemplo:
+::: {.callout-tip title="Agrupar y seleccionar estadísticas" collapse="true"}
+Promedios por tipo:
+```python
+promedio = df.groupby('Type 1')[['HP','Attack','Defense','Speed']].mean().round(2)
+````
+
+Tipo con mayor/menor promedio:
 
 ```python
-promedio = df.groupby('Type 1')[['HP', 'Attack', 'Defense', 'Speed']].mean()
+tipo_mas_ataque   = promedio['Attack'].idxmax()
+tipo_menos_ataque = promedio['Attack'].idxmin()
 ```
 
-Luego puedes usar:
-
-- `.idxmax()` → Para saber qué tipo tiene el mayor promedio en una columna.  
-- `.idxmin()` → Para saber qué tipo tiene el menor promedio en una columna.  
-
-Por ejemplo:
+Lista de ganadores por estadística (en orden fijo):
 
 ```python
-tipo_mas_ataque = promedio['Attack'].idxmax()
-tipo_menos_defensa = promedio['Defense'].idxmin()
+orden = ['HP','Attack','Defense','Speed']
+respuesta_lista = [promedio[c].idxmax() for c in orden]
 ```
-
 :::
 
----
-
-## Desafío de la Sala
-
-1. Agrupa los Pokémon por `Type 1` y calcula el promedio de `HP`, `Attack`, `Defense`, `Speed`.  
-2. Guarda ese resultado en `promedio`.  
-3. Define la variable `respuesta_ataque` con el tipo de Pokémon que tiene mayor promedio de ataque.  
-4. Define la variable `respuesta_defensa` con el tipo de Pokémon que tiene menor promedio de defensa.  
-5. Muestra el resultado.
-
----
+## 🧩 Desafío de la Sala
 
 ```{pyodide-python}
 # Cargar datos
 import pandas as pd
+import matplotlib.pyplot as plt
 
 url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
 df = pd.read_csv(url)
 
-# Agrupar y calcular promedio
-promedio = df.groupby('Type 1')[['HP', 'Attack', 'Defense', 'Speed']].mean()
-
-# Definir respuestas
-respuesta_ataque = None  # Tipo con mayor ataque promedio
-respuesta_defensa = None  # Tipo con menor defensa promedio
-
-print("Promedio por tipo:")
+# 1) Agrupar y calcular promedios
+cols_stats = ['HP', 'Attack', 'Defense', 'Speed']
+promedio = None
+print("Promedios por tipo (redondeados):")
 print(promedio)
-
-print("Tipo con mayor ataque promedio:", respuesta_ataque)
-print("Tipo con menor defensa promedio:", respuesta_defensa)
-
-# Verifica tu respuesta
-import verificar
-verificar.salon_33(respuesta_ataque, respuesta_defensa)
 ```
+
+```{pyodide-python}
+# 2) Gráfico Top-10 dinámico por métrica
+metrica = 'Attack'   # Cambia a 'HP', 'Defense' o 'Speed' y vuelve a ejecutar
+
+if metrica not in cols_stats:
+    raise ValueError(f"Métrica inválida: {metrica}. Usa una de {cols_stats}")
+
+top10 = promedio.sort_values(by=metrica, ascending=False)[metrica].head(10)
+
+plt.figure(figsize=(8,7))
+bars = top10.plot(kind='bar', edgecolor='black')
+
+plt.title(f"Top 10 tipos por {metrica} promedio", fontsize=15, fontweight='bold')
+plt.xlabel("Tipo de Pokémon", fontsize=12)
+plt.ylabel(f"{metrica} promedio", fontsize=12)
+plt.xticks(rotation=45, ha='right')
+plt.grid(axis='y', linestyle='--', alpha=0.6)
+
+# Etiquetas numéricas encima de cada barra
+for p in bars.patches:
+    height = p.get_height()
+    bars.annotate(f'{height:.1f}',
+                  (p.get_x() + p.get_width()/2, height),
+                  ha='center', va='bottom', fontsize=9, xytext=(0,3), textcoords='offset points')
+
+plt.show()
+```
+
+
+```{pyodide-python}
+# 3) Respuestas pedidas (lista completa)
+orden = ['HP', 'Attack', 'Defense', 'Speed']
+respuesta = None
+print("🏆 Ganadores por estadística [HP, Attack, Defense, Speed]:")
+print(respuesta)
+
+# Verifica tu respuesta (según especificación existente)
+import verificar
+verificar.salon_33(respuesta)
+```
+
+
+

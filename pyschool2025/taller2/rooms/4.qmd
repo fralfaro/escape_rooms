@@ -1,74 +1,127 @@
 ---
-title: "Habitación 4: Visualización de Combate"
+title: "Habitación 4"
 ---
+
+<h2 class="text-center">
+🎯 Relación entre diferentes estadísticas 
+</h2>
+
+
+
+
+<center>
+<img src="./img/sala_p4.png" width="500">
+</center>
+
+
+<br/>
 
 La sala está llena de pantallas mostrando batallas Pokémon.  
-
-El Profesor Oak te deja un nuevo mensaje:
+La pantalla principal muestra un nuevo mensaje del **Profesor Oak**:
 
 <div class="alert alert-info">
-"Antes de elegir al Pokémon más fuerte, un buen Científico de Datos debe visualizar los datos.  
-No siempre sumar estadísticas tiene sentido... ¡Primero observa, luego decide!"
+"Antes de elegir al Pokémon más fuerte, observa la relación entre sus estadísticas.  
+¿Ataque y Defensa crecen juntos, compiten entre sí… o no parecen relacionarse?"
 </div>
 
----
 
-## ¿Qué haremos?
+## ✅ Pregunta principal
 
-1. Elegir dos estadísticas de combate (`col_x` y `col_y`) — por ejemplo `Attack` y `Defense`.  
-2. Crear un gráfico de dispersión para ver cómo se relacionan.  
-3. Crear una nueva columna llamada `suma` sumando esas dos estadísticas.  
-4. Mostrar los 5 mejores Pokémon con mayor `suma`.  
-5. Definir en `respuesta` el nombre del Pokémon con la mayor `suma`.
+**¿Qué tan relacionada está `Attack` con `Defense`?**  
+Observa el gráfico de dispersión y comenta si la relación parece **positiva**, **negativa** o **débil/nula**.  
+Luego, explora **otros pares** de estadísticas para comparar patrones.
 
----
 
-::: {.callout-tip title="Recuerda"}  
-El gráfico de dispersión nos permite observar:  
 
-- Si las estadísticas están relacionadas.  
-- Si sumar tiene sentido o si las variables son muy distintas.  
+## 🧪 Qué haremos
 
-Luego de observar, podemos ordenar la tabla y tomar una mejor decisión.  
+1. Elegir dos estadísticas de combate (`col_x` y `col_y`) — por defecto `Attack` y `Defense`.  
+2. Crear un **gráfico de dispersión personalizable** (color, tamaño, línea de tendencia opcional).  
+3. Definir en **`respuesta`** el **tipo** de correlación entre las estadísticas seleccionadas.
+
+::: {.callout-tip title="Sugerencias para analizar" collapse="true"}
+- Si los puntos suben hacia la derecha, la relación es **positiva**; si bajan, **negativa**; si están dispersos, **débil o nula**.  
+- Una “suma” puede sesgar si las escalas son distintas; como alternativa, podrías estandarizar (z-score) antes de sumar.  
+- **Opcional**: calcula la correlación de Pearson con `df[[col_x, col_y]].corr()`.
 :::
 
----
+
 
 ## Tu Código
-
 ```{pyodide-python}
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
+# --- Cargar datos ---
 url = 'https://gist.githubusercontent.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6/raw/92200bc0a673d5ce2110aaad4544ed6c4010f687/pokemon.csv'
 df = pd.read_csv(url)
 
-# Elegir columnas
-col_x = None  # Por ejemplo: 'Attack', 'Defense', 'HP', 'Speed'
-col_y = None  # Por ejemplo: 'Attack', 'Defense', 'HP', 'Speed'
-color = None  # Por ejemplo: 'orange', 'green', 'blue', 'red'
+print("Mostrando primeras filas:")
+print(df.head())
+```
 
-# Crear columna suma
+```{pyodide-python}
+# --- Parámetros personalizables ---
+# Elige dos estadísticas para comparar:
+col_x = 'Attack'   # Cambia por: 'HP', 'Attack', 'Defense', 'Speed'
+col_y = 'Defense'  # Cambia por: 'HP', 'Attack', 'Defense', 'Speed'
+
+# Estética del gráfico:
+color_puntos = 'tab:blue'  # 'tab:orange', 'tab:green', 'red', etc.
+alpha_puntos = 0.7
+tamano_base = 40           # tamaño de los puntos
+tamano_por = None          # opcional: 'HP', 'Speed' para escalar tamaño por una columna, o None
+
+# Línea de tendencia:
+dibujar_tendencia = True
+
+# --- Validaciones simples ---
+stats_validas = ['HP', 'Attack', 'Defense', 'Speed']
+if col_x not in stats_validas or col_y not in stats_validas:
+    raise ValueError(f"Elige columnas dentro de {stats_validas}")
+
+# --- Columna suma y Top 5 ---
 df['suma'] = df[col_x] + df[col_y]
+tabla_top5 = df[['Name', col_x, col_y, 'suma']].sort_values('suma', ascending=False).head(5)
 
-# Gráfico de dispersión
-plt.figure(figsize=(10, 6))
-plt.scatter(df[col_x], df[col_y], color=color)
-plt.title(f'{col_x} vs {col_y} de Pokémon')
+# --- Tamaños adaptativos (opcional) ---
+if tamano_por in stats_validas:
+    # Escala simple para que no explote el tamaño
+    vals = df[tamano_por].fillna(df[tamano_por].median())
+    sizes = tamano_base * (vals - vals.min()) / (vals.max() - vals.min() + 1e-9) + tamano_base
+else:
+    sizes = tamano_base
+
+# --- Gráfico de dispersión ---
+plt.figure(figsize=(8, 7))
+plt.scatter(df[col_x], df[col_y], s=sizes, alpha=alpha_puntos, edgecolor='k', linewidth=0.3, color=color_puntos)
+
+plt.title(f'Relación entre {col_x} y {col_y} (Pokémon)', fontsize=15, fontweight='bold')
 plt.xlabel(col_x)
 plt.ylabel(col_y)
-plt.grid()
+plt.grid(alpha=0.4)
+
+# Línea de tendencia (mínimos cuadrados)
+if dibujar_tendencia:
+    m, b = np.polyfit(df[col_x], df[col_y], 1)
+    xs = np.linspace(df[col_x].min(), df[col_x].max(), 200)
+    ys = m * xs + b
+    plt.plot(xs, ys, linestyle='--', linewidth=2)
+
 plt.show()
-
-# Mostrar Top 5 Pokémon
-print("Top 5 Pokémon con mayor suma entre", col_x, "y", col_y)
-tabla_top5 = df[['Name', col_x, col_y, 'suma']].sort_values('suma', ascending=False).head(5)
-print(tabla_top5)
-
-# Definir respuesta
-respuesta = None  # Escribe aquí el nombre del Pokémon con mayor suma
-
-# Verifica tu respuesta
-import verificar
-verificar.salon_44(col_x, col_y, respuesta)
 ```
+
+```{pyodide-python}
+# --- (Medir correlación ---
+print("\nMatriz de correlación (Pearson):")
+print(df[[col_x, col_y]].corr().round(3))
+
+# Tipo de correlación:
+respuesta = None
+
+# --- Verificación ---
+import verificar
+verificar.salon_44(respuesta)
+````
+

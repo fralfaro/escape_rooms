@@ -85,7 +85,7 @@ print(conteo)
 
 ```{pyodide-python}
 # 2) Crear gráfico de barras mejorado
-plt.figure(figsize=(12,7))
+plt.figure(figsize=(8,7))
 
 # Ordenar de mayor a menor para que sea más claro
 conteo.sort_values(ascending=False).plot(

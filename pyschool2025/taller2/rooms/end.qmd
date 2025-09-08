@@ -1,20 +1,37 @@
-# Habitación Final
-
-La última puerta se abre lentamente...  
-Sientes una brisa fresca y el sonido de la naturaleza vuelve a rodearte.  
-
-Has logrado superar todos los desafíos del laboratorio del Profesor Oak.  
-No solo atrapaste datos... aprendiste a analizarlos, entenderlos y usarlos a tu favor.  
-
-Frente a ti, una gran Pokébola holográfica aparece en el cielo y proyecta un mensaje:
-
-> *"Los verdaderos Maestros Pokémon no solo entrenan en batalla... también dominan el poder de los datos."*
-
-Sabes que esta aventura no fue solo un juego.  
-Has dado tus primeros pasos como Científico de Datos Pokémon.  
-Y esto... es solo el comienzo.
+---
+title: "Habitación Final"
+---
 
 <center>
-<a href="../../anexos/cierre_evento.html" class="btn btn-success" w-100 h-100>🏆 Cierre PySchool</a>
+
+<h2>
+🌟 ¡Misión completada, equipo Pokémon! 🏆
+</h2>
+
+Después de limpiar datos, explorar estadísticas 🧠, comparar tipos y visualizar batallas 📊⚔️…
+
+💫 ¡El Laboratorio del Profesor Oak ha sido restaurado con éxito!
+
+Los sistemas vuelven a la normalidad, las compuertas se abren y el profesor confirma que tu dominio de **pandas** y **visualización** marcó la diferencia. Gracias a tu criterio y trabajo con Python 🐍💻, ahora la región cuenta con una base de conocimiento más fuerte que nunca.
+
+🧪 Tu aventura demostró que entrenar no es solo pelear: es **medir, analizar y decidir** con evidencia.  
+El viaje continúa… y tus próximos equipos serán más inteligentes que nunca. 🔬🎮
+
 </center>
 
+<br/>
+
+<center>
+<img src="./img/end.png" width="650">
+</center>
+
+<br/>
+
+<center>
+🧪 Fin del Escape Room: Laboratorio del Profesor Oak 🧪<br/>
+¡Gracias por formar parte de esta aventura de Ciencia de Datos Pokémon!
+</center>
+
+<center style="margin-top: 12px;">
+  <a href="../../anexos/cierre_evento.html" class="btn btn-success" w-100 h-100>🏁 Cierre del Taller</a>
+</center>
