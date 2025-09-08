@@ -4,7 +4,7 @@ title: "Habitación 8"
 ---
 
 <center>
-<img src="./img/sala_171.png" width="650">
+<img src="./img/sala_17.png" width="650">
 </center>
 
 <br/>
