@@ -1,14 +1,32 @@
-# PySchool
+# Escape Rooms -  Python & Matemáticas
 
-![example workflow](https://github.com/fralfaro/pyschool/actions/workflows/documentation.yml/badge.svg)
-[![documentation](https://img.shields.io/badge/📖-docs-brightgreen)](https://falfaro.xyz/pyschool/)
+![example workflow](https://github.com/fralfaro/escape_rooms/actions/workflows/documentation.yml/badge.svg)
+[![documentation](https://img.shields.io/badge/🔐-escape_rooms-brightgreen)](https://falfaro.xyz/escape_rooms/)
 
-<img src="images/cover.png" width="300" align="center">
 
-¡Bienvenidos al repositorio oficial de PySchool! 🎉
+<p align="center">
+  <img src="images/favicon.png" width="280" alt="Escape Room Cover">
+</p>
 
-Este espacio ha sido creado para motivar a los estudiantes a aprender Python. Aquí encontrarás ejemplos autocontenidos para entender y practicar los conceptos fundamentales de este lenguaje.
 
-PySchool es una iniciativa del equipo de Python Chile, creada en 2024. Nuestro objetivo es proporcionar a la comunidad los recursos necesarios para aprender y mejorar sus habilidades en Python.
 
-Explora los ejemplos, descarga el material y prepárate para una experiencia educativa enriquecedora. ¡Nos vemos en PySchool! 🚀
+Este repositorio presenta un **Escape Room de Python y Matemáticas**, desarrollado con **Quarto** y **Pyodide**.
+Su propósito es ofrecer una experiencia de aprendizaje **interactiva, entretenida y accesible**, donde podrás explorar programación y conceptos matemáticos **directamente desde tu navegador**, sin necesidad de instalaciones adicionales. 
+
+
+
+## Características
+
+* **Escape Rooms temáticos**: desde programación básica hasta ideas de infinito.
+* **Ejercicios progresivos** con pistas y soluciones.
+* **Código Python ejecutable en el navegador** (sin instalaciones).
+* **Material para estudiantes y docentes**, listo para usar en clases o talleres.
+
+
+
+## Temáticas incluidas
+
+* **Estación Espacial 🛰️** → Introducción a Python: `print`, variables, números, condicionales.
+* **Laboratorio Pokémon 🧪** → Ciencia de Datos básica: `pandas`, filtros, `groupby`, visualizaciones.
+* **Más allá del Infinito ∞** → Ideas matemáticas inspiradas en Cantor e Hilbert.
+
