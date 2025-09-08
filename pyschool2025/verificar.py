@@ -27,7 +27,7 @@ def salon_0(answer):
 
 
 def salon_1(answer):
-    if answer == "Hola Mundo":
+    if answer == "Cerrar":
         hyperlink("¡Correcto! Avanza a la siguiente página", "2.html", "success")
     elif answer == None:
         text("Indica la solución asignando algún valor a la variable `respuesta`.", "info")

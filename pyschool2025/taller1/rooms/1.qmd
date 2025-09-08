@@ -2,24 +2,50 @@
 title: "Habitación 1: Hola Mundo"
 ---
 
-Al responder correctamente el enigma, la puerta se abre. Al cruzar la puerta, la puerta se cierra y 
-te encuentras en una nueva habitación, exactamente como la habitación anterior, con una nueva nota sobre la pantalla electrónica:
+<h2 class="text-center">
+👨‍🚀 ¡Has llegado con éxito a la estación espacial OASIS-9! 🛰 <br/>
+La misión apenas comienza... 💫
+</h2>
+
+<br/>
+
+<center>
+<img src="./img/sala_01.png" width="650">
+</center>
+
+<br/>
+
+La terminal del sistema de oxígeno comienza a parpadear en rojo... algo no está bien.  
+
+<div class="d-flex justify-content-center">
+<div class="alert alert-danger text-center font-weight-bold">
+⚠️ **¡Alerta Crítica!** ⚠️  
+Se ha detectado una pérdida de oxígeno en la sala B9-2.
+</div>
+</div>
+
+🕹️ ¡Rápido! Debes activar la puerta de emergencia.  
+Usa la terminal para enviar la señal correcta y cerrar la sala antes de que el oxígeno se agote por completo.
 
 <div class="alert alert-info">
-La primera tarea de todo pythonista es escribir "Hola Mundo".  
-Cambia el valor de la variable `respuesta` por `"Hola Mundo"` y ejecuta la celda.
+**Primera tarea:** escribe la palabra `"Cerrar"`.  
+Cambia el valor de la variable `respuesta` y ejecuta la celda.
 </div>
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Recuerda que en Python, los strings (cadenas de texto) se escriben entre comillas dobles o simples.  
-Puedes escribir 
-```python 
-respuesta="Hola Mundo"
-```
+En Python, las cadenas de texto (strings) se escriben entre comillas simples o dobles.  
+
+Ejemplos:
+```python
+respuesta = "Ejemplo"
+````
+
 o
-```python 
-respuesta='Hola Mundo'
+
+```python
+respuesta = 'Ejemplo'
 ```
+
 :::
 
 ```{pyodide-python}
@@ -28,6 +54,9 @@ respuesta = None
 print(respuesta)
 
 # Verifica la respuesta
-import verificar
+import sala
 verificar.salon_1(respuesta)
 ```
+
+
+
