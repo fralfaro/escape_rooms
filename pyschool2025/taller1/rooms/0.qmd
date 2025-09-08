@@ -2,30 +2,47 @@
 title: "Habitación 0: Inicio"
 ---
 
-Despiertas poco a poco en un cuarto oscuro.  
-Solo recuerdas que aceptaste un desafío, algo llamado PySchool.  
-Las murallas son de piedra, y no hay ventanas. Una débil luz emana de una antorcha colgada en la pared.
-En una de las murallas, hay una puerta y una consola electrónica emitiendo un parpadeo de luz.  
-Te acercas a la consola y observas que sobre la pantalla hay una nota:
+<h2 class="text-center">
+🚀 ¡Bienvenido explorador espacial!✨ <br/>
+Estás a punto de embarcarte en una misión llena de acertijos y desafíos lógicos que pondrán a prueba tu ingenio.
+</h2>
+
+<br/>
+
+<center>
+<img src="./img/sala_00.png" width="650">
+</center>
+
+<br/>
+
+<div class="font-italic">
+Año 2079. La estación espacial OASIS-9, que orbita la luna Europa, sufre una serie de fallas tras una tormenta solar.
+
+El comandante en jefe 🚨 activa el protocolo de emergencia "PYTHON-25”🐍: cada sala del sistema principal se bloquea 🔒 hasta que un miembro de la tripulación resuelva un enigma 🔎 lógico, matemático o computacional.
+
+Solo así podrán restablecer los sistemas y regresar a salvo a sus hogares...
+</div>
+
+<br/>
 
 <div class="alert alert-info">
-**¡Bienvenido a PySchool!**  
-Cada habitación tiene un enigma, que deberás resolver con Python.  
-Puedes realizar tantos intentos como desees.  
-Cada habitación tiene algunas explicaciones y pistas.  
-¡Buena suerte, futuro pythonista!
+**¡Bienvenido al Desafío!**  
+Cada habitación tiene un enigma que deberás resolver combinando lógica, creatividad y conocimiento.  
+Puedes realizar tantos intentos como quieras hasta encontrar la solución.  
+
+¡Buena suerte, viajero del conocimiento!
 </div>
 
 ::: {.callout-tip title="Pistas y  Explicaciones" collapse="true"}
-En este tipo de celdas expandibles, encontrarás algunas pistas, explicaciones y enlaces de interés.  
-La primera habitación es muy fácil. Sólo tienes que ejecutar la celda haciendo click en "Run Code".
+En este tipo de celdas expandibles encontrarás pistas, explicaciones y enlaces de interés.  
+La primera habitación es muy sencilla: solo necesitas ejecutar la celda haciendo click en "Run Code".
 :::
 
 ```{pyodide-python}
 # Escribe tu respuesta aquí
-respuesta = "PySchool2025"
+codigo_acceso = "PYTHON-25"
 
 # Verifica la respuesta
 import verificar
-verificar.salon_0(respuesta)
+verificar.salon_0(codigo_acceso)
 ```

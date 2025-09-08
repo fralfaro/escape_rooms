@@ -18,11 +18,11 @@ def hyperlink(text, url, type="info"):
 ########################################################
 
 def salon_0(answer):
-    if answer == "PySchool2025":
+    if answer == "PYTHON-25":
         hyperlink("¡Correcto! Avanza a la siguiente página", "1.html", "success")
     else:
         incorrect_answer = f"""Estás probando nuevas respuestas, muy bien.  
-        Recuerda que la respuesta es PySchool2025"""
+        Recuerda que la respuesta es PYTHON-25"""
         text(incorrect_answer, "warning")
 
 
