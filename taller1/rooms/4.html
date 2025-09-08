@@ -265,7 +265,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# Completa los valores correctos\ninicio = None\nfin = None\nmultiplo = None\n\n# Escribe tu código aquí\nfor numero in range(inicio, fin + 1):\n    if numero % multiplo == 0:\n        print(numero)\n\n# Verifica tu respuesta\nimport verificar\nverificar.salon_4(inicio, fin, multiplo)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"coordenadas = [540, 320, 890, 150, 430, 270]\n\n# Ordenar la lista de coordenadas\nordenadas = None\nprint(\"Lista ordenada:\", ordenadas)\n\n# Obtener el objeto más cercano (primer elemento)\nmas_cercano = ordenadas[None]\n\n# Obtener el objeto más lejano (último elemento)\nmas_lejano = ordenadas[None]\n\n# Calcular el centro de la lista\ncentro = (ordenadas[None]+ordenadas[None])/2\n\n# Crear la lista final con los tres valores\nrespuesta = [mas_cercano, centro, mas_lejano]\nprint(\"Respuesta final:\", respuesta)\n\n# Verifica la respuesta\nimport verificar\nverificar.salon_4(respuesta)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -685,49 +685,88 @@ globalThis._qpyodideGetInstance = function() {
 </header>
 
 
-<p>La puerta se cierra tras de ti… y aparece un nuevo mensaje:</p>
+<center>
+<img src="./img/sala_07.png" width="650">
+</center>
+<p><br></p>
+<p>Desde el módulo de control se detectan múltiples objetos orbitando alrededor de la estación espacial ⚠️.<br>
+Es urgente analizar sus coordenadas para prevenir colisiones 🌌💥.</p>
+<p>🚀 Tu misión es <strong>ordenar las coordenadas</strong> y extraer tres datos clave:</p>
+<ol type="1">
+<li>El objeto <strong>más cercano</strong> a la estación.<br>
+</li>
+<li>El objeto <strong>más lejano</strong>.<br>
+</li>
+<li>El objeto que queda en el <strong>centro de la lista</strong> (una vez ordenada).</li>
+</ol>
 <div class="alert alert-info">
-<p>Para resolver este desafío debes mostrar los números <strong>pares</strong> (divisibles por 2)<br>
-entre 1 y 20 (incluyéndolos).</p>
+<p><strong>Instrucción:</strong><br>
+Utiliza la función <code>sorted()</code> para ordenar la lista y selecciona los elementos necesarios a través de sus índices.</p>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Recuerda">
+<div class="callout callout-style-default callout-tip callout-titled" title="Acceder a elementos de una lista">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Recuerda
+Acceder a elementos de una lista
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>En Python puedes recorrer números con:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> numero <span class="kw">in</span> <span class="bu">range</span>(inicio, fin <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> numero <span class="op">%</span> multiplo <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(numero)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Los múltiplos de 2 son los números pares.</p>
-</div>
-</div>
-</div>
-<hr>
-<section id="desafío-de-la-sala" class="level2">
-<h2 class="anchored" data-anchor-id="desafío-de-la-sala">Desafío de la Sala</h2>
-<p>Completa las siguientes variables:</p>
+<p>Para acceder a un elemento se neceita indicar su índice, los índices comienzan desde el valor <strong>0</strong> hasta <strong>n-1</strong> dónde <strong>n</strong> igual a cantidad de elementos de la lista.</p>
+<p>En Python los indices pueden ser también negativos <code>-1, -2, -3, ..., -n</code> pero estos se cuentan de derecha a izquierda.</p>
+<p>teniendo la siguiente lista lista = [1, 2, 3, 4, 5, 6]</p>
+<p>índices positivos:</p>
 <ul>
-<li><code>inicio</code>: número inicial del ciclo<br>
-</li>
-<li><code>fin</code>: número final del ciclo<br>
-</li>
-<li><code>multiplo</code>: número por el cual deben ser divisibles</li>
+<li>0 para obtener 1</li>
+<li>2 para obtener 3</li>
+<li>3 para obtener 4</li>
 </ul>
-<p>Luego escribe un ciclo <code>for</code> que muestre solo esos números.</p>
-<hr>
+<p>índices negativos:</p>
+<ul>
+<li>-6 para obtener 1</li>
+<li>-3 para obtener 4</li>
+<li>-1 para obtener 6</li>
+</ul>
+<p>Ejemplo</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lista <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>lista[<span class="dv">0</span>] <span class="co"># Obtiene valor 1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>lista[<span class="dv">3</span>] <span class="co"># Obtiene valor 3</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>lista[<span class="op">-</span><span class="dv">3</span>] <span class="co"># Obtiene valor 2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Pista">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pista
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>👉 El valor del <strong>centro</strong> depende de la cantidad de elementos en la lista:</p>
+<ul>
+<li>Si la lista tiene <strong>largo impar</strong>: es el valor que queda exactamente al medio.<br>
+</li>
+<li>Si la lista tiene <strong>largo par</strong>: se toma el promedio de los dos valores centrales (como número entero).</li>
+</ul>
+<p>Ejemplo para lista con largo impar:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>largo <span class="op">=</span> <span class="bu">len</span>(lista)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>valor_centro <span class="op">=</span> lista[largo <span class="op">//</span> <span class="dv">2</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>ℹ️ La operación <code>//2</code> realiza una <strong>división entera</strong>, es decir, conserva solo la parte entera del resultado (<code>7//2 = 3</code>).</p>
+</div>
+</div>
+</div>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

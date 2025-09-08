@@ -69,18 +69,7 @@
     "href": "taller1/rooms/4.html",
     "title": "Habitación 4: Ciclos",
     "section": "",
-    "text": "Desafío de la Sala\nLa puerta se cierra tras de ti… y aparece un nuevo mensaje:\nCompleta las siguientes variables:\nLuego escribe un ciclo for que muestre solo esos números.",
-    "crumbs": [
-      "Estación Espacial 🛰️",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Habitación 4: Ciclos</span>"
-    ]
-  },
-  {
-    "objectID": "taller1/rooms/4.html#desafío-de-la-sala",
-    "href": "taller1/rooms/4.html#desafío-de-la-sala",
-    "title": "Habitación 4: Ciclos",
-    "section": "",
-    "text": "inicio: número inicial del ciclo\n\nfin: número final del ciclo\n\nmultiplo: número por el cual deben ser divisibles\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Desde el módulo de control se detectan múltiples objetos orbitando alrededor de la estación espacial ⚠️.\nEs urgente analizar sus coordenadas para prevenir colisiones 🌌💥.\n🚀 Tu misión es ordenar las coordenadas y extraer tres datos clave:\n\nEl objeto más cercano a la estación.\n\nEl objeto más lejano.\n\nEl objeto que queda en el centro de la lista (una vez ordenada).\n\n\nInstrucción:\nUtiliza la función sorted() para ordenar la lista y selecciona los elementos necesarios a través de sus índices.\n\n\n\n\n\n\n\nAcceder a elementos de una lista\n\n\n\n\n\nPara acceder a un elemento se neceita indicar su índice, los índices comienzan desde el valor 0 hasta n-1 dónde n igual a cantidad de elementos de la lista.\nEn Python los indices pueden ser también negativos -1, -2, -3, ..., -n pero estos se cuentan de derecha a izquierda.\nteniendo la siguiente lista lista = [1, 2, 3, 4, 5, 6]\níndices positivos:\n\n0 para obtener 1\n2 para obtener 3\n3 para obtener 4\n\níndices negativos:\n\n-6 para obtener 1\n-3 para obtener 4\n-1 para obtener 6\n\nEjemplo\nlista = [1, 2, 3, 4]\nlista[0] # Obtiene valor 1\nlista[3] # Obtiene valor 3\nlista[-3] # Obtiene valor 2\n\n\n\n\n\n\n\n\n\nPista\n\n\n\n\n\n👉 El valor del centro depende de la cantidad de elementos en la lista:\n\nSi la lista tiene largo impar: es el valor que queda exactamente al medio.\n\nSi la lista tiene largo par: se toma el promedio de los dos valores centrales (como número entero).\n\nEjemplo para lista con largo impar:\nlargo = len(lista)\nvalor_centro = lista[largo // 2]\nℹ️ La operación //2 realiza una división entera, es decir, conserva solo la parte entera del resultado (7//2 = 3).\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Estación Espacial 🛰️",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Habitación 4: Ciclos</span>"
