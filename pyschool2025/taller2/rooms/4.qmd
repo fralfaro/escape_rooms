@@ -107,7 +107,7 @@ if dibujar_tendencia:
     m, b = np.polyfit(df[col_x], df[col_y], 1)
     xs = np.linspace(df[col_x].min(), df[col_x].max(), 200)
     ys = m * xs + b
-    plt.plot(xs, ys, linestyle='--', linewidth=2)
+    plt.plot(xs, ys, linestyle='--', linewidth=2, color='red')
 
 plt.show()
 ```
@@ -117,8 +117,8 @@ plt.show()
 print("\nMatriz de correlación (Pearson):")
 print(df[[col_x, col_y]].corr().round(3))
 
-# Tipo de correlación:
-respuesta = None
+# Tipo de correlación: 
+respuesta = None # "positiva", "negativa" o "nula"
 
 # --- Verificación ---
 import verificar
